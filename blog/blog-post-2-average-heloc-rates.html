@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find out what average HELOC rates look like right now, what drives them up or down, and how to get the lowest rate possible on your home equity line of credit.">
+  <title>What Are Average HELOC Rates Right Now? — MyHelocRates.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#0f2557;--navy-mid:#1a3a6b;--gold:#c9a84c;--gold-dark:#a07c28;--gold-light:#f5ecd4;--navy-light:#e8eef7;--white:#ffffff;--bg:#f9f8f6;--text:#1a1a2e;--text-muted:#5f5e5a;--border:rgba(0,0,0,0.10)}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    .nav{background:var(--navy);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100}
+    .nav-logo{color:var(--gold);font-size:20px;font-weight:600;text-decoration:none}
+    .nav-logo span{color:white}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:rgba(255,255,255,0.72);font-size:14px;text-decoration:none}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-cta{background:var(--gold);color:var(--navy);font-size:14px;font-weight:600;padding:9px 18px;border-radius:8px;text-decoration:none}
+
+    .article-hero{background:var(--navy);padding:3.5rem 2rem 2.5rem;text-align:center}
+    .article-cat{display:inline-block;background:rgba(201,168,76,0.15);color:var(--gold);font-size:12px;padding:4px 14px;border-radius:20px;border:0.5px solid rgba(201,168,76,0.3);margin-bottom:1rem;font-weight:500}
+    .article-hero h1{font-family:'DM Serif Display',serif;color:white;font-size:36px;font-weight:400;max-width:720px;margin:0 auto 1rem;line-height:1.25}
+    .article-meta{color:rgba(255,255,255,0.5);font-size:13px;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap}
+    .article-meta span{display:flex;align-items:center;gap:5px}
+
+    .article-layout{max-width:1060px;margin:3rem auto;padding:0 2rem;display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start}
+    .article-body h2{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem}
+    .article-body h3{font-size:18px;font-weight:600;color:var(--text);margin:1.75rem 0 0.6rem}
+    .article-body p{font-size:16px;margin-bottom:1.1rem;color:var(--text)}
+    .article-body ul,.article-body ol{margin:0 0 1.1rem 1.5rem}
+    .article-body li{font-size:16px;margin-bottom:0.5rem}
+    .article-body a{color:var(--navy-mid)}
+    .article-body strong{font-weight:600}
+
+    .callout{background:var(--navy-light);border-left:4px solid var(--navy);border-radius:0 10px 10px 0;padding:1.25rem 1.5rem;margin:1.75rem 0}
+    .callout.gold{background:var(--gold-light);border-left-color:var(--gold-dark)}
+    .callout.green{background:#eaf3de;border-left-color:#3b6d11}
+    .callout p{margin:0;font-size:15px}
+    .callout strong{display:block;margin-bottom:0.3rem;font-size:13px;text-transform:uppercase;letter-spacing:0.4px;color:var(--navy)}
+    .callout.gold strong{color:var(--gold-dark)}
+    .callout.green strong{color:#3b6d11}
+
+    .rate-card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.75rem 0}
+    .rate-card{background:var(--white);border:0.5px solid var(--border);border-radius:12px;padding:1.25rem;text-align:center}
+    .rate-card .label{font-size:12px;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.4px;margin-bottom:8px;font-weight:500}
+    .rate-card .rate{font-size:28px;font-weight:600;color:var(--navy)}
+    .rate-card .rate.gold{color:var(--gold-dark)}
+    .rate-card .sublabel{font-size:12px;color:var(--text-muted);margin-top:4px}
+
+    .info-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:15px}
+    .info-table th{background:var(--navy);color:white;padding:10px 14px;text-align:left;font-weight:500;font-size:13px}
+    .info-table td{padding:10px 14px;border-bottom:0.5px solid var(--border)}
+    .info-table tr:last-child td{border-bottom:none}
+    .info-table tr:nth-child(even) td{background:var(--navy-light)}
+
+    .toc{background:var(--white);border:0.5px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:2rem}
+    .toc h4{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);margin-bottom:0.75rem}
+    .toc ol{margin:0 0 0 1.25rem}
+    .toc li{font-size:14px;margin-bottom:0.4rem}
+    .toc a{color:var(--navy-mid);text-decoration:none}
+    .toc a:hover{color:var(--gold-dark)}
+
+    .tip-list{list-style:none;margin:0 0 1.1rem}
+    .tip-list li{display:flex;align-items:flex-start;gap:10px;font-size:16px;margin-bottom:0.75rem;padding:0.75rem;background:var(--white);border:0.5px solid var(--border);border-radius:10px}
+    .tip-list li i{color:var(--gold-dark);font-size:20px;flex-shrink:0;margin-top:2px}
+
+    .sidebar-sticky{position:sticky;top:84px}
+    .sidebar-card{background:var(--white);border:0.5px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1.25rem}
+    .sidebar-card h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:0.5px solid var(--border)}
+    .sidebar-card p{font-size:13px;color:var(--text-muted);line-height:1.6;margin-bottom:1rem}
+    .sidebar-btn{display:block;background:var(--navy);color:white;text-align:center;padding:10px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:background 0.2s}
+    .sidebar-btn:hover{background:var(--navy-mid)}
+    .sidebar-btn.gold{background:var(--gold-dark);color:white}
+    .related-list{list-style:none}
+    .related-list li{padding:8px 0;border-bottom:0.5px solid var(--border);font-size:13px}
+    .related-list li:last-child{border-bottom:none}
+    .related-list a{color:var(--navy-mid);text-decoration:none}
+    .related-list a:hover{color:var(--gold-dark)}
+
+    .rate-update-badge{display:inline-flex;align-items:center;gap:6px;background:var(--gold-light);color:var(--gold-dark);font-size:12px;padding:5px 14px;border-radius:20px;border:0.5px solid rgba(201,168,76,0.4);margin-bottom:1.5rem;font-weight:500}
+
+    .article-footer{background:var(--navy-light);border-top:0.5px solid var(--border);padding:2rem;margin-top:3rem}
+    .article-footer-inner{max-width:760px;margin:0 auto;text-align:center}
+    .article-footer p{font-size:13px;color:var(--text-muted);font-style:italic;line-height:1.6}
+
+    footer{background:var(--navy);padding:1.5rem 2rem;text-align:center}
+    footer p{font-size:12px;color:rgba(255,255,255,0.3)}
+    footer a{color:rgba(255,255,255,0.4);text-decoration:none;margin:0 0.5rem}
+
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .article-layout{grid-template-columns:1fr}
+      .article-hero h1{font-size:26px}
+      .rate-card-grid{grid-template-columns:1fr 1fr}
+      .sidebar-sticky{position:static}
+    }
+    @media(max-width:480px){
+      .rate-card-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">MyHeloc<span>Rates</span>.com</a>
+  <ul class="nav-links">
+    <li><a href="/what-is-a-heloc.html">What is a HELOC?</a></li>
+    <li><a href="/heloc-rates-today.html">Rates Today</a></li>
+    <li><a href="/how-to-qualify-for-heloc.html">Qualify</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+  </ul>
+  <a href="/#calculator" class="nav-cta">Try Calculator</a>
+</nav>
+
+<div class="article-hero">
+  <div class="article-cat">HELOC Rates</div>
+  <h1>What Are Average HELOC Rates Right Now?</h1>
+  <div class="article-meta">
+    <span><i class="ti ti-calendar" aria-hidden="true"></i> <span class="dyn-monthyear">May 2026</span></span>
+    <span><i class="ti ti-clock" aria-hidden="true"></i> 7 min read</span>
+    <span><i class="ti ti-refresh" aria-hidden="true"></i> Updated weekly</span>
+  </div>
+</div>
+
+<div class="article-layout">
+
+  <article class="article-body">
+
+    <div class="toc">
+      <h4>In this guide</h4>
+      <ol>
+        <li><a href="#current-rates">Current average HELOC rates</a></li>
+        <li><a href="#what-drives-rates">What drives HELOC rates?</a></li>
+        <li><a href="#rate-by-credit">Rates by credit score</a></li>
+        <li><a href="#fixed-vs-variable">Fixed vs variable rate HELOCs</a></li>
+        <li><a href="#how-to-get-lower">How to get a lower rate</a></li>
+        <li><a href="#rate-vs-apr">Rate vs APR — what to compare</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </div>
+
+    <div class="rate-update-badge">
+      <i class="ti ti-refresh" aria-hidden="true"></i> Rates updated weekly — last reviewed <span class="dyn-monthyear">May 2026</span>
+    </div>
+
+    <p>HELOC interest rates are among the most searched terms in personal finance — and for good reason. Because most HELOCs carry a <strong>variable interest rate</strong>, even a small shift in the Federal Reserve's benchmark rate can meaningfully change your monthly payment. In this guide we break down current average HELOC rates, what moves them, and exactly how to position yourself for the best possible rate when you apply.</p>
+
+    <h2 id="current-rates">Current average HELOC rates</h2>
+    <p>HELOC rates are tied to the <strong>Prime Rate</strong>, which moves in step with Federal Reserve policy decisions. As of <span class="dyn-monthyear">May 2026</span>, average HELOC rates for well-qualified borrowers typically fall in the following ranges:</p>
+
+    <div class="rate-card-grid">
+      <div class="rate-card">
+        <div class="label">Excellent Credit (740+)</div>
+        <div class="rate gold">8.25% – 9.00%</div>
+        <div class="sublabel">APR range</div>
+      </div>
+      <div class="rate-card">
+        <div class="label">Good Credit (680–739)</div>
+        <div class="rate">9.00% – 10.50%</div>
+        <div class="sublabel">APR range</div>
+      </div>
+      <div class="rate-card">
+        <div class="label">Fair Credit (620–679)</div>
+        <div class="rate">10.50% – 13.00%+</div>
+        <div class="sublabel">APR range</div>
+      </div>
+    </div>
+
+    <div class="callout gold">
+      <strong>Important note on rates</strong>
+      <p>These are representative ranges based on national averages. Your actual rate will depend on your lender, credit score, loan-to-value ratio, income, and the current Prime Rate. Always get quotes from multiple lenders before committing — rates can vary by 1–2% for the same borrower profile.</p>
+    </div>
+
+    <h2 id="what-drives-rates">What drives HELOC rates?</h2>
+    <p>Unlike fixed-rate mortgages, most HELOC rates are not set in stone at closing. They move based on a combination of macroeconomic factors and your individual borrower profile.</p>
+
+    <h3>The Prime Rate and the Federal Reserve</h3>
+    <p>The single biggest driver of HELOC rates is the <strong>US Prime Rate</strong>, which is typically set at 3 percentage points above the Federal Funds Rate. When the Fed raises rates to combat inflation — as it did aggressively in 2022 and 2023 — HELOC rates rise too. When the Fed cuts rates, HELOC borrowers benefit from lower payments.</p>
+    <p>Your lender adds a fixed margin (typically 0% to 2%) on top of the Prime Rate. That margin is determined by your creditworthiness and the lender's own pricing.</p>
+
+    <h3>Your individual borrower factors</h3>
+    <table class="info-table">
+      <thead>
+        <tr><th>Factor</th><th>Impact on Your Rate</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Credit score</td><td>Largest individual factor — a 100-point difference can mean 1–2% rate difference</td></tr>
+        <tr><td>Combined loan-to-value (CLTV)</td><td>Lower CLTV = less risk for lender = better rate</td></tr>
+        <tr><td>Debt-to-income ratio (DTI)</td><td>Lower DTI signals stronger ability to repay</td></tr>
+        <tr><td>Income stability</td><td>Salaried employees often get better terms than self-employed</td></tr>
+        <tr><td>Credit line size</td><td>Larger lines sometimes carry slightly lower margins</td></tr>
+        <tr><td>Relationship with lender</td><td>Existing customers may get rate discounts</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="rate-by-credit">How your credit score affects your HELOC rate</h2>
+    <p>Your credit score is the most powerful lever you have control over when it comes to your HELOC rate. Here is what you can typically expect at different score ranges:</p>
+    <table class="info-table">
+      <thead>
+        <tr><th>Credit Score Range</th><th>Rate Impact</th><th>Typical Approval Odds</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>760 and above</td><td>Best available rates — lender's lowest margin</td><td>Very high</td></tr>
+        <tr><td>720–759</td><td>Competitive rates, minimal premium</td><td>High</td></tr>
+        <tr><td>680–719</td><td>Moderate premium above best rates</td><td>Good</td></tr>
+        <tr><td>640–679</td><td>Noticeable rate premium; fewer lender options</td><td>Moderate</td></tr>
+        <tr><td>620–639</td><td>Higher rates; limited lenders; may need more equity</td><td>Lower</td></tr>
+        <tr><td>Below 620</td><td>Most lenders will decline; specialist lenders only</td><td>Very low</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout green">
+      <strong>Pro tip</strong>
+      <p>Even a modest credit score improvement before you apply can save you thousands over the life of your HELOC. Paying down credit card balances below 30% utilisation is typically the fastest way to lift your score by 20–40 points.</p>
+    </div>
+
+    <h2 id="fixed-vs-variable">Fixed vs variable rate HELOCs</h2>
+    <p>The majority of HELOCs carry a <strong>variable rate</strong> — meaning your rate and payment can change every time your lender adjusts its Prime Rate-linked rate (often monthly or quarterly). However, some lenders offer options to lock in a fixed rate on part or all of your balance.</p>
+
+    <h3>Variable rate HELOC</h3>
+    <ul>
+      <li>Rate moves with the Prime Rate</li>
+      <li>Can benefit from Fed rate cuts</li>
+      <li>Creates payment uncertainty over time</li>
+      <li>Usually starts lower than fixed options</li>
+    </ul>
+
+    <h3>Fixed-rate conversion option</h3>
+    <ul>
+      <li>Lock in your current rate on a drawn balance</li>
+      <li>Predictable payments — easier to budget</li>
+      <li>Typically a slightly higher starting rate than variable</li>
+      <li>Not all lenders offer this — ask specifically before applying</li>
+    </ul>
+
+    <div class="callout">
+      <strong>Which should you choose?</strong>
+      <p>If you expect interest rates to fall, stay variable. If you need payment certainty — for example, you are using a HELOC for a fixed-cost renovation project — consider a lender that offers a fixed-rate lock option.</p>
+    </div>
+
+    <h2 id="how-to-get-lower">How to get a lower HELOC rate</h2>
+    <ul class="tip-list">
+      <li><i class="ti ti-star" aria-hidden="true"></i><span><strong>Improve your credit score before applying.</strong> Even a 20–30 point improvement can move you into a better rate tier. Pay down revolving balances, dispute any errors on your report, and avoid opening new credit in the months before you apply.</span></li>
+      <li><i class="ti ti-home" aria-hidden="true"></i><span><strong>Borrow less relative to your home value.</strong> A lower combined loan-to-value ratio (CLTV) signals less risk to lenders. If you can keep your CLTV below 80%, you will typically access better rates and more lender options.</span></li>
+      <li><i class="ti ti-building-bank" aria-hidden="true"></i><span><strong>Shop multiple lenders.</strong> Rates and margins vary significantly across banks, credit unions, and online lenders. Getting quotes from at least three lenders takes less than an hour and can save you thousands. Rate shopping within a 14-day window has minimal impact on your credit score.</span></li>
+      <li><i class="ti ti-users" aria-hidden="true"></i><span><strong>Leverage your existing banking relationship.</strong> Many banks and credit unions offer rate discounts of 0.25%–0.50% to existing customers who set up automatic payments from a checking account.</span></li>
+      <li><i class="ti ti-calendar-check" aria-hidden="true"></i><span><strong>Time your application.</strong> If the Fed is actively cutting rates, waiting even a few months could result in a meaningfully lower rate — particularly since HELOC rates track Prime closely and adjust quickly.</span></li>
+    </ul>
+
+    <h2 id="rate-vs-apr">Rate vs APR — what to actually compare</h2>
+    <p>When comparing HELOC offers, do not compare interest rates alone. The <strong>Annual Percentage Rate (APR)</strong> includes the interest rate plus certain fees, giving you a more complete picture of the true cost of borrowing.</p>
+    <p>However, HELOCs are variable-rate products, which makes APR comparisons less straightforward than with fixed-rate loans. Focus on these numbers when comparing lenders:</p>
+    <ul>
+      <li>The <strong>margin above Prime</strong> (this is your long-term rate cost)</li>
+      <li>Any <strong>introductory or teaser rates</strong> (and what the rate reverts to)</li>
+      <li><strong>Annual fees</strong> (typically $50–$100/year)</li>
+      <li><strong>Closing costs</strong> (can range from $0 to $1,500+)</li>
+      <li><strong>Early closure fees</strong> (usually apply if you close within 2–3 years)</li>
+      <li><strong>Rate caps</strong> — the maximum your rate can rise (lifetime and periodic)</li>
+    </ul>
+
+    <h2 id="faq">Frequently asked questions</h2>
+
+    <h3>Do HELOC rates change every month?</h3>
+    <p>Most HELOC rates are tied to the Prime Rate and adjust whenever Prime changes, which typically happens after each Federal Reserve policy meeting. However, your specific adjustment frequency depends on your loan agreement — some adjust monthly, some quarterly.</p>
+
+    <h3>Are HELOC rates higher than mortgage rates?</h3>
+    <p>Generally, yes. Because HELOCs are in a second-lien position on your home (behind your primary mortgage), they carry slightly more risk for lenders, which is reflected in higher rates than first-mortgage products.</p>
+
+    <h3>Can I negotiate my HELOC rate?</h3>
+    <p>Yes — especially the lender's margin above Prime. If you have excellent credit and significant equity, you have negotiating leverage. Use competing offers from other lenders as leverage to request a rate match or reduction.</p>
+
+    <h3>Will my HELOC rate go down if the Fed cuts rates?</h3>
+    <p>Yes. Because most HELOC rates are variable and tied to Prime (which tracks the Fed Funds Rate), a Fed rate cut should result in a lower HELOC rate — usually within one to two billing cycles after the cut.</p>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="sidebar-sticky">
+      <div class="sidebar-card">
+        <h4><i class="ti ti-calculator" aria-hidden="true"></i> Calculate Your Payment</h4>
+        <p>See what a HELOC at current rates would cost you each month — free, no sign-up required.</p>
+        <a href="/#calculator" class="sidebar-btn">Open Calculator</a>
+      </div>
+      <div class="sidebar-card">
+        <h4><i class="ti ti-list-check" aria-hidden="true"></i> Do You Qualify?</h4>
+        <p>Check the credit score, equity, and income requirements most lenders look for.</p>
+        <a href="/how-to-qualify-for-heloc.html" class="sidebar-btn gold">See Requirements</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>Related guides</h4>
+        <ul class="related-list">
+          <li><a href="/blog/blog-post-1-what-is-a-heloc.html">What is a HELOC and how does it work?</a></li>
+          <li><a href="/blog/blog-post-3-credit-score-for-heloc.html">Credit score needed for a HELOC</a></li>
+          <li><a href="/heloc-vs-home-equity-loan.html">HELOC vs home equity loan</a></li>
+          <li><a href="/blog/blog-post-heloc-for-home-improvements.html">Using a HELOC for home improvements</a></li>
+          <li><a href="/heloc-pros-and-cons.html">HELOC pros and cons</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<div class="article-footer">
+  <div class="article-footer-inner">
+    <p><strong>Editorial disclaimer:</strong> Rate ranges shown on this page are representative national averages for informational purposes only. They are not a loan offer or guarantee of eligibility. Actual rates vary by lender and individual borrower. Always consult a licensed financial professional before making borrowing decisions. See our full <a href="/disclaimer.html">Disclaimer</a>.</p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; <span class="dyn-year">2026</span> MyHelocRates.com &nbsp;|&nbsp;
+    <a href="/privacy-policy.html">Privacy</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/terms-of-use.html">Terms</a>
+    <a href="/">Home</a>
+  </p>
+</footer>
+
+
+<script>
+  // Dynamic year & date — auto-updates every year, no maintenance needed
+  (function() {
+    var now   = new Date();
+    var year  = now.getFullYear();
+    var month = now.toLocaleString("en-US", { month: "long" });
+    // © year spans
+    document.querySelectorAll(".dyn-year").forEach(function(el) {
+      el.textContent = year;
+    });
+    // Month + year spans (e.g. "May 2026")
+    document.querySelectorAll(".dyn-monthyear").forEach(function(el) {
+      el.textContent = month + " " + year;
+    });
+    // Last-updated spans (e.g. "May 1, 2026")
+    document.querySelectorAll(".dyn-updated").forEach(function(el) {
+      el.textContent = month + " 1, " + year;
+    });
+  })();
+</script>
+
+</body>
+</html>

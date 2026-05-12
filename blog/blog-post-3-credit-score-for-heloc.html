@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Find out what credit score you need to qualify for a HELOC, how your score affects your rate, and the fastest ways to improve it before you apply.">
+  <title>What Credit Score Do You Need for a HELOC? — MyHelocRates.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#0f2557;--navy-mid:#1a3a6b;--gold:#c9a84c;--gold-dark:#a07c28;--gold-light:#f5ecd4;--navy-light:#e8eef7;--white:#ffffff;--bg:#f9f8f6;--text:#1a1a2e;--text-muted:#5f5e5a;--border:rgba(0,0,0,0.10)}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    .nav{background:var(--navy);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100}
+    .nav-logo{color:var(--gold);font-size:20px;font-weight:600;text-decoration:none}
+    .nav-logo span{color:white}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:rgba(255,255,255,0.72);font-size:14px;text-decoration:none}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-cta{background:var(--gold);color:var(--navy);font-size:14px;font-weight:600;padding:9px 18px;border-radius:8px;text-decoration:none}
+
+    .article-hero{background:var(--navy);padding:3.5rem 2rem 2.5rem;text-align:center}
+    .article-cat{display:inline-block;background:rgba(201,168,76,0.15);color:var(--gold);font-size:12px;padding:4px 14px;border-radius:20px;border:0.5px solid rgba(201,168,76,0.3);margin-bottom:1rem;font-weight:500}
+    .article-hero h1{font-family:'DM Serif Display',serif;color:white;font-size:36px;font-weight:400;max-width:720px;margin:0 auto 1rem;line-height:1.25}
+    .article-meta{color:rgba(255,255,255,0.5);font-size:13px;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap}
+    .article-meta span{display:flex;align-items:center;gap:5px}
+
+    .article-layout{max-width:1060px;margin:3rem auto;padding:0 2rem;display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start}
+    .article-body h2{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem}
+    .article-body h3{font-size:18px;font-weight:600;color:var(--text);margin:1.75rem 0 0.6rem}
+    .article-body p{font-size:16px;margin-bottom:1.1rem;color:var(--text)}
+    .article-body ul,.article-body ol{margin:0 0 1.1rem 1.5rem}
+    .article-body li{font-size:16px;margin-bottom:0.5rem}
+    .article-body a{color:var(--navy-mid)}
+    .article-body strong{font-weight:600}
+
+    .callout{background:var(--navy-light);border-left:4px solid var(--navy);border-radius:0 10px 10px 0;padding:1.25rem 1.5rem;margin:1.75rem 0}
+    .callout.gold{background:var(--gold-light);border-left-color:var(--gold-dark)}
+    .callout.green{background:#eaf3de;border-left-color:#3b6d11}
+    .callout.red{background:#fce8e8;border-left-color:#a32d2d}
+    .callout p{margin:0;font-size:15px}
+    .callout strong{display:block;margin-bottom:0.3rem;font-size:13px;text-transform:uppercase;letter-spacing:0.4px;color:var(--navy)}
+    .callout.gold strong{color:var(--gold-dark)}
+    .callout.green strong{color:#3b6d11}
+    .callout.red strong{color:#a32d2d}
+
+    /* SCORE METER */
+    .score-bands{margin:1.75rem 0;border-radius:14px;overflow:hidden;border:0.5px solid var(--border)}
+    .score-band{display:grid;grid-template-columns:130px 1fr auto;align-items:center;padding:14px 16px;gap:1rem;border-bottom:0.5px solid var(--border)}
+    .score-band:last-child{border-bottom:none}
+    .score-band.excellent{background:#eaf3de}
+    .score-band.good{background:#e8eef7}
+    .score-band.fair{background:#fff8e6}
+    .score-band.poor{background:#fce8e8}
+    .score-band.very-poor{background:#f5f0f5}
+    .band-range{font-size:15px;font-weight:600;color:var(--text)}
+    .band-label{font-size:13px;color:var(--text-muted)}
+    .band-verdict{font-size:13px;font-weight:600;white-space:nowrap}
+    .band-verdict.v-yes{color:#3b6d11}
+    .band-verdict.v-maybe{color:#a07c28}
+    .band-verdict.v-hard{color:#c05000}
+    .band-verdict.v-no{color:#a32d2d}
+
+    .info-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:15px}
+    .info-table th{background:var(--navy);color:white;padding:10px 14px;text-align:left;font-weight:500;font-size:13px}
+    .info-table td{padding:10px 14px;border-bottom:0.5px solid var(--border)}
+    .info-table tr:last-child td{border-bottom:none}
+    .info-table tr:nth-child(even) td{background:var(--navy-light)}
+
+    .toc{background:var(--white);border:0.5px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:2rem}
+    .toc h4{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);margin-bottom:0.75rem}
+    .toc ol{margin:0 0 0 1.25rem}
+    .toc li{font-size:14px;margin-bottom:0.4rem}
+    .toc a{color:var(--navy-mid);text-decoration:none}
+    .toc a:hover{color:var(--gold-dark)}
+
+    .boost-cards{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.75rem 0}
+    .boost-card{background:var(--white);border:0.5px solid var(--border);border-radius:12px;padding:1.1rem}
+    .boost-card .boost-header{display:flex;align-items:center;gap:8px;margin-bottom:0.5rem}
+    .boost-card .boost-icon{width:36px;height:36px;border-radius:9px;background:var(--navy-light);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .boost-card .boost-icon i{color:var(--navy);font-size:18px}
+    .boost-card h4{font-size:14px;font-weight:600;color:var(--text)}
+    .boost-card p{font-size:13px;color:var(--text-muted);line-height:1.6}
+    .boost-card .impact{font-size:12px;color:var(--gold-dark);font-weight:600;margin-top:0.5rem}
+
+    .sidebar-sticky{position:sticky;top:84px}
+    .sidebar-card{background:var(--white);border:0.5px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1.25rem}
+    .sidebar-card h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:0.5px solid var(--border)}
+    .sidebar-card p{font-size:13px;color:var(--text-muted);line-height:1.6;margin-bottom:1rem}
+    .sidebar-btn{display:block;background:var(--navy);color:white;text-align:center;padding:10px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:background 0.2s}
+    .sidebar-btn:hover{background:var(--navy-mid)}
+    .sidebar-btn.gold{background:var(--gold-dark);color:white}
+    .related-list{list-style:none}
+    .related-list li{padding:8px 0;border-bottom:0.5px solid var(--border);font-size:13px}
+    .related-list li:last-child{border-bottom:none}
+    .related-list a{color:var(--navy-mid);text-decoration:none}
+    .related-list a:hover{color:var(--gold-dark)}
+
+    .article-footer{background:var(--navy-light);border-top:0.5px solid var(--border);padding:2rem;margin-top:3rem}
+    .article-footer-inner{max-width:760px;margin:0 auto;text-align:center}
+    .article-footer p{font-size:13px;color:var(--text-muted);font-style:italic;line-height:1.6}
+
+    footer{background:var(--navy);padding:1.5rem 2rem;text-align:center}
+    footer p{font-size:12px;color:rgba(255,255,255,0.3)}
+    footer a{color:rgba(255,255,255,0.4);text-decoration:none;margin:0 0.5rem}
+
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .article-layout{grid-template-columns:1fr}
+      .article-hero h1{font-size:26px}
+      .boost-cards{grid-template-columns:1fr}
+      .score-band{grid-template-columns:110px 1fr auto}
+      .sidebar-sticky{position:static}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">MyHeloc<span>Rates</span>.com</a>
+  <ul class="nav-links">
+    <li><a href="/what-is-a-heloc.html">What is a HELOC?</a></li>
+    <li><a href="/heloc-rates-today.html">Rates Today</a></li>
+    <li><a href="/how-to-qualify-for-heloc.html">Qualify</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+  </ul>
+  <a href="/#calculator" class="nav-cta">Try Calculator</a>
+</nav>
+
+<div class="article-hero">
+  <div class="article-cat">Qualifying for a HELOC</div>
+  <h1>What Credit Score Do You Need for a HELOC?</h1>
+  <div class="article-meta">
+    <span><i class="ti ti-calendar" aria-hidden="true"></i> <span class="dyn-monthyear">May 2026</span></span>
+    <span><i class="ti ti-clock" aria-hidden="true"></i> 8 min read</span>
+    <span><i class="ti ti-user" aria-hidden="true"></i> MyHelocRates Editorial Team</span>
+  </div>
+</div>
+
+<div class="article-layout">
+
+  <article class="article-body">
+
+    <div class="toc">
+      <h4>In this guide</h4>
+      <ol>
+        <li><a href="#minimum-score">Minimum credit score for a HELOC</a></li>
+        <li><a href="#score-by-lender">Score requirements by lender type</a></li>
+        <li><a href="#score-vs-rate">How your score affects your rate</a></li>
+        <li><a href="#other-factors">Other qualifying factors beyond credit</a></li>
+        <li><a href="#boost-score">How to boost your score before applying</a></li>
+        <li><a href="#bad-credit">Can you get a HELOC with bad credit?</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </div>
+
+    <p>Your credit score is one of the most important factors lenders consider when you apply for a HELOC. It affects not just whether you are approved, but also what interest rate you are offered — and that rate difference can translate into thousands of dollars in extra interest over the life of your line of credit. This guide explains exactly what score you need, how lenders use it, and the fastest ways to improve it before you apply.</p>
+
+    <h2 id="minimum-score">Minimum credit score for a HELOC</h2>
+    <p>Most lenders require a minimum credit score of <strong>620</strong> to qualify for a HELOC. However, a score of 620 will typically only get you approved at the higher end of the rate range with fewer lender options. To access competitive rates and the widest choice of lenders, you should aim for a score of <strong>700 or above</strong> before applying.</p>
+
+    <div class="score-bands">
+      <div class="score-band excellent">
+        <div class="band-range">760 – 850</div>
+        <div class="band-label">Exceptional — best rates, maximum lender options</div>
+        <div class="band-verdict v-yes">✓ Excellent</div>
+      </div>
+      <div class="score-band excellent">
+        <div class="band-range">720 – 759</div>
+        <div class="band-label">Very good — competitive rates, high approval odds</div>
+        <div class="band-verdict v-yes">✓ Very Good</div>
+      </div>
+      <div class="score-band good">
+        <div class="band-range">680 – 719</div>
+        <div class="band-label">Good — approved with moderate rate premium</div>
+        <div class="band-verdict v-yes">✓ Good</div>
+      </div>
+      <div class="score-band fair">
+        <div class="band-range">640 – 679</div>
+        <div class="band-label">Fair — fewer lenders, higher rate, may need more equity</div>
+        <div class="band-verdict v-maybe">⚡ Possible</div>
+      </div>
+      <div class="score-band poor">
+        <div class="band-range">620 – 639</div>
+        <div class="band-label">Minimum — limited options, highest rates, strict requirements</div>
+        <div class="band-verdict v-hard">⚠ Difficult</div>
+      </div>
+      <div class="score-band very-poor">
+        <div class="band-range">Below 620</div>
+        <div class="band-label">Below minimum — most mainstream lenders will decline</div>
+        <div class="band-verdict v-no">✗ Most lenders</div>
+      </div>
+    </div>
+
+    <div class="callout gold">
+      <strong>The 700 target</strong>
+      <p>While 620 is the technical floor for most lenders, think of 700 as your practical target. At 700+, you unlock significantly better rates and a much wider range of lenders to shop from. The difference between a 650 and 720 score can easily be 1.5% in rate — on a $100,000 HELOC, that is $1,500 per year in extra interest.</p>
+    </div>
+
+    <h2 id="score-by-lender">Score requirements by lender type</h2>
+    <p>Not all lenders use the same credit score thresholds. Here is how requirements typically differ across lender types:</p>
+    <table class="info-table">
+      <thead>
+        <tr><th>Lender Type</th><th>Typical Min. Score</th><th>Notes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Large national banks</td><td>660 – 680</td><td>Stricter underwriting, more consistent standards</td></tr>
+        <tr><td>Credit unions</td><td>620 – 640</td><td>Often more flexible; membership required</td></tr>
+        <tr><td>Online lenders</td><td>640 – 660</td><td>Faster process; rates vary widely</td></tr>
+        <tr><td>Community banks</td><td>620 – 650</td><td>May consider full picture more than just score</td></tr>
+        <tr><td>Specialist / non-QM lenders</td><td>580 – 620</td><td>Higher rates; last resort for lower scores</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="score-vs-rate">How your credit score directly affects your HELOC rate</h2>
+    <p>HELOC lenders do not just approve or decline based on credit score — they also use it to set your interest rate margin above Prime. The better your score, the lower the margin, and the less interest you pay every single month.</p>
+    <table class="info-table">
+      <thead>
+        <tr><th>Credit Score</th><th>Typical Margin Above Prime</th><th>Rate Example*</th><th>Monthly Cost on $75k</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>760+</td><td>0.00% – 0.25%</td><td>8.50%</td><td>$531</td></tr>
+        <tr><td>720 – 759</td><td>0.25% – 0.75%</td><td>9.00%</td><td>$563</td></tr>
+        <tr><td>680 – 719</td><td>0.75% – 1.50%</td><td>9.75%</td><td>$609</td></tr>
+        <tr><td>640 – 679</td><td>1.50% – 2.50%</td><td>10.75%</td><td>$672</td></tr>
+        <tr><td>620 – 639</td><td>2.50% – 4.00%</td><td>12.00%</td><td>$750</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:13px;color:var(--text-muted);">*Assumes Prime Rate of 8.50%. Monthly cost is interest-only payment during draw period. For illustrative purposes only.</p>
+
+    <h2 id="other-factors">Other qualifying factors beyond your credit score</h2>
+    <p>While credit score is the headline number, lenders evaluate several other factors when underwriting a HELOC application:</p>
+    <ul>
+      <li><strong>Home equity and LTV:</strong> Most lenders require you to retain at least 15–20% equity in your home after the HELOC. A lower combined loan-to-value (CLTV) ratio strengthens your application significantly.</li>
+      <li><strong>Debt-to-income ratio (DTI):</strong> Most lenders cap DTI at 43–50%. This includes all monthly debt payments (mortgage, car loans, credit cards, student loans) divided by your gross monthly income.</li>
+      <li><strong>Income verification:</strong> You will need to document stable income — typically via W-2s, tax returns, and recent pay stubs.</li>
+      <li><strong>Payment history:</strong> Lenders scrutinise your mortgage payment history especially closely. Even one or two late payments in the past 12 months can hurt your application.</li>
+      <li><strong>Property type:</strong> Primary residences get the best terms. Second homes and investment properties face higher requirements and rates.</li>
+    </ul>
+
+    <h2 id="boost-score">How to boost your credit score before applying</h2>
+    <p>The good news is that credit scores are not fixed. With the right actions, many borrowers can improve their score by 30–60 points within three to six months. Here are the most impactful moves:</p>
+
+    <div class="boost-cards">
+      <div class="boost-card">
+        <div class="boost-header">
+          <div class="boost-icon"><i class="ti ti-credit-card" aria-hidden="true"></i></div>
+          <h4>Pay down credit card balances</h4>
+        </div>
+        <p>Credit utilisation (balance ÷ limit) accounts for about 30% of your score. Getting below 30% on each card — and ideally below 10% — delivers the fastest score improvement.</p>
+        <div class="impact">Potential impact: +20 to +50 points</div>
+      </div>
+      <div class="boost-card">
+        <div class="boost-header">
+          <div class="boost-icon"><i class="ti ti-calendar-check" aria-hidden="true"></i></div>
+          <h4>Never miss a payment</h4>
+        </div>
+        <p>Payment history is 35% of your FICO score — the largest single factor. Set up autopay for at least the minimum on every account to ensure a clean recent history going into your application.</p>
+        <div class="impact">Potential impact: prevents major drops</div>
+      </div>
+      <div class="boost-card">
+        <div class="boost-header">
+          <div class="boost-icon"><i class="ti ti-file-search" aria-hidden="true"></i></div>
+          <h4>Dispute errors on your report</h4>
+        </div>
+        <p>One in five credit reports contains an error significant enough to affect a score. Pull your free reports from AnnualCreditReport.com and dispute anything inaccurate — creditors have 30 days to respond.</p>
+        <div class="impact">Potential impact: +10 to +40 points</div>
+      </div>
+      <div class="boost-card">
+        <div class="boost-header">
+          <div class="boost-icon"><i class="ti ti-ban" aria-hidden="true"></i></div>
+          <h4>Avoid new credit applications</h4>
+        </div>
+        <p>Each hard inquiry can shave a few points off your score temporarily. In the six months before your HELOC application, avoid applying for new credit cards, car loans, or other lines of credit.</p>
+        <div class="impact">Potential impact: preserves 5–15 points</div>
+      </div>
+      <div class="boost-card">
+        <div class="boost-header">
+          <div class="boost-icon"><i class="ti ti-history" aria-hidden="true"></i></div>
+          <h4>Keep old accounts open</h4>
+        </div>
+        <p>The length of your credit history makes up 15% of your score. Closing old credit card accounts — even ones you do not use — can shorten your average account age and reduce your available credit limit, both of which hurt your score.</p>
+        <div class="impact">Potential impact: preserves 5–20 points</div>
+      </div>
+      <div class="boost-card">
+        <div class="boost-header">
+          <div class="boost-icon"><i class="ti ti-device-mobile" aria-hidden="true"></i></div>
+          <h4>Use Experian Boost</h4>
+        </div>
+        <p>Experian Boost lets you add on-time utility, phone, and streaming payments to your Experian credit file for free. It will not help with all lenders but can give your Experian score a quick, legitimate lift.</p>
+        <div class="impact">Potential impact: +5 to +20 points</div>
+      </div>
+    </div>
+
+    <div class="callout green">
+      <strong>Timeline tip</strong>
+      <p>Start your credit improvement plan at least three to six months before you intend to apply. Score changes from paying down balances can appear on your report within 30–60 days of the account statement closing date. Give yourself enough runway to see results before a lender pulls your credit.</p>
+    </div>
+
+    <h2 id="bad-credit">Can you get a HELOC with bad credit?</h2>
+    <p>It is difficult but not always impossible. If your score is below 620, here are the options worth exploring:</p>
+    <ul>
+      <li><strong>Credit unions:</strong> Member-owned institutions often take a more holistic view of your application and may work with scores down to 580 in some cases.</li>
+      <li><strong>Community banks:</strong> Local lenders who know their market may consider compensating factors like a very low CLTV or long-standing customer relationship.</li>
+      <li><strong>Non-QM or portfolio lenders:</strong> Some specialist lenders offer home equity products to lower-credit borrowers, though rates will be significantly higher.</li>
+      <li><strong>Wait and rebuild:</strong> For most borrowers with scores below 620, the smartest move is to spend six to twelve months improving their credit before applying. The rate difference between a 600 and 680 score is large enough that waiting usually pays off handsomely.</li>
+    </ul>
+
+    <div class="callout red">
+      <strong>A word of caution</strong>
+      <p>Be wary of lenders promising "guaranteed approval" for HELOCs regardless of credit score. Products marketed this way often carry extremely high rates, large fees, or predatory terms. Always read the full loan agreement and compare the APR before signing anything.</p>
+    </div>
+
+    <h2 id="faq">Frequently asked questions</h2>
+
+    <h3>Which credit score do HELOC lenders use?</h3>
+    <p>Most lenders use FICO scores. If you are applying jointly, lenders typically use the lower of the two borrowers' middle scores (from Equifax, Experian, and TransUnion). Check your FICO Score 2, 4, and 5 specifically — these are the mortgage-specific versions most commonly used for home equity products.</p>
+
+    <h3>Does applying for a HELOC hurt my credit score?</h3>
+    <p>Yes, a hard inquiry will appear on your credit report and may reduce your score by a few points temporarily. However, most scoring models treat multiple HELOC inquiries within a 14-day window as a single inquiry, so shopping around with multiple lenders in a short period has minimal impact.</p>
+
+    <h3>How long does it take to improve my credit score?</h3>
+    <p>Paying down balances can improve your score within one to two billing cycles (30–60 days). More significant improvements — such as recovering from a missed payment or building a longer history — take three to twelve months. Negative marks like collections or late payments have less impact over time and are removed from your report after seven years.</p>
+
+    <h3>Will my HELOC application affect my credit long-term?</h3>
+    <p>A new HELOC will appear as a new account on your credit report, which may temporarily lower your average account age. However, using it responsibly — keeping the balance low and making on-time payments — will build your credit history positively over time.</p>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="sidebar-sticky">
+      <div class="sidebar-card">
+        <h4><i class="ti ti-calculator" aria-hidden="true"></i> HELOC Calculator</h4>
+        <p>See what a HELOC would cost at different credit score tiers — use our free calculator to compare scenarios.</p>
+        <a href="/#calculator" class="sidebar-btn">Try the Calculator</a>
+      </div>
+      <div class="sidebar-card">
+        <h4><i class="ti ti-chart-line" aria-hidden="true"></i> Current HELOC Rates</h4>
+        <p>See current average HELOC rates by credit score range and find out where you stand.</p>
+        <a href="/heloc-rates-today.html" class="sidebar-btn gold">View Rates Today</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>Related guides</h4>
+        <ul class="related-list">
+          <li><a href="/blog/blog-post-1-what-is-a-heloc.html">What is a HELOC and how does it work?</a></li>
+          <li><a href="/blog/blog-post-2-average-heloc-rates.html">Average HELOC rates right now</a></li>
+          <li><a href="/how-to-qualify-for-heloc.html">Full HELOC qualification guide</a></li>
+          <li><a href="/heloc-vs-home-equity-loan.html">HELOC vs home equity loan</a></li>
+          <li><a href="/blog/blog-post-can-lender-freeze-heloc.html">Can a lender freeze your HELOC?</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<div class="article-footer">
+  <div class="article-footer-inner">
+    <p><strong>Editorial disclaimer:</strong> The content on this page is for informational and educational purposes only. Credit requirements, rates, and lending standards vary by lender and change over time. This does not constitute financial or credit advice. Always consult a licensed financial professional and verify requirements directly with lenders before applying. See our full <a href="/disclaimer.html">Disclaimer</a>.</p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; <span class="dyn-year">2026</span> MyHelocRates.com &nbsp;|&nbsp;
+    <a href="/privacy-policy.html">Privacy</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/terms-of-use.html">Terms</a>
+    <a href="/">Home</a>
+  </p>
+</footer>
+
+
+<script>
+  // Dynamic year & date — auto-updates every year, no maintenance needed
+  (function() {
+    var now   = new Date();
+    var year  = now.getFullYear();
+    var month = now.toLocaleString("en-US", { month: "long" });
+    // © year spans
+    document.querySelectorAll(".dyn-year").forEach(function(el) {
+      el.textContent = year;
+    });
+    // Month + year spans (e.g. "May 2026")
+    document.querySelectorAll(".dyn-monthyear").forEach(function(el) {
+      el.textContent = month + " " + year;
+    });
+    // Last-updated spans (e.g. "May 1, 2026")
+    document.querySelectorAll(".dyn-updated").forEach(function(el) {
+      el.textContent = month + " 1, " + year;
+    });
+  })();
+</script>
+
+</body>
+</html>

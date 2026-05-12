@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A HELOC (Home Equity Line of Credit) lets you borrow against your home's equity. Learn exactly how a HELOC works, what it costs, and whether it's right for you.">
+  <title>What is a HELOC and How Does It Work? — MyHelocRates.com</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    :root{--navy:#0f2557;--navy-mid:#1a3a6b;--gold:#c9a84c;--gold-dark:#a07c28;--gold-light:#f5ecd4;--navy-light:#e8eef7;--white:#ffffff;--bg:#f9f8f6;--text:#1a1a2e;--text-muted:#5f5e5a;--border:rgba(0,0,0,0.10)}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7}
+    .nav{background:var(--navy);padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;position:sticky;top:0;z-index:100}
+    .nav-logo{color:var(--gold);font-size:20px;font-weight:600;text-decoration:none}
+    .nav-logo span{color:white}
+    .nav-links{display:flex;gap:1.5rem;list-style:none}
+    .nav-links a{color:rgba(255,255,255,0.72);font-size:14px;text-decoration:none}
+    .nav-links a:hover{color:var(--gold)}
+    .nav-cta{background:var(--gold);color:var(--navy);font-size:14px;font-weight:600;padding:9px 18px;border-radius:8px;text-decoration:none}
+
+    .article-hero{background:var(--navy);padding:3.5rem 2rem 2.5rem;text-align:center}
+    .article-cat{display:inline-block;background:rgba(201,168,76,0.15);color:var(--gold);font-size:12px;padding:4px 14px;border-radius:20px;border:0.5px solid rgba(201,168,76,0.3);margin-bottom:1rem;font-weight:500}
+    .article-hero h1{font-family:'DM Serif Display',serif;color:white;font-size:36px;font-weight:400;max-width:720px;margin:0 auto 1rem;line-height:1.25}
+    .article-meta{color:rgba(255,255,255,0.5);font-size:13px;display:flex;justify-content:center;align-items:center;gap:1rem;flex-wrap:wrap}
+    .article-meta span{display:flex;align-items:center;gap:5px}
+
+    .article-layout{max-width:1060px;margin:3rem auto;padding:0 2rem;display:grid;grid-template-columns:1fr 280px;gap:3rem;align-items:start}
+    .article-body h2{font-family:'DM Serif Display',serif;font-size:26px;font-weight:400;color:var(--navy);margin:2.5rem 0 1rem}
+    .article-body h3{font-size:18px;font-weight:600;color:var(--text);margin:1.75rem 0 0.6rem}
+    .article-body p{font-size:16px;margin-bottom:1.1rem;color:var(--text)}
+    .article-body ul,.article-body ol{margin:0 0 1.1rem 1.5rem}
+    .article-body li{font-size:16px;margin-bottom:0.5rem}
+    .article-body a{color:var(--navy-mid)}
+    .article-body strong{font-weight:600}
+
+    .callout{background:var(--navy-light);border-left:4px solid var(--navy);border-radius:0 10px 10px 0;padding:1.25rem 1.5rem;margin:1.75rem 0}
+    .callout.gold{background:var(--gold-light);border-left-color:var(--gold-dark)}
+    .callout p{margin:0;font-size:15px}
+    .callout strong{display:block;margin-bottom:0.3rem;font-size:14px;text-transform:uppercase;letter-spacing:0.4px;color:var(--navy)}
+    .callout.gold strong{color:var(--gold-dark)}
+
+    .info-table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:15px}
+    .info-table th{background:var(--navy);color:white;padding:10px 14px;text-align:left;font-weight:500;font-size:13px}
+    .info-table td{padding:10px 14px;border-bottom:0.5px solid var(--border)}
+    .info-table tr:last-child td{border-bottom:none}
+    .info-table tr:nth-child(even) td{background:var(--navy-light)}
+
+    .toc{background:var(--white);border:0.5px solid var(--border);border-radius:12px;padding:1.25rem;margin-bottom:2rem}
+    .toc h4{font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:0.5px;color:var(--text-muted);margin-bottom:0.75rem}
+    .toc ol{margin:0 0 0 1.25rem}
+    .toc li{font-size:14px;margin-bottom:0.4rem}
+    .toc a{color:var(--navy-mid);text-decoration:none}
+    .toc a:hover{color:var(--gold-dark)}
+
+    .sidebar-sticky{position:sticky;top:84px}
+    .sidebar-card{background:var(--white);border:0.5px solid var(--border);border-radius:14px;padding:1.25rem;margin-bottom:1.25rem}
+    .sidebar-card h4{font-size:14px;font-weight:600;color:var(--navy);margin-bottom:0.75rem;padding-bottom:0.5rem;border-bottom:0.5px solid var(--border)}
+    .sidebar-card p{font-size:13px;color:var(--text-muted);line-height:1.6;margin-bottom:1rem}
+    .sidebar-btn{display:block;background:var(--navy);color:white;text-align:center;padding:10px;border-radius:8px;font-size:14px;font-weight:600;text-decoration:none;transition:background 0.2s}
+    .sidebar-btn:hover{background:var(--navy-mid)}
+    .sidebar-btn.gold{background:var(--gold-dark);color:white}
+    .related-list{list-style:none}
+    .related-list li{padding:8px 0;border-bottom:0.5px solid var(--border);font-size:13px}
+    .related-list li:last-child{border-bottom:none}
+    .related-list a{color:var(--navy-mid);text-decoration:none}
+    .related-list a:hover{color:var(--gold-dark)}
+
+    .article-footer{background:var(--navy-light);border-top:0.5px solid var(--border);padding:2rem;margin-top:3rem}
+    .article-footer-inner{max-width:760px;margin:0 auto;text-align:center}
+    .article-footer p{font-size:13px;color:var(--text-muted);font-style:italic;line-height:1.6}
+
+    footer{background:var(--navy);padding:1.5rem 2rem;text-align:center}
+    footer p{font-size:12px;color:rgba(255,255,255,0.3)}
+    footer a{color:rgba(255,255,255,0.4);text-decoration:none;margin:0 0.5rem}
+
+    @media(max-width:768px){
+      .nav-links{display:none}
+      .article-layout{grid-template-columns:1fr}
+      .article-hero h1{font-size:26px}
+      .sidebar-sticky{position:static}
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">MyHeloc<span>Rates</span>.com</a>
+  <ul class="nav-links">
+    <li><a href="/what-is-a-heloc.html">What is a HELOC?</a></li>
+    <li><a href="/heloc-rates-today.html">Rates Today</a></li>
+    <li><a href="/how-to-qualify-for-heloc.html">Qualify</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+  </ul>
+  <a href="/#calculator" class="nav-cta">Try Calculator</a>
+</nav>
+
+<div class="article-hero">
+  <div class="article-cat">HELOC Basics</div>
+  <h1>What is a HELOC and How Does It Work?</h1>
+  <div class="article-meta">
+    <span><i class="ti ti-calendar" aria-hidden="true"></i> <span class="dyn-monthyear">May 2026</span></span>
+    <span><i class="ti ti-clock" aria-hidden="true"></i> 8 min read</span>
+    <span><i class="ti ti-user" aria-hidden="true"></i> MyHelocRates Editorial Team</span>
+  </div>
+</div>
+
+<div class="article-layout">
+
+  <!-- MAIN CONTENT -->
+  <article class="article-body">
+
+    <div class="toc">
+      <h4>In this guide</h4>
+      <ol>
+        <li><a href="#what-is-heloc">What is a HELOC?</a></li>
+        <li><a href="#how-it-works">How does a HELOC work?</a></li>
+        <li><a href="#draw-repayment">Draw period vs repayment period</a></li>
+        <li><a href="#rates">HELOC interest rates explained</a></li>
+        <li><a href="#pros-cons">Pros and cons</a></li>
+        <li><a href="#who-qualifies">Who qualifies?</a></li>
+        <li><a href="#heloc-vs-heloan">HELOC vs home equity loan</a></li>
+        <li><a href="#faq">Frequently asked questions</a></li>
+      </ol>
+    </div>
+
+    <p>If you own a home and have been paying your mortgage for a few years, you may be sitting on a significant financial resource without even realising it — your home equity. A <strong>Home Equity Line of Credit (HELOC)</strong> is one of the most flexible ways to access that equity. In this guide, we explain exactly what a HELOC is, how it works, what it costs, and how to decide if it is right for your situation.</p>
+
+    <h2 id="what-is-heloc">What is a HELOC?</h2>
+    <p>A HELOC is a revolving line of credit secured against the equity in your home. Think of it like a credit card backed by your house — you are approved for a maximum credit limit, and you can draw from that limit whenever you need funds, repay it, and draw again during a set period.</p>
+    <p>Your home equity is the difference between what your home is currently worth and what you still owe on your mortgage. For example, if your home is worth $400,000 and you owe $200,000 on your mortgage, you have $200,000 in equity. Lenders typically allow you to borrow up to 80–90% of your home's value minus your existing mortgage balance.</p>
+
+    <div class="callout">
+      <strong>Quick Example</strong>
+      <p>Home value: $400,000 | Mortgage balance: $200,000 | Lender max LTV: 85%<br>
+      Maximum HELOC: ($400,000 × 85%) − $200,000 = <strong>$140,000</strong></p>
+    </div>
+
+    <h2 id="how-it-works">How does a HELOC work?</h2>
+    <p>A HELOC operates in two distinct phases: the <strong>draw period</strong> and the <strong>repayment period</strong>. Understanding both is essential before you apply.</p>
+    <p>During the draw period (typically 10 years), you can borrow from your credit line as needed. You might access funds via a debit card linked to the account, by writing a check, or through an online transfer. You only pay interest on the amount you actually borrow — not your full credit limit.</p>
+    <p>Once the draw period ends, you enter the repayment period (typically 10–20 years), during which you can no longer draw funds and must repay both principal and interest on the outstanding balance.</p>
+
+    <h2 id="draw-repayment">Draw period vs repayment period</h2>
+    <table class="info-table">
+      <thead>
+        <tr><th>Feature</th><th>Draw Period</th><th>Repayment Period</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Typical length</td><td>5–10 years</td><td>10–20 years</td></tr>
+        <tr><td>Can borrow funds?</td><td>Yes</td><td>No</td></tr>
+        <tr><td>Monthly payment</td><td>Interest only (usually)</td><td>Principal + interest</td></tr>
+        <tr><td>Payment amount</td><td>Lower</td><td>Higher</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout gold">
+      <strong>Important heads up</strong>
+      <p>Many first-time HELOC borrowers are caught off guard by the significant payment increase when the repayment period begins. Always plan your budget around the fully amortised repayment payment, not just the draw-period interest payment.</p>
+    </div>
+
+    <h2 id="rates">HELOC interest rates explained</h2>
+    <p>Most HELOCs carry a <strong>variable interest rate</strong> tied to the Prime Rate (which moves with Federal Reserve policy). Your lender adds a margin on top of the Prime Rate to arrive at your rate. For example: Prime Rate (8.50%) + Margin (0.50%) = Your Rate (9.00%).</p>
+    <p>Because HELOC rates are variable, your monthly payment can go up or down over time. Some lenders offer a fixed-rate conversion option that lets you lock in a rate on all or part of your balance — worth asking about if you prefer payment predictability.</p>
+
+    <h3>What affects your HELOC rate?</h3>
+    <ul>
+      <li>Your credit score — higher scores get lower rates</li>
+      <li>Your combined loan-to-value ratio (CLTV)</li>
+      <li>The lender's margin above Prime</li>
+      <li>Federal Reserve interest rate decisions</li>
+      <li>The size of your credit line</li>
+    </ul>
+
+    <h2 id="pros-cons">HELOC pros and cons</h2>
+    <h3>Advantages</h3>
+    <ul>
+      <li><strong>Flexibility:</strong> Borrow only what you need, when you need it</li>
+      <li><strong>Lower initial payments:</strong> Interest-only during the draw period</li>
+      <li><strong>Potentially tax-deductible:</strong> Interest may be deductible if funds are used for home improvements (consult a tax advisor)</li>
+      <li><strong>Reusable credit:</strong> As you repay, you can draw again</li>
+      <li><strong>Lower rates than credit cards:</strong> Secured debt typically carries lower interest</li>
+    </ul>
+    <h3>Disadvantages</h3>
+    <ul>
+      <li><strong>Variable rate risk:</strong> Payments can increase if interest rates rise</li>
+      <li><strong>Your home is collateral:</strong> Defaulting puts your home at risk</li>
+      <li><strong>Payment shock:</strong> Payments jump significantly in the repayment period</li>
+      <li><strong>Lenders can freeze the line:</strong> If your home value drops or your credit deteriorates</li>
+      <li><strong>Fees:</strong> Application fees, annual fees, and closing costs may apply</li>
+    </ul>
+
+    <h2 id="who-qualifies">Who qualifies for a HELOC?</h2>
+    <p>Lender requirements vary, but most look for the following:</p>
+    <ul>
+      <li><strong>Credit score:</strong> Minimum 620; 700+ for the best rates</li>
+      <li><strong>Home equity:</strong> Typically at least 15–20% equity remaining after the HELOC</li>
+      <li><strong>Debt-to-income ratio (DTI):</strong> Usually below 43–50%</li>
+      <li><strong>Stable income:</strong> Documented employment or self-employment income</li>
+      <li><strong>On-time payment history:</strong> Lenders look at your mortgage payment record</li>
+    </ul>
+
+    <h2 id="heloc-vs-heloan">HELOC vs home equity loan — what is the difference?</h2>
+    <p>A home equity loan gives you a lump sum of money upfront at a fixed interest rate, with fixed monthly payments over a set term. A HELOC gives you a revolving credit line with a variable rate. The right choice depends on how you plan to use the funds.</p>
+    <table class="info-table">
+      <thead>
+        <tr><th>Feature</th><th>HELOC</th><th>Home Equity Loan</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Disbursement</td><td>Draw as needed</td><td>Lump sum</td></tr>
+        <tr><td>Interest rate</td><td>Variable (usually)</td><td>Fixed</td></tr>
+        <tr><td>Best for</td><td>Ongoing or unknown costs</td><td>One-time large expense</td></tr>
+        <tr><td>Monthly payment</td><td>Varies</td><td>Fixed</td></tr>
+        <tr><td>Flexibility</td><td>High</td><td>Low</td></tr>
+      </tbody>
+    </table>
+
+    <h2 id="faq">Frequently asked questions</h2>
+    <h3>Can I get a HELOC on a rental or investment property?</h3>
+    <p>Some lenders offer HELOCs on investment properties, but requirements are stricter and rates are typically higher than for primary residences.</p>
+
+    <h3>How long does HELOC approval take?</h3>
+    <p>The process typically takes two to six weeks, including application, appraisal, underwriting, and closing.</p>
+
+    <h3>Can I pay off a HELOC early?</h3>
+    <p>Yes, though some lenders charge an early closure fee (typically if you close the line within two to three years). Check your loan agreement before prepaying.</p>
+
+    <h3>What happens to my HELOC if I sell my home?</h3>
+    <p>When you sell, the HELOC balance is paid off at closing from the sale proceeds, just like your primary mortgage.</p>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside>
+    <div class="sidebar-sticky">
+      <div class="sidebar-card">
+        <h4><i class="ti ti-calculator" aria-hidden="true"></i> HELOC Calculator</h4>
+        <p>Estimate your monthly payment or find out how much equity you can access — free, no sign-up required.</p>
+        <a href="/#calculator" class="sidebar-btn">Try the Calculator</a>
+      </div>
+      <div class="sidebar-card">
+        <h4><i class="ti ti-chart-line" aria-hidden="true"></i> Current HELOC Rates</h4>
+        <p>See what average HELOC rates look like right now and how yours might compare.</p>
+        <a href="/heloc-rates-today.html" class="sidebar-btn gold">View Rates Today</a>
+      </div>
+      <div class="sidebar-card">
+        <h4>Related guides</h4>
+        <ul class="related-list">
+          <li><a href="/blog/blog-post-2-average-heloc-rates.html">Average HELOC rates right now</a></li>
+          <li><a href="/blog/blog-post-3-credit-score-for-heloc.html">Credit score needed for a HELOC</a></li>
+          <li><a href="/heloc-vs-home-equity-loan.html">HELOC vs home equity loan</a></li>
+          <li><a href="/how-to-qualify-for-heloc.html">How to qualify for a HELOC</a></li>
+          <li><a href="/heloc-pros-and-cons.html">HELOC pros and cons</a></li>
+        </ul>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- ARTICLE FOOTER DISCLAIMER -->
+<div class="article-footer">
+  <div class="article-footer-inner">
+    <p><strong>Editorial disclaimer:</strong> The content on this page is for informational purposes only and does not constitute financial advice. HELOC products, rates, and terms vary by lender and individual borrower. Always consult a licensed financial professional before making borrowing decisions. See our full <a href="/disclaimer.html">Disclaimer</a> for details.</p>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; <span class="dyn-year">2026</span> MyHelocRates.com &nbsp;|&nbsp;
+    <a href="/privacy-policy.html">Privacy</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/terms-of-use.html">Terms</a>
+    <a href="/">Home</a>
+  </p>
+</footer>
+
+
+<script>
+  // Dynamic year & date — auto-updates every year, no maintenance needed
+  (function() {
+    var now   = new Date();
+    var year  = now.getFullYear();
+    var month = now.toLocaleString("en-US", { month: "long" });
+    // © year spans
+    document.querySelectorAll(".dyn-year").forEach(function(el) {
+      el.textContent = year;
+    });
+    // Month + year spans (e.g. "May 2026")
+    document.querySelectorAll(".dyn-monthyear").forEach(function(el) {
+      el.textContent = month + " " + year;
+    });
+    // Last-updated spans (e.g. "May 1, 2026")
+    document.querySelectorAll(".dyn-updated").forEach(function(el) {
+      el.textContent = month + " 1, " + year;
+    });
+  })();
+</script>
+
+</body>
+</html>
