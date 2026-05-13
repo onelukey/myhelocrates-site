@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free HELOC guides, rate analysis, and plain-English articles for US homeowners. Browse all posts by category at MyHelocRates.com.">
+  <title>HELOC Blog & Guides — MyHelocRates.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0f2557; --navy-mid: #1a3a6b; --navy-light: #e8eef7;
+      --gold: #c9a84c; --gold-dark: #a07c28; --gold-light: #f5ecd4;
+      --white: #ffffff; --bg: #f9f8f6; --bg2: #f2f1ee;
+      --text: #1a1a2e; --text-muted: #5f5e5a; --border: rgba(0,0,0,0.10);
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+
+    /* ── NAV ── */
+    .nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+    .nav-logo { color: var(--gold); font-size: 20px; font-weight: 600; text-decoration: none; }
+    .nav-logo span { color: white; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.72); font-size: 14px; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: var(--navy); font-size: 14px; font-weight: 600; padding: 9px 18px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+    .nav-cta:hover { background: var(--gold-dark); color: white; }
+
+    /* ── HERO ── */
+    .hero { background: var(--navy); padding: 4rem 2rem 3rem; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--gold); font-size: 12px; padding: 5px 16px; border-radius: 20px; border: 0.5px solid rgba(201,168,76,0.35); margin-bottom: 1.25rem; }
+    .hero h1 { font-family: 'DM Serif Display', serif; color: white; font-size: 38px; font-weight: 400; line-height: 1.2; margin-bottom: 1rem; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero p { color: rgba(255,255,255,0.65); font-size: 16px; max-width: 540px; margin: 0 auto; line-height: 1.7; }
+
+    /* ── CATEGORY FILTER ── */
+    .filter-bar { background: var(--white); border-bottom: 0.5px solid var(--border); padding: 1rem 2rem; display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center; }
+    .filter-btn { padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 500; cursor: pointer; border: 0.5px solid var(--border); background: var(--bg2); color: var(--text-muted); transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+    .filter-btn:hover { border-color: var(--navy); color: var(--navy); }
+    .filter-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+    /* ── MAIN LAYOUT ── */
+    .main { max-width: 1060px; margin: 3rem auto; padding: 0 2rem 5rem; display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start; }
+
+    /* ── SECTION HEADING ── */
+    .section-label { font-size: 12px; color: var(--gold-dark); font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 0.4rem; }
+    .section-title { font-family: 'DM Serif Display', serif; font-size: 24px; font-weight: 400; color: var(--text); margin-bottom: 1.5rem; }
+
+    /* ── POST CARDS ── */
+    .posts-grid { display: flex; flex-direction: column; gap: 1rem; }
+    .post-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; overflow: hidden; display: grid; grid-template-columns: 100px 1fr; transition: box-shadow 0.2s; text-decoration: none; }
+    .post-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); border-color: rgba(0,0,0,0.15); }
+    .post-thumb { display: flex; align-items: center; justify-content: center; min-height: 100px; }
+    .post-thumb.t1 { background: var(--navy-light); }
+    .post-thumb.t2 { background: var(--gold-light); }
+    .post-thumb.t3 { background: #eaf3de; }
+    .post-thumb.t4 { background: #fce8e8; }
+    .post-thumb.t5 { background: #e8f4f0; }
+    .post-thumb.t6 { background: #f0e8f5; }
+    .post-thumb i { font-size: 30px; }
+    .post-body { padding: 1.1rem 1.25rem; }
+    .post-meta { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.4rem; flex-wrap: wrap; }
+    .post-cat { font-size: 11px; color: var(--gold-dark); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .post-date { font-size: 11px; color: var(--text-muted); }
+    .post-read { font-size: 11px; color: var(--text-muted); }
+    .post-card h2 { font-size: 16px; font-weight: 600; color: var(--text); line-height: 1.4; margin-bottom: 0.4rem; }
+    .post-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.75rem; }
+    .post-link { font-size: 13px; color: var(--navy); font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+
+    /* ── COMING SOON CARDS ── */
+    .coming-soon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 2rem; }
+    .cs-card { background: var(--bg2); border: 0.5px dashed var(--border); border-radius: 12px; padding: 1rem; opacity: 0.7; }
+    .cs-cat { font-size: 11px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 0.3rem; }
+    .cs-title { font-size: 13px; color: var(--text-muted); line-height: 1.4; }
+    .cs-badge { display: inline-block; background: var(--bg); border: 0.5px solid var(--border); color: var(--text-muted); font-size: 11px; padding: 2px 8px; border-radius: 10px; margin-top: 0.5rem; }
+
+    /* ── SIDEBAR ── */
+    .sidebar-sticky { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 1rem; }
+    .sidebar-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.25rem; }
+    .sidebar-card h3 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 0.5px solid var(--border); }
+    .sidebar-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
+    .sidebar-btn { display: block; background: var(--navy); color: white; text-align: center; padding: 10px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background 0.2s; }
+    .sidebar-btn:hover { background: var(--navy-mid); }
+    .sidebar-btn.gold { background: var(--gold-dark); }
+
+    .cat-list { list-style: none; }
+    .cat-list li { padding: 7px 0; border-bottom: 0.5px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+    .cat-list li:last-child { border-bottom: none; }
+    .cat-list a { font-size: 13px; color: var(--navy-mid); text-decoration: none; font-weight: 500; }
+    .cat-list a:hover { color: var(--gold-dark); }
+    .cat-count { font-size: 11px; color: var(--text-muted); background: var(--bg2); padding: 2px 8px; border-radius: 10px; }
+
+    /* ── STATS BAR ── */
+    .stats-bar { background: var(--gold-light); border-top: 0.5px solid rgba(201,168,76,0.3); border-bottom: 0.5px solid rgba(201,168,76,0.3); padding: 1rem 2rem; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 22px; font-weight: 600; color: var(--navy); display: block; }
+    .stat-label { font-size: 12px; color: var(--text-muted); }
+
+    hr { border: none; border-top: 0.5px solid var(--border); }
+
+    /* ── FOOTER ── */
+    .footer { background: var(--navy); padding: 1.5rem 2rem; text-align: center; }
+    .footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .footer a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 0.5rem; }
+    .footer a:hover { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero h1 { font-size: 28px; }
+      .main { grid-template-columns: 1fr; }
+      .post-card { grid-template-columns: 80px 1fr; }
+      .coming-soon-grid { grid-template-columns: 1fr; }
+      .sidebar-sticky { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">MyHeloc<span>Rates</span>.com</a>
+  <ul class="nav-links">
+    <li><a href="/what-is-a-heloc.html">What is a HELOC?</a></li>
+    <li><a href="#" title="Coming soon">Rates Today</a></li>
+    <li><a href="/about.html">About</a></li>
+    <li><a href="/contact.html">Contact</a></li>
+  </ul>
+  <a href="/#calculator" class="nav-cta">Try Calculator</a>
+</nav>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" aria-labelledby="blog-heading">
+    <div class="hero-badge">Free HELOC Guides — No Sign Up Required</div>
+    <h1>HELOC Guides &amp; <em>Insights</em></h1>
+    <p>Plain-English articles for US homeowners at every stage of the HELOC journey — from basics to advanced strategies.</p>
+  </section>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat"><span class="stat-num" id="post-count">3</span><span class="stat-label">Articles published</span></div>
+    <div class="stat"><span class="stat-num">6</span><span class="stat-label">Topic categories</span></div>
+    <div class="stat"><span class="stat-num">Weekly</span><span class="stat-label">Rate updates</span></div>
+    <div class="stat"><span class="stat-num">Free</span><span class="stat-label">Always — no paywall</span></div>
+  </div>
+
+  <!-- CATEGORY FILTER -->
+  <div class="filter-bar" role="navigation" aria-label="Filter by category">
+    <button class="filter-btn active" onclick="filterPosts('all')">All Posts</button>
+    <button class="filter-btn" onclick="filterPosts('basics')">HELOC Basics</button>
+    <button class="filter-btn" onclick="filterPosts('rates')">HELOC Rates</button>
+    <button class="filter-btn" onclick="filterPosts('qualifying')">Qualifying</button>
+    <button class="filter-btn" onclick="filterPosts('strategy')">Strategy</button>
+    <button class="filter-btn" onclick="filterPosts('risks')">Risks</button>
+    <button class="filter-btn" onclick="filterPosts('lenders')">Lender Comparisons</button>
+  </div>
+
+  <div class="main">
+
+    <!-- POSTS -->
+    <div>
+      <div class="section-label">Latest guides</div>
+      <h2 class="section-title">All Published Articles</h2>
+
+      <div class="posts-grid" id="posts-grid">
+
+        <!-- POST 1 -->
+        <a class="post-card" href="/blog/blog-post-1-what-is-a-heloc.html" data-cat="basics">
+          <div class="post-thumb t1"><i class="ti ti-home-dollar" style="color:#1a3a6b;" aria-hidden="true"></i></div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat">HELOC Basics</span>
+              <span class="post-date"><i class="ti ti-calendar" aria-hidden="true"></i> <span class="dyn-monthyear">May 2026</span></span>
+              <span class="post-read"><i class="ti ti-clock" aria-hidden="true"></i> 8 min read</span>
+            </div>
+            <h2>What is a HELOC and How Does It Work?</h2>
+            <p>Everything first-time borrowers need to know — draw periods, repayment, variable rates, and how your home equity is calculated.</p>
+            <span class="post-link">Read guide <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+
+        <!-- POST 2 -->
+        <a class="post-card" href="/blog/blog-post-2-average-heloc-rates.html" data-cat="rates">
+          <div class="post-thumb t2"><i class="ti ti-chart-bar" style="color:#a07c28;" aria-hidden="true"></i></div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat">HELOC Rates</span>
+              <span class="post-date"><i class="ti ti-calendar" aria-hidden="true"></i> <span class="dyn-monthyear">May 2026</span></span>
+              <span class="post-read"><i class="ti ti-clock" aria-hidden="true"></i> 7 min read</span>
+            </div>
+            <h2>What Are Average HELOC Rates Right Now?</h2>
+            <p>Current average HELOC rate ranges by credit score, what drives rates up and down, and how to position yourself for the best rate when you apply.</p>
+            <span class="post-link">Read guide <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+
+        <!-- POST 3 -->
+        <a class="post-card" href="/blog/blog-post-3-credit-score-for-heloc.html" data-cat="qualifying">
+          <div class="post-thumb t3"><i class="ti ti-checklist" style="color:#3b6d11;" aria-hidden="true"></i></div>
+          <div class="post-body">
+            <div class="post-meta">
+              <span class="post-cat">Qualifying</span>
+              <span class="post-date"><i class="ti ti-calendar" aria-hidden="true"></i> <span class="dyn-monthyear">May 2026</span></span>
+              <span class="post-read"><i class="ti ti-clock" aria-hidden="true"></i> 8 min read</span>
+            </div>
+            <h2>What Credit Score Do You Need for a HELOC?</h2>
+            <p>Minimum score requirements by lender type, how your score affects your rate, and the fastest proven ways to improve your score before applying.</p>
+            <span class="post-link">Read guide <i class="ti ti-arrow-right" aria-hidden="true"></i></span>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- NO RESULTS MESSAGE -->
+      <div id="no-results" style="display:none; text-align:center; padding:2rem; color:var(--text-muted); font-size:15px;">
+        No posts in this category yet — check back soon!
+      </div>
+
+      <!-- COMING SOON -->
+      <div style="margin-top:2.5rem;">
+        <div class="section-label">Coming soon</div>
+        <h2 class="section-title" style="font-size:20px;">More guides in the pipeline</h2>
+        <div class="coming-soon-grid">
+          <div class="cs-card">
+            <div class="cs-cat">HELOC Basics</div>
+            <div class="cs-title">HELOC vs Home Equity Loan — Full Comparison</div>
+            <span class="cs-badge">Coming soon</span>
+          </div>
+          <div class="cs-card">
+            <div class="cs-cat">HELOC Rates</div>
+            <div class="cs-title">How to Get the Lowest HELOC Rate Possible</div>
+            <span class="cs-badge">Coming soon</span>
+          </div>
+          <div class="cs-card">
+            <div class="cs-cat">Qualifying</div>
+            <div class="cs-title">How Much Home Equity Do You Need for a HELOC?</div>
+            <span class="cs-badge">Coming soon</span>
+          </div>
+          <div class="cs-card">
+            <div class="cs-cat">Strategy</div>
+            <div class="cs-title">Using a HELOC for Home Improvements — Is It Worth It?</div>
+            <span class="cs-badge">Coming soon</span>
+          </div>
+          <div class="cs-card">
+            <div class="cs-cat">Risks</div>
+            <div class="cs-title">Can a Lender Freeze Your HELOC?</div>
+            <span class="cs-badge">Coming soon</span>
+          </div>
+          <div class="cs-card">
+            <div class="cs-cat">Lender Comparisons</div>
+            <div class="cs-title">Best HELOC Lenders in 2026 — Full Review</div>
+            <span class="cs-badge">Coming soon</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIDEBAR -->
+    <aside>
+      <div class="sidebar-sticky">
+
+        <div class="sidebar-card">
+          <h3><i class="ti ti-calculator" aria-hidden="true"></i> Free Calculator</h3>
+          <p>Estimate your monthly payment or find out how much equity you can access — no sign-up required.</p>
+          <a href="/#calculator" class="sidebar-btn">Try the Calculator</a>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Browse by category</h3>
+          <ul class="cat-list">
+            <li><a href="#" onclick="filterPosts('basics');return false;">HELOC Basics</a><span class="cat-count">1</span></li>
+            <li><a href="#" onclick="filterPosts('rates');return false;">HELOC Rates</a><span class="cat-count">1</span></li>
+            <li><a href="#" onclick="filterPosts('qualifying');return false;">Qualifying</a><span class="cat-count">1</span></li>
+            <li><a href="#" onclick="filterPosts('strategy');return false;">Strategy</a><span class="cat-count">0</span></li>
+            <li><a href="#" onclick="filterPosts('risks');return false;">Risks</a><span class="cat-count">0</span></li>
+            <li><a href="#" onclick="filterPosts('lenders');return false;">Lender Comparisons</a><span class="cat-count">0</span></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <h3><i class="ti ti-chart-line" aria-hidden="true"></i> Current Rates</h3>
+          <p>See average HELOC rates by credit score range — updated weekly.</p>
+          <a href="/blog/blog-post-2-average-heloc-rates.html" class="sidebar-btn gold">View Rate Guide</a>
+        </div>
+
+      </div>
+    </aside>
+
+  </div>
+
+</main>
+
+<footer class="footer">
+  <p>&copy; <span class="dyn-year">2026</span> MyHelocRates.com &nbsp;|&nbsp;
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/terms-of-use.html">Terms of Use</a>
+    <a href="/">Home</a>
+  </p>
+</footer>
+
+<script>
+  /* Dynamic dates */
+  (function() {
+    var now = new Date(); var year = now.getFullYear();
+    var month = now.toLocaleString("en-US", { month: "long" });
+    document.querySelectorAll(".dyn-year").forEach(function(el){ el.textContent = year; });
+    document.querySelectorAll(".dyn-monthyear").forEach(function(el){ el.textContent = month + " " + year; });
+  })();
+
+  /* Category filter */
+  function filterPosts(cat) {
+    /* Update buttons */
+    document.querySelectorAll('.filter-btn').forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+    event.target.classList.add('active');
+
+    /* Filter cards */
+    var cards = document.querySelectorAll('.post-card');
+    var visible = 0;
+    cards.forEach(function(card) {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.style.display = 'grid';
+        visible++;
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    /* Show/hide no results */
+    document.getElementById('no-results').style.display = visible === 0 ? 'block' : 'none';
+  }
+</script>
+
+</body>
+</html>
