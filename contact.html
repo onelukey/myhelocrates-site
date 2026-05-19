@@ -148,105 +148,12 @@
     <div class="form-card">
       <h2>Send us a message</h2>
       <p class="form-sub">Typical response time: 1 business day</p>
-
-      <!--
-        ============================================================
-        ZOHO MAIL INTEGRATION — HOW TO CONNECT
-        ============================================================
-        This form submits via Zoho Forms (free with your Zoho account).
-        SETUP STEPS:
-        1. Log into zoho.com/forms → Create new form
-        2. Add fields: Name, Email, Subject, Enquiry Type, Message
-        3. Set the form notification email to your Zoho Mail address
-        4. Publish the form → get your Form action URL
-        5. Replace the action URL below:
-           action="https://forms.zohopublic.com/YOUR_ACCOUNT/form/YOUR_FORM_ID/formperma/YOUR_PERMA_ID"
-        6. Set method="POST"
-        7. Replace each input name="" with the exact field names from Zoho
-
-        ALTERNATIVE — Zoho Mail SMTP (no Zoho Forms needed):
-        Use a free form-to-email service like FormSubmit.co:
-        action="https://formsubmit.co/contact@myhelocrates.com"
-        Add a hidden field: <input type="hidden" name="_subject" value="New Contact Form Submission">
-        ============================================================
-      -->
-      <form
-        id="contact-form"
-        action="https://formsubmit.co/contact@myhelocrates.com"
-        method="POST"
-        novalidate
-        onsubmit="handleSubmit(event)"
-      >
-        <!-- FormSubmit.co config fields — remove if using Zoho Forms directly -->
-        <input type="hidden" name="_subject" value="New MyHelocRates.com Enquiry">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://myhelocrates.com/contact.html?sent=true">
-        <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-
-        <div class="field-row">
-          <div class="field">
-            <label for="fname">First Name *</label>
-            <input type="text" id="fname" name="first_name" placeholder="John" required autocomplete="given-name">
-          </div>
-          <div class="field">
-            <label for="lname">Last Name *</label>
-            <input type="text" id="lname" name="last_name" placeholder="Smith" required autocomplete="family-name">
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="email">Email Address *</label>
-          <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email">
-        </div>
-
-        <div class="field">
-          <label for="enquiry-type">Enquiry Type *</label>
-          <select id="enquiry-type" name="enquiry_type" required>
-            <option value="" disabled selected>Select a topic…</option>
-            <option value="general">General question about HELOCs</option>
-            <option value="calculator">Question about the calculator</option>
-            <option value="content">Content correction or suggestion</option>
-            <option value="advertising">Advertising enquiry</option>
-            <option value="partnership">Partnership or collaboration</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div class="field">
-          <label for="message">Message *</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Tell us how we can help…"
-            required
-            maxlength="1000"
-            oninput="updateCharCount(this)"
-          ></textarea>
-          <div class="char-count"><span id="char-count">0</span> / 1000 characters</div>
-        </div>
-
-        <button type="submit" class="submit-btn" id="submit-btn">
-          <i class="ti ti-send" aria-hidden="true"></i>
-          <span id="btn-text">Send Message</span>
-        </button>
-
-        <div class="alert success" id="success-alert" role="alert">
-          <i class="ti ti-circle-check" aria-hidden="true"></i>
-          <div>
-            <strong>Message sent!</strong>
-            Thank you for getting in touch. We will get back to you within 1 business day.
-          </div>
-        </div>
-
-        <div class="alert error" id="error-alert" role="alert">
-          <i class="ti ti-alert-circle" aria-hidden="true"></i>
-          <div>
-            <strong>Something went wrong.</strong>
-            Please try again or email us directly at <a href="mailto:contact@myhelocrates.com" style="color:var(--red);">contact@myhelocrates.com</a>
-          </div>
-        </div>
-
-      </form>
+      <iframe
+        aria-label="MyHelocRates Contact Form"
+        frameborder="0"
+        style="height:620px;width:100%;border:none;border-radius:8px;margin-top:0.5rem;"
+        src="https://forms.zohopublic.eu/contactweeklyma1/form/MyHelocRatesContactForm/formperma/UbcJrM0OvTzpyQc2romvBM9xXHu6xAS4WZPGSEBICGQ">
+      </iframe>
     </div>
 
     <!-- SIDEBAR -->
