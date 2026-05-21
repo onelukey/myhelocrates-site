@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) — MyHelocRates.com GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RLKEB7GMX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-9RLKEB7GMX');
+  </script>
+  <!-- Google AdSense — MyHelocRates.com -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3723787015797542"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free HELOC calculator — estimate your monthly payment during the draw and repayment periods, or calculate how much home equity you can borrow. No sign-up required.">
+  <meta name="keywords" content="HELOC calculator, home equity line of credit calculator, HELOC payment calculator, HELOC borrowing calculator">
+  <meta property="og:title" content="Free HELOC Calculator — MyHelocRates.com">
+  <meta property="og:type" content="website">
+  <title>Free HELOC Calculator — Estimate Payments & Borrowing Power — MyHelocRates.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --navy: #0f2557; --navy-mid: #1a3a6b; --navy-light: #e8eef7;
+      --gold: #c9a84c; --gold-dark: #a07c28; --gold-light: #f5ecd4;
+      --white: #ffffff; --bg: #f9f8f6; --bg2: #f2f1ee;
+      --text: #1a1a2e; --text-muted: #5f5e5a; --border: rgba(0,0,0,0.10);
+      --green: #3b6d11; --green-light: #eaf3de;
+    }
+    body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+    .nav { background: var(--navy); padding: 0 2rem; display: flex; align-items: center; justify-content: space-between; height: 64px; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 12px rgba(0,0,0,0.2); }
+    .nav-logo { color: var(--gold); font-size: 20px; font-weight: 600; text-decoration: none; }
+    .nav-logo span { color: white; }
+    .nav-links { display: flex; gap: 1.5rem; list-style: none; }
+    .nav-links a { color: rgba(255,255,255,0.72); font-size: 14px; text-decoration: none; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--gold); }
+    .nav-cta { background: var(--gold); color: var(--navy); font-size: 14px; font-weight: 600; padding: 9px 18px; border-radius: 8px; text-decoration: none; }
+    .nav-cta:hover { background: var(--gold-dark); color: white; }
+    /* HERO */
+    .hero { background: var(--navy); padding: 3.5rem 2rem 2.5rem; text-align: center; }
+    .hero-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--gold); font-size: 12px; padding: 5px 16px; border-radius: 20px; border: 0.5px solid rgba(201,168,76,0.35); margin-bottom: 1.25rem; }
+    .hero h1 { font-family: 'DM Serif Display', serif; color: white; font-size: 38px; font-weight: 400; line-height: 1.2; margin-bottom: 0.75rem; }
+    .hero h1 em { color: var(--gold); font-style: normal; }
+    .hero p { color: rgba(255,255,255,0.65); font-size: 15px; max-width: 520px; margin: 0 auto 2rem; }
+    /* CALCULATOR */
+    .calc-wrap { background: var(--navy); padding: 0 2rem 3rem; }
+    .calc-card { background: var(--white); border-radius: 16px; max-width: 780px; margin: 0 auto; overflow: hidden; box-shadow: 0 8px 48px rgba(0,0,0,0.22); }
+    .calc-tabs { display: flex; border-bottom: 0.5px solid var(--border); }
+    .calc-tab { flex: 1; padding: 16px 12px; font-size: 14px; font-weight: 500; text-align: center; cursor: pointer; color: var(--text-muted); border: none; background: var(--bg2); transition: all 0.2s; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; justify-content: center; gap: 7px; }
+    .calc-tab i { font-size: 17px; }
+    .calc-tab.active { background: var(--white); color: var(--navy); border-bottom: 3px solid var(--gold); }
+    .calc-body { padding: 2rem; }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+    .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-size: 12px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+    .field input, .field select { width: 100%; padding: 12px 14px; border: 0.5px solid var(--border); border-radius: 8px; font-size: 15px; color: var(--text); background: var(--bg); font-family: 'DM Sans', sans-serif; transition: border-color 0.2s, box-shadow 0.2s; }
+    .field input:focus, .field select:focus { outline: none; border-color: var(--navy-mid); box-shadow: 0 0 0 3px rgba(26,58,107,0.08); }
+    .field .hint { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+    .calc-btn { width: 100%; background: var(--navy); color: white; border: none; padding: 14px; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 0.75rem; font-family: 'DM Sans', sans-serif; transition: background 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+    .calc-btn:hover { background: var(--navy-mid); }
+    .results { margin-top: 1.5rem; background: var(--navy-light); border-radius: 12px; padding: 1.5rem; display: none; animation: fadeIn 0.3s ease; }
+    .results.show { display: block; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+    .results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1rem; }
+    .result-item { background: var(--white); border-radius: 10px; padding: 1rem; text-align: center; border: 0.5px solid var(--border); }
+    .result-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; }
+    .result-value { font-size: 22px; font-weight: 600; color: var(--navy); }
+    .result-value.gold { color: var(--gold-dark); }
+    .result-note { font-size: 12px; color: var(--text-muted); text-align: center; line-height: 1.6; }
+    /* AMORTISATION TABLE */
+    .amort-toggle { background: none; border: 0.5px solid var(--border); color: var(--navy); font-size: 13px; font-weight: 500; padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-top: 1rem; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; gap: 6px; }
+    .amort-table-wrap { display: none; margin-top: 1rem; overflow-x: auto; }
+    .amort-table-wrap.show { display: block; }
+    .amort-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+    .amort-table th { background: var(--navy); color: white; padding: 8px 10px; text-align: left; font-size: 12px; font-weight: 500; }
+    .amort-table td { padding: 7px 10px; border-bottom: 0.5px solid var(--border); }
+    .amort-table tr:nth-child(even) td { background: var(--navy-light); }
+    /* TRUST BAR */
+    .trust-bar { background: var(--gold-light); border-top: 0.5px solid rgba(201,168,76,0.3); border-bottom: 0.5px solid rgba(201,168,76,0.3); padding: 1rem 2rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem 2.5rem; }
+    .trust-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--navy); font-weight: 500; }
+    .trust-item i { color: var(--gold-dark); font-size: 17px; }
+    /* HOW TO USE */
+    .how-section { max-width: 900px; margin: 3rem auto; padding: 0 2rem; }
+    .how-section h2 { font-family: 'DM Serif Display', serif; font-size: 26px; font-weight: 400; color: var(--navy); margin-bottom: 1.5rem; }
+    .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .how-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.25rem; }
+    .how-num { width: 34px; height: 34px; background: var(--navy); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; margin-bottom: 0.75rem; }
+    .how-card h3 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+    .how-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+    /* FAQ */
+    .faq-section { max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem; }
+    .faq-section h2 { font-family: 'DM Serif Display', serif; font-size: 26px; font-weight: 400; color: var(--navy); margin-bottom: 1.25rem; }
+    .faq-item { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; margin-bottom: 0.75rem; overflow: hidden; }
+    .faq-q { padding: 1rem 1.25rem; font-size: 15px; font-weight: 600; color: var(--navy); cursor: pointer; display: flex; justify-content: space-between; align-items: center; user-select: none; }
+    .faq-q i { font-size: 18px; color: var(--text-muted); transition: transform 0.2s; flex-shrink: 0; }
+    .faq-item.open .faq-q i { transform: rotate(180deg); }
+    .faq-a { display: none; padding: 0 1.25rem 1rem; font-size: 15px; color: var(--text-muted); line-height: 1.7; border-top: 0.5px solid var(--border); padding-top: 1rem; }
+    .faq-item.open .faq-a { display: block; }
+    /* RELATED */
+    .related-section { background: var(--navy); padding: 3rem 2rem; }
+    .related-inner { max-width: 900px; margin: 0 auto; }
+    .related-section h2 { font-family: 'DM Serif Display', serif; color: white; font-size: 24px; font-weight: 400; margin-bottom: 1.5rem; }
+    .related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+    .related-card { background: rgba(255,255,255,0.07); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 1.1rem; text-decoration: none; transition: background 0.2s; display: block; }
+    .related-card:hover { background: rgba(255,255,255,0.11); }
+    .related-card .rc-cat { font-size: 11px; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 0.4rem; }
+    .related-card h3 { font-size: 14px; font-weight: 500; color: white; line-height: 1.4; margin-bottom: 0.5rem; }
+    .related-card .rc-arrow { font-size: 13px; color: rgba(255,255,255,0.45); }
+    .page-disclaimer { background: var(--navy-light); border-top: 0.5px solid var(--border); padding: 1.5rem 2rem; }
+    .page-disclaimer p { max-width: 900px; margin: 0 auto; font-size: 13px; color: var(--text-muted); font-style: italic; line-height: 1.6; text-align: center; }
+    .footer { background: var(--navy); padding: 1.5rem 2rem; text-align: center; }
+    .footer p { font-size: 12px; color: rgba(255,255,255,0.3); }
+    .footer a { color: rgba(255,255,255,0.4); text-decoration: none; margin: 0 0.5rem; }
+    .footer a:hover { color: var(--gold); }
+    hr { border: none; border-top: 0.5px solid var(--border); }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero h1 { font-size: 28px; }
+      .field-row { grid-template-columns: 1fr; }
+      .results-grid { grid-template-columns: 1fr 1fr; }
+      .how-grid { grid-template-columns: 1fr; }
+      .related-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) {
+      .results-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <a href="/" class="nav-logo">MyHeloc<span>Rates</span>.com</a>
+  <ul class="nav-links">
+    <li><a href="/what-is-a-heloc.html">What is a HELOC?</a></li>
+    <li><a href="/heloc-rates-today.html">Rates Today</a></li>
+    <li><a href="/heloc-calculator.html" class="active">Calculator</a></li>
+    <li><a href="/blog/index.html">Blog</a></li>
+    <li><a href="/about.html">About</a></li>
+  </ul>
+  <a href="/heloc-calculator.html" class="nav-cta">Calculator</a>
+</nav>
+
+<main id="main">
+
+  <section class="hero" aria-labelledby="calc-heading">
+    <div class="hero-badge">Free — No Sign Up Required</div>
+    <h1 id="calc-heading">Free HELOC Calculator —<br><em>Payments &amp; Borrowing Power</em></h1>
+    <p>Estimate your monthly HELOC payment or calculate how much home equity you can access — instantly, with no personal data required.</p>
+  </section>
+
+  <!-- CALCULATOR -->
+  <div class="calc-wrap">
+    <div class="calc-card">
+      <div class="calc-tabs" role="tablist">
+        <button class="calc-tab active" role="tab" aria-selected="true" aria-controls="tab-payment" onclick="switchTab('payment')">
+          <i class="ti ti-calculator" aria-hidden="true"></i> Monthly Payment Estimator
+        </button>
+        <button class="calc-tab" role="tab" aria-selected="false" aria-controls="tab-equity" onclick="switchTab('equity')">
+          <i class="ti ti-home-dollar" aria-hidden="true"></i> Borrowing Power Calculator
+        </button>
+      </div>
+
+      <div class="calc-body">
+
+        <!-- TAB 1 — PAYMENT -->
+        <div class="tab-panel active" id="tab-payment" role="tabpanel">
+          <div class="field-row">
+            <div class="field">
+              <label for="p-amount">HELOC Amount ($)</label>
+              <input type="number" id="p-amount" value="75000" min="1000" step="1000">
+              <div class="hint">The amount you plan to draw</div>
+            </div>
+            <div class="field">
+              <label for="p-rate">Annual Interest Rate (%)</label>
+              <input type="number" id="p-rate" value="9.25" min="0.1" step="0.25">
+              <div class="hint">See <a href="/heloc-rates-today.html">current average rates</a></div>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="p-draw">Draw Period (years)</label>
+              <input type="number" id="p-draw" value="10" min="1" max="30">
+              <div class="hint">Typically 5–10 years</div>
+            </div>
+            <div class="field">
+              <label for="p-repay">Repayment Period (years)</label>
+              <input type="number" id="p-repay" value="20" min="1" max="30">
+              <div class="hint">Typically 10–20 years</div>
+            </div>
+          </div>
+          <button class="calc-btn" onclick="calcPayment()">
+            <i class="ti ti-calculator" aria-hidden="true"></i> Calculate My Payment
+          </button>
+          <div class="results" id="payment-results" aria-live="polite">
+            <div class="results-grid">
+              <div class="result-item">
+                <div class="result-label">Draw Period Payment</div>
+                <div class="result-value gold" id="r-draw-pmt">—</div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Repayment Payment</div>
+                <div class="result-value" id="r-repay-pmt">—</div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Total Interest Cost</div>
+                <div class="result-value" id="r-total-int">—</div>
+              </div>
+            </div>
+            <button class="amort-toggle" onclick="toggleAmort()">
+              <i class="ti ti-table" aria-hidden="true"></i> <span id="amort-label">Show year-by-year breakdown</span>
+            </button>
+            <div class="amort-table-wrap" id="amort-wrap">
+              <table class="amort-table" id="amort-table">
+                <thead><tr><th>Year</th><th>Phase</th><th>Monthly Payment</th><th>Interest Paid</th><th>Principal Paid</th><th>Balance</th></tr></thead>
+                <tbody id="amort-body"></tbody>
+              </table>
+            </div>
+            <p class="result-note" style="margin-top:1rem;">Estimates are for informational purposes only. Actual rates and payments will vary. See our <a href="/disclaimer.html">Disclaimer</a>.</p>
+          </div>
+        </div>
+
+        <!-- TAB 2 — EQUITY -->
+        <div class="tab-panel" id="tab-equity" role="tabpanel">
+          <div class="field-row">
+            <div class="field">
+              <label for="e-home">Current Home Value ($)</label>
+              <input type="number" id="e-home" value="400000" min="10000" step="5000">
+              <div class="hint">Use a recent appraisal or estimate</div>
+            </div>
+            <div class="field">
+              <label for="e-mortgage">Mortgage Balance ($)</label>
+              <input type="number" id="e-mortgage" value="200000" min="0" step="1000">
+              <div class="hint">Current outstanding balance</div>
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="e-ltv">Lender Max CLTV (%)</label>
+              <input type="number" id="e-ltv" value="85" min="50" max="95" step="1">
+              <div class="hint">Most lenders allow 80–85%</div>
+            </div>
+            <div class="field">
+              <label for="e-credit">Your Credit Score Range</label>
+              <select id="e-credit">
+                <option value="0.95">Excellent (740+)</option>
+                <option value="0.90" selected>Good (680–739)</option>
+                <option value="0.80">Fair (620–679)</option>
+                <option value="0.65">Poor (below 620)</option>
+              </select>
+            </div>
+          </div>
+          <button class="calc-btn" onclick="calcEquity()">
+            <i class="ti ti-home-search" aria-hidden="true"></i> Calculate My Borrowing Power
+          </button>
+          <div class="results" id="equity-results" aria-live="polite">
+            <div class="results-grid">
+              <div class="result-item">
+                <div class="result-label">Available Equity</div>
+                <div class="result-value" id="r-equity">—</div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Est. HELOC Limit</div>
+                <div class="result-value gold" id="r-heloc-limit">—</div>
+              </div>
+              <div class="result-item">
+                <div class="result-label">Combined LTV</div>
+                <div class="result-value" id="r-cltv">—</div>
+              </div>
+            </div>
+            <p class="result-note" style="margin-top:1rem;">Estimated borrowing power based on your inputs. Actual approval depends on income, credit history, and lender underwriting. See our <a href="/disclaimer.html">Disclaimer</a>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- TRUST BAR -->
+  <div class="trust-bar">
+    <div class="trust-item"><i class="ti ti-shield-check" aria-hidden="true"></i> No personal data required</div>
+    <div class="trust-item"><i class="ti ti-lock" aria-hidden="true"></i> Secure &amp; private</div>
+    <div class="trust-item"><i class="ti ti-refresh" aria-hidden="true"></i> Rates updated weekly</div>
+    <div class="trust-item"><i class="ti ti-certificate" aria-hidden="true"></i> Reviewed by financial experts</div>
+  </div>
+
+  <hr>
+
+  <!-- HOW TO USE -->
+  <section class="how-section" aria-labelledby="how-heading">
+    <h2 id="how-heading">How to use the HELOC calculator</h2>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-num">1</div>
+        <h3>Choose your calculator</h3>
+        <p>Use the <strong>Monthly Payment tab</strong> if you know how much you want to borrow and want to see the cost. Use the <strong>Borrowing Power tab</strong> if you want to know your maximum credit limit first.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">2</div>
+        <h3>Enter your numbers</h3>
+        <p>For payments: enter your draw amount, interest rate, draw period, and repayment period. Check our <a href="/heloc-rates-today.html">rates page</a> for current average rates to use as a baseline.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-num">3</div>
+        <h3>Review your results</h3>
+        <p>Pay attention to both the draw period payment (lower) and the repayment period payment (higher). Always budget for the repayment payment before drawing on a HELOC.</p>
+      </div>
+    </div>
+  </section>
+
+  <hr>
+
+  <!-- FAQ -->
+  <section class="faq-section" aria-labelledby="faq-heading">
+    <h2 id="faq-heading">Calculator frequently asked questions</h2>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Why are there two different payment amounts? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+      <div class="faq-a">A HELOC has two phases. During the draw period (typically 10 years), most lenders only require interest-only payments — which is why the draw period payment is lower. When the repayment period begins, you can no longer draw and must repay the full balance with both principal and interest over the remaining term — which is why the repayment payment is higher. Always budget for the repayment payment before opening a HELOC.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">What interest rate should I enter? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+      <div class="faq-a">Use our current average rates from the <a href="/heloc-rates-today.html">HELOC Rates Today page</a> as a starting point based on your credit score. For a conservative estimate, model a rate 1–2% higher than current averages to account for potential future rate increases — since most HELOCs are variable rate products tied to the Prime Rate.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">How accurate are these estimates? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+      <div class="faq-a">The calculator uses standard financial formulas and produces accurate estimates based on the inputs you provide. However, actual HELOC payments will vary based on your specific lender's terms, the actual rate you are offered, any fees included in your agreement, and how the rate changes over time on a variable product. Use these estimates for planning and comparison purposes — always verify with your actual lender before making financial decisions.</div>
+    </div>
+
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q">Does using this calculator affect my credit score? <i class="ti ti-chevron-down" aria-hidden="true"></i></div>
+      <div class="faq-a">No — this is an anonymous estimation tool that requires no personal information. No credit check is performed. Your credit score is completely unaffected by using this calculator. Only a formal HELOC application with a lender triggers a hard credit inquiry that can temporarily affect your score.</div>
+    </div>
+
+  </section>
+
+  <!-- RELATED GUIDES -->
+  <section class="related-section" aria-labelledby="related-heading">
+    <div class="related-inner">
+      <h2 id="related-heading">Helpful guides to read next</h2>
+      <div class="related-grid">
+        <a href="/heloc-rates-today.html" class="related-card">
+          <div class="rc-cat">HELOC Rates</div>
+          <h3>What are average HELOC rates today?</h3>
+          <div class="rc-arrow">Read guide →</div>
+        </a>
+        <a href="/how-to-qualify-for-heloc.html" class="related-card">
+          <div class="rc-cat">Qualifying</div>
+          <h3>How to qualify for a HELOC — full requirements</h3>
+          <div class="rc-arrow">Read guide →</div>
+        </a>
+        <a href="/how-heloc-works.html" class="related-card">
+          <div class="rc-cat">How it Works</div>
+          <h3>How does a HELOC work — step-by-step</h3>
+          <div class="rc-arrow">Read guide →</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="page-disclaimer">
+  <p><strong>Calculator disclaimer:</strong> Results are estimates for informational purposes only based on the values entered. They do not constitute a loan offer, pre-qualification, or guarantee of any rate or credit limit. Actual HELOC terms vary by lender and individual borrower profile. Always verify with a licensed lender before making financial decisions. See our full <a href="/disclaimer.html">Disclaimer</a>.</p>
+</div>
+
+<footer class="footer">
+  <p>&copy; <span class="dyn-year">2026</span> MyHelocRates.com &nbsp;|&nbsp;
+    <a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/disclaimer.html">Disclaimer</a>
+    <a href="/terms-of-use.html">Terms of Use</a>
+    <a href="/">Home</a>
+  </p>
+</footer>
+
+<script>
+  /* Dynamic dates */
+  (function() {
+    var now = new Date(); var year = now.getFullYear();
+    var month = now.toLocaleString("en-US", { month: "long" });
+    document.querySelectorAll(".dyn-year").forEach(function(el){ el.textContent = year; });
+    document.querySelectorAll(".dyn-monthyear").forEach(function(el){ el.textContent = month + " " + year; });
+  })();
+
+  /* Tab switcher */
+  function switchTab(tab) {
+    document.querySelectorAll('.calc-tab').forEach(function(t){ t.classList.remove('active'); t.setAttribute('aria-selected','false'); });
+    document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.remove('active'); });
+    document.querySelectorAll('.results').forEach(function(r){ r.classList.remove('show'); });
+    if (tab === 'payment') {
+      document.querySelectorAll('.calc-tab')[0].classList.add('active');
+      document.querySelectorAll('.calc-tab')[0].setAttribute('aria-selected','true');
+      document.getElementById('tab-payment').classList.add('active');
+    } else {
+      document.querySelectorAll('.calc-tab')[1].classList.add('active');
+      document.querySelectorAll('.calc-tab')[1].setAttribute('aria-selected','true');
+      document.getElementById('tab-equity').classList.add('active');
+    }
+  }
+
+  function fmt(n) { return '$' + Math.round(n).toLocaleString('en-US'); }
+
+  /* Payment calculator */
+  function calcPayment() {
+    var amount     = parseFloat(document.getElementById('p-amount').value) || 0;
+    var annualRate = parseFloat(document.getElementById('p-rate').value) || 0;
+    var drawYrs    = parseFloat(document.getElementById('p-draw').value) || 10;
+    var repayYrs   = parseFloat(document.getElementById('p-repay').value) || 20;
+    var mr         = annualRate / 100 / 12;
+    var drawPmt    = mr > 0 ? amount * mr : 0;
+    var repayMos   = repayYrs * 12;
+    var repayPmt   = mr === 0 ? amount / repayMos :
+      amount * (mr * Math.pow(1 + mr, repayMos)) / (Math.pow(1 + mr, repayMos) - 1);
+    var totalInt   = (drawPmt * drawYrs * 12) + (repayPmt * repayMos) - amount;
+    document.getElementById('r-draw-pmt').textContent  = fmt(drawPmt) + '/mo';
+    document.getElementById('r-repay-pmt').textContent = fmt(repayPmt) + '/mo';
+    document.getElementById('r-total-int').textContent = fmt(Math.max(0, totalInt));
+    buildAmortTable(amount, mr, drawYrs, repayYrs, drawPmt, repayPmt);
+    document.getElementById('payment-results').classList.add('show');
+  }
+
+  /* Build amortisation table */
+  function buildAmortTable(amount, mr, drawYrs, repayYrs, drawPmt, repayPmt) {
+    var tbody = document.getElementById('amort-body');
+    tbody.innerHTML = '';
+    var balance = amount;
+    /* Draw period */
+    for (var y = 1; y <= drawYrs; y++) {
+      var intPaid = drawPmt * 12;
+      var row = tbody.insertRow();
+      row.innerHTML = '<td>Year ' + y + '</td><td>Draw</td><td>' + fmt(drawPmt) + '/mo</td><td>' + fmt(intPaid) + '</td><td>$0</td><td>' + fmt(balance) + '</td>';
+    }
+    /* Repayment period */
+    for (var y = 1; y <= repayYrs; y++) {
+      var intPaid = 0; var prinPaid = 0;
+      for (var m = 0; m < 12; m++) {
+        var intCharge = balance * mr;
+        var prin = repayPmt - intCharge;
+        intPaid += intCharge;
+        prinPaid += prin;
+        balance = Math.max(0, balance - prin);
+      }
+      var row = tbody.insertRow();
+      row.innerHTML = '<td>Year ' + (drawYrs + y) + '</td><td>Repay</td><td>' + fmt(repayPmt) + '/mo</td><td>' + fmt(intPaid) + '</td><td>' + fmt(prinPaid) + '</td><td>' + fmt(balance) + '</td>';
+    }
+  }
+
+  /* Toggle amortisation table */
+  function toggleAmort() {
+    var wrap  = document.getElementById('amort-wrap');
+    var label = document.getElementById('amort-label');
+    var show  = wrap.classList.toggle('show');
+    label.textContent = show ? 'Hide year-by-year breakdown' : 'Show year-by-year breakdown';
+  }
+
+  /* Equity calculator */
+  function calcEquity() {
+    var homeVal    = parseFloat(document.getElementById('e-home').value) || 0;
+    var mortgage   = parseFloat(document.getElementById('e-mortgage').value) || 0;
+    var ltv        = parseFloat(document.getElementById('e-ltv').value) / 100 || 0.85;
+    var creditMult = parseFloat(document.getElementById('e-credit').value) || 0.90;
+    var equity     = homeVal - mortgage;
+    var maxBorrow  = (homeVal * ltv) - mortgage;
+    var helocLimit = Math.max(0, maxBorrow * creditMult);
+    var cltv       = homeVal > 0 ? ((mortgage + helocLimit) / homeVal * 100) : 0;
+    document.getElementById('r-equity').textContent      = fmt(Math.max(0, equity));
+    document.getElementById('r-heloc-limit').textContent = fmt(helocLimit);
+    document.getElementById('r-cltv').textContent        = cltv.toFixed(1) + '%';
+    document.getElementById('equity-results').classList.add('show');
+  }
+
+  /* FAQ accordion */
+  function toggleFaq(el) {
+    var isOpen = el.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(function(item){ item.classList.remove('open'); });
+    if (!isOpen) { el.classList.add('open'); }
+  }
+</script>
+
+</body>
+</html>
