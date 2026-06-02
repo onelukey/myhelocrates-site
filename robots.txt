@@ -1,26 +1,27 @@
 # robots.txt — MyHelocRates.com
-# Updated: 2026-05-10
+# Updated: 2026-06-02
 
 # ── Allow all legitimate search engine crawlers ──
 User-agent: *
 Allow: /
 
-# ── Block access to any future admin or private folders ──
+# ── Block access to admin and private folders ──
 Disallow: /admin/
 Disallow: /private/
 Disallow: /drafts/
 Disallow: /staging/
 
-# ── Prevent duplicate content from query strings ──
-Disallow: /*?*
-
 # ── Sitemap location ──
 Sitemap: https://myhelocrates.com/sitemap.xml
 
-# ── Crawl delay (optional — polite to non-Google bots) ──
-Crawl-delay: 10
+# ── Crawl delay (polite to non-Google bots) ──
+Crawl-delay: 1
 
-# ── Google-specific (no crawl delay needed — Google ignores it) ──
+# ── Google AdSense — explicitly allowed for all URLs including query strings ──
+User-agent: Mediapartners-Google
+Allow: /
+
+# ── Google search ──
 User-agent: Googlebot
 Allow: /
 Disallow: /admin/
@@ -31,7 +32,7 @@ Disallow: /staging/
 # ── Bing ──
 User-agent: Bingbot
 Allow: /
-Crawl-delay: 10
+Crawl-delay: 1
 
 # ── Block AI training crawlers ──
 User-agent: GPTBot
