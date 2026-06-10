@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HELOC Glossary: Key Terms Explained in Plain English | MyHelocRates.com</title>
+  <meta name="description" content="The complete HELOC glossary — 40+ key terms explained in plain English. From APR to LTV to draw period, understand every term before you borrow." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://myhelocrates.com/heloc-glossary.html" />
+  <meta property="og:title" content="HELOC Glossary: Key Terms Explained in Plain English" />
+  <meta property="og:description" content="40+ HELOC terms explained clearly. Understand every term before you borrow." />
+  <meta property="og:url" content="https://myhelocrates.com/heloc-glossary.html" />
+  <meta property="og:type" content="website" />
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RLKEB7GMX"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-9RLKEB7GMX');</script>
+  <!-- AdSense -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3723787015797542" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+  <style>
+    :root {
+      --navy:#0f2557; --navy-mid:#1a3a6b; --navy-light:#e8eef7;
+      --gold:#c9a84c; --gold-dark:#a07c28; --gold-light:#f5ecd4;
+      --bg:#f9f8f6; --text:#1a1a2e; --text-muted:#5f5e5a;
+      --white:#ffffff; --border:#dde3ed;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:1rem;}
+
+    /* ── HEADER ── */
+    header{background:var(--navy);padding:0 1.5rem;position:sticky;top:0;z-index:100;box-shadow:0 2px 12px rgba(0,0,0,.18);}
+    .header-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px;}
+    .logo{font-family:'DM Serif Display',serif;font-size:1.35rem;color:var(--white);text-decoration:none;}
+    .logo span{color:var(--gold);}
+    nav{display:flex;gap:.25rem;align-items:center;}
+    nav a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.875rem;font-weight:500;padding:.4rem .75rem;border-radius:6px;transition:background .2s,color .2s;}
+    nav a:hover{background:rgba(255,255,255,.1);color:var(--white);}
+    nav a.active{color:var(--gold);}
+    .nav-cta{background:var(--gold);color:var(--navy) !important;border-radius:8px;font-weight:700 !important;padding:.4rem 1rem !important;}
+    .nav-cta:hover{background:var(--gold-dark) !important;color:var(--white) !important;}
+
+    /* ── HERO ── */
+    .hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);padding:3.5rem 1.5rem 3rem;text-align:center;color:var(--white);}
+    .hero-badge{display:inline-block;background:rgba(201,168,76,.2);border:1px solid var(--gold);color:var(--gold);font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;padding:.3rem .9rem;border-radius:20px;margin-bottom:1.25rem;}
+    .hero h1{font-family:'DM Serif Display',serif;font-size:clamp(2rem,5vw,3rem);line-height:1.15;margin-bottom:1rem;color:var(--white);}
+    .hero p{font-size:1.1rem;color:rgba(255,255,255,.78);max-width:600px;margin:0 auto 2rem;}
+    .hero-stats{display:flex;justify-content:center;gap:2.5rem;flex-wrap:wrap;}
+    .hero-stat .num{font-family:'DM Serif Display',serif;font-size:1.75rem;color:var(--gold);display:block;}
+    .hero-stat .lbl{font-size:.8rem;color:rgba(255,255,255,.6);text-transform:uppercase;letter-spacing:.05em;}
+
+    /* ── SEARCH ── */
+    .search-bar-wrap{background:var(--white);border-bottom:1px solid var(--border);padding:1.25rem 1.5rem;position:sticky;top:64px;z-index:90;box-shadow:0 2px 8px rgba(15,37,87,.06);}
+    .search-bar-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;gap:1rem;flex-wrap:wrap;}
+    .search-input-wrap{position:relative;flex:1;min-width:220px;}
+    .search-input-wrap i{position:absolute;left:.85rem;top:50%;transform:translateY(-50%);color:var(--text-muted);font-size:1.1rem;pointer-events:none;}
+    #glossarySearch{width:100%;padding:.65rem .9rem .65rem 2.5rem;border:1.5px solid var(--border);border-radius:8px;font-family:'DM Sans',sans-serif;font-size:.95rem;color:var(--text);background:var(--bg);transition:border-color .2s;}
+    #glossarySearch:focus{outline:none;border-color:var(--navy);}
+    .alpha-nav{display:flex;flex-wrap:wrap;gap:.25rem;}
+    .alpha-btn{background:none;border:1px solid var(--border);border-radius:5px;padding:.25rem .55rem;font-family:'DM Sans',sans-serif;font-size:.8rem;font-weight:600;color:var(--text-muted);cursor:pointer;transition:all .2s;}
+    .alpha-btn:hover,.alpha-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy);}
+
+    /* ── LAYOUT ── */
+    .page-layout{max-width:1100px;margin:0 auto;padding:2.5rem 1.5rem 4rem;display:grid;grid-template-columns:1fr 280px;gap:2.5rem;align-items:start;}
+    @media(max-width:820px){.page-layout{grid-template-columns:1fr;}.page-sidebar{display:none;}}
+
+    /* ── GLOSSARY CONTENT ── */
+    .glossary-main{min-width:0;}
+    .no-results{display:none;text-align:center;padding:3rem 1rem;color:var(--text-muted);}
+    .no-results i{font-size:2.5rem;display:block;margin-bottom:.75rem;color:var(--border);}
+
+    /* Letter section */
+    .letter-section{margin-bottom:2.5rem;}
+    .letter-anchor{display:flex;align-items:center;gap:1rem;margin-bottom:1.25rem;}
+    .letter-badge{background:var(--navy);color:var(--white);font-family:'DM Serif Display',serif;font-size:1.5rem;width:3rem;height:3rem;border-radius:10px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .letter-divider{flex:1;height:2px;background:var(--navy-light);}
+
+    /* Term cards */
+    .term-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:.85rem;box-shadow:0 2px 6px rgba(15,37,87,.05);transition:border-color .2s,box-shadow .2s;}
+    .term-card:hover{border-color:var(--gold);box-shadow:0 4px 14px rgba(15,37,87,.1);}
+    .term-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem;margin-bottom:.5rem;}
+    .term-name{font-family:'DM Serif Display',serif;font-size:1.15rem;color:var(--navy);}
+    .term-abbr{font-size:.72rem;font-weight:700;background:var(--navy-light);color:var(--navy);padding:.15rem .55rem;border-radius:20px;white-space:nowrap;flex-shrink:0;margin-top:.2rem;}
+    .term-def{font-size:.975rem;color:var(--text);line-height:1.65;}
+    .term-link{display:inline-flex;align-items:center;gap:.3rem;margin-top:.65rem;font-size:.82rem;font-weight:600;color:var(--gold-dark);text-decoration:none;}
+    .term-link:hover{color:var(--navy);text-decoration:underline;}
+    .term-link i{font-size:.9rem;}
+
+    /* ── KEY TAKEAWAY ── */
+    .key-box{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:12px;padding:1.75rem 2rem;color:var(--white);margin:2.5rem 0;}
+    .key-box h3{font-family:'DM Serif Display',serif;font-size:1.2rem;color:var(--gold);margin-bottom:.75rem;display:flex;align-items:center;gap:.5rem;}
+    .key-box ul{margin-left:1.25rem;}
+    .key-box li{color:rgba(255,255,255,.88);margin-bottom:.45rem;font-size:.95rem;}
+    .key-box li a{color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(201,168,76,.35);transition:border-color .2s,color .2s;}
+    .key-box li a:hover{color:var(--white);border-bottom-color:var(--white);}
+
+    /* ── SIDEBAR ── */
+    .page-sidebar{position:sticky;top:130px;}
+    .sidebar-card{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.25rem;margin-bottom:1.25rem;box-shadow:0 2px 8px rgba(15,37,87,.05);}
+    .sidebar-card h4{font-family:'DM Serif Display',serif;font-size:1rem;color:var(--navy);margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:2px solid var(--navy-light);}
+    .sidebar-links{list-style:none;padding:0;margin:0;}
+    .sidebar-links li{margin-bottom:.5rem;}
+    .sidebar-links a{color:var(--navy-mid);text-decoration:none;font-size:.875rem;display:flex;align-items:flex-start;gap:.5rem;line-height:1.4;}
+    .sidebar-links a:hover{color:var(--gold-dark);text-decoration:underline;}
+    .sidebar-links a i{flex-shrink:0;margin-top:.1em;color:var(--gold);}
+    .cta-card{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-mid) 100%);border-radius:10px;padding:1.5rem;text-align:center;}
+    .cta-card h4{font-family:'DM Serif Display',serif;color:var(--white);font-size:1.1rem;margin-bottom:.5rem;}
+    .cta-card p{color:rgba(255,255,255,.75);font-size:.85rem;margin-bottom:1rem;}
+    .cta-card a{display:inline-flex;align-items:center;gap:.4rem;background:var(--gold);color:var(--navy);text-decoration:none;font-weight:700;padding:.65rem 1.25rem;border-radius:7px;font-size:.875rem;transition:background .2s;}
+    .cta-card a:hover{background:var(--gold-dark);color:var(--white);}
+
+    /* ── DISCLAIMER & FOOTER ── */
+    .disclaimer{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:1rem 1.25rem;margin-top:2rem;font-size:.8rem;color:var(--text-muted);}
+    .disclaimer strong{color:var(--text);}
+    footer{background:var(--navy);color:rgba(255,255,255,.65);padding:2.5rem 1.5rem;text-align:center;font-size:.85rem;}
+    footer a{color:rgba(255,255,255,.65);text-decoration:none;}
+    footer a:hover{color:var(--gold);}
+    .footer-links{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem 1.75rem;margin-bottom:1rem;}
+    .footer-copy{margin-top:.75rem;font-size:.78rem;opacity:.55;}
+
+    /* Search highlight */
+    .highlight{background:rgba(201,168,76,.25);border-radius:3px;padding:0 2px;}
+  </style>
+</head>
+<body>
+
+<!-- ── HEADER ── -->
+<header>
+  <div class="header-inner">
+    <a href="/" class="logo">MyHeloc<span>Rates</span>.com</a>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/heloc-rates-today.html">Rates Today</a>
+      <a href="/heloc-glossary.html" class="active">Glossary</a>
+      <a href="/blog/index.html">Blog</a>
+      <a href="/heloc-calculator.html" class="nav-cta">Try Calculator</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-badge">Reference Guide</div>
+  <h1>HELOC Glossary</h1>
+  <p>Every term you'll encounter when researching a Home Equity Line of Credit — explained in plain English, no jargon.</p>
+  <div class="hero-stats">
+    <div class="hero-stat"><span class="num">40+</span><span class="lbl">Terms defined</span></div>
+    <div class="hero-stat"><span class="num">A–Z</span><span class="lbl">Alphabetical</span></div>
+    <div class="hero-stat"><span class="num">Free</span><span class="lbl">Always — no sign up</span></div>
+  </div>
+</section>
+
+<!-- ── SEARCH & ALPHA NAV ── -->
+<div class="search-bar-wrap">
+  <div class="search-bar-inner">
+    <div class="search-input-wrap">
+      <i class="ti ti-search"></i>
+      <input type="text" id="glossarySearch" placeholder="Search terms e.g. 'draw period', 'LTV'…" oninput="filterGlossary()" />
+    </div>
+    <div class="alpha-nav" id="alphaNav"></div>
+  </div>
+</div>
+
+<!-- ── PAGE LAYOUT ── -->
+<div class="page-layout">
+  <main class="glossary-main">
+
+    <div class="no-results" id="noResults">
+      <i class="ti ti-search-off"></i>
+      No terms found — try a different search word.
+    </div>
+
+    <!-- ═══ A ═══ -->
+    <div class="letter-section" data-letter="A" id="letter-A">
+      <div class="letter-anchor"><div class="letter-badge">A</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Annual Percentage Rate</span><span class="term-abbr">APR</span></div>
+        <p class="term-def">The true annual cost of borrowing, expressed as a percentage. For a HELOC, the APR includes the interest rate plus any fees, giving you a more accurate comparison tool than the interest rate alone. Because HELOCs have variable rates, the APR shown is typically an introductory or current rate — it will change over time.</p>
+        <a href="/heloc-rates-today.html" class="term-link"><i class="ti ti-arrow-right"></i> See today's HELOC rates</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Appraisal</span></div>
+        <p class="term-def">A professional assessment of your home's current market value, carried out by a licensed appraiser. Lenders use appraisals to determine how much equity you have and how large a HELOC they'll offer. Some lenders use automated valuation models (AVMs) instead of full appraisals for lower-risk applications.</p>
+        <a href="/blog/blog-post-6-how-much-equity-for-heloc.html" class="term-link"><i class="ti ti-arrow-right"></i> How equity affects your HELOC limit</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Automated Valuation Model</span><span class="term-abbr">AVM</span></div>
+        <p class="term-def">A computer-generated estimate of a property's value based on recent comparable sales, public records, and market data. Lenders use AVMs as a faster, cheaper alternative to a full appraisal. AVMs are less accurate for unusual properties or in fast-moving markets — if your AVM comes in low, you can request a professional appraisal.</p>
+      </div>
+    </div>
+
+    <!-- ═══ B ═══ -->
+    <div class="letter-section" data-letter="B" id="letter-B">
+      <div class="letter-anchor"><div class="letter-badge">B</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Balloon Payment</span></div>
+        <p class="term-def">A large lump-sum payment due at the end of a loan term. Some HELOCs require a balloon payment — where the entire remaining principal balance is due when the repayment period ends. Most standard HELOCs are fully amortising, meaning the balance reaches zero through regular monthly payments. Always check your HELOC agreement for balloon payment clauses.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Basis Point</span><span class="term-abbr">bps</span></div>
+        <p class="term-def">One hundredth of one percentage point (0.01%). Used to describe small changes in interest rates. A 25 basis point rate increase equals a 0.25% rise. Lenders often express rate discounts in basis points — for example, "50bps off for existing customers" means a 0.50% rate reduction.</p>
+      </div>
+    </div>
+
+    <!-- ═══ C ═══ -->
+    <div class="letter-section" data-letter="C" id="letter-C">
+      <div class="letter-anchor"><div class="letter-badge">C</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Closing Costs</span></div>
+        <p class="term-def">Fees paid when a HELOC is established, which may include appraisal fees, title search fees, attorney fees, and origination fees. Many lenders offer HELOCs with no closing costs — but check whether those costs are waived or simply rolled into the rate. Some lenders recoup closing costs if you close the HELOC within a set period (typically 2–3 years).</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Combined Loan-to-Value Ratio</span><span class="term-abbr">CLTV</span></div>
+        <p class="term-def">The total of all loans secured by your home — including your first mortgage and HELOC — divided by your home's current market value, expressed as a percentage. Most lenders cap CLTV at 80–85%. The lower your CLTV, the more equity you have and the more you may be able to borrow.</p>
+        <a href="/blog/blog-post-6-how-much-equity-for-heloc.html" class="term-link"><i class="ti ti-arrow-right"></i> How to calculate your CLTV</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Credit Limit</span></div>
+        <p class="term-def">The maximum amount you are authorised to borrow on your HELOC. Set at the time of approval, it is based on your home's equity, credit score, income, and lender policy. You can draw up to this limit at any time during the draw period. Having a high credit limit doesn't mean you should use it all.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Credit Score</span></div>
+        <p class="term-def">A numerical rating (typically 300–850 in the US) that represents your creditworthiness based on your borrowing history. Most HELOC lenders require a minimum score of 620, with the best rates reserved for scores of 740 and above. Your score is checked when you apply and can affect both your approval and your interest rate.</p>
+        <a href="/blog/blog-post-3-credit-score-for-heloc.html" class="term-link"><i class="ti ti-arrow-right"></i> What credit score do you need?</a>
+      </div>
+    </div>
+
+    <!-- ═══ D ═══ -->
+    <div class="letter-section" data-letter="D" id="letter-D">
+      <div class="letter-anchor"><div class="letter-badge">D</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Debt Consolidation</span></div>
+        <p class="term-def">Using a single lower-rate loan to pay off multiple higher-rate debts. A common HELOC strategy is to use the line of credit to pay off credit card balances, replacing 20%+ card rates with a HELOC rate of 7–9%. The risk: credit card debt is unsecured; HELOC debt is secured by your home.</p>
+        <a href="/blog/blog-post-10-heloc-for-debt-consolidation.html" class="term-link"><i class="ti ti-arrow-right"></i> Using a HELOC to pay off debt</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Debt-to-Income Ratio</span><span class="term-abbr">DTI</span></div>
+        <p class="term-def">Your total monthly debt payments divided by your gross monthly income, expressed as a percentage. Lenders use DTI to assess whether you can afford additional borrowing. Most HELOC lenders prefer a DTI below 43%, with under 36% considered strong. A high DTI may result in a lower credit limit or outright rejection.</p>
+        <a href="/how-to-qualify-for-heloc.html" class="term-link"><i class="ti ti-arrow-right"></i> How to qualify for a HELOC</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Draw Period</span></div>
+        <p class="term-def">The phase of a HELOC during which you can actively borrow money from your credit line. Typically lasts 10 years. During this time, most lenders only require interest-only payments on the outstanding balance. When the draw period ends, no new draws are allowed and the repayment period begins.</p>
+        <a href="/blog/blog-post-11-heloc-draw-period-explained.html" class="term-link"><i class="ti ti-arrow-right"></i> Full guide to the HELOC draw period</a>
+      </div>
+    </div>
+
+    <!-- ═══ E ═══ -->
+    <div class="letter-section" data-letter="E" id="letter-E">
+      <div class="letter-anchor"><div class="letter-badge">E</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Equity</span></div>
+        <p class="term-def">The portion of your home's value that you own outright — calculated as your home's current market value minus any outstanding mortgage balance. For example, a $400,000 home with a $250,000 mortgage has $150,000 in equity. Your equity grows as you pay down your mortgage and as your home's value appreciates.</p>
+        <a href="/blog/blog-post-6-how-much-equity-for-heloc.html" class="term-link"><i class="ti ti-arrow-right"></i> How much equity do you need?</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Early Closure Fee</span></div>
+        <p class="term-def">A penalty charged by some lenders if you close your HELOC within a set period of opening it — typically 2–3 years. This fee helps lenders recoup the costs of setting up the line. Always check your HELOC agreement for early closure terms before signing, particularly if you're not certain you'll keep the line open long-term.</p>
+      </div>
+    </div>
+
+    <!-- ═══ F ═══ -->
+    <div class="letter-section" data-letter="F" id="letter-F">
+      <div class="letter-anchor"><div class="letter-badge">F</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Fixed-Rate Option</span></div>
+        <p class="term-def">Some HELOCs allow you to lock a fixed interest rate on a portion of your outstanding balance, converting it to a predictable fixed-rate sub-account while the rest remains variable. This hybrid approach protects against rate rises on the locked portion while retaining the flexibility of the variable-rate line.</p>
+        <a href="/blog/blog-post-9-best-heloc-lenders.html" class="term-link"><i class="ti ti-arrow-right"></i> Lenders offering rate-lock options</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Freeze (HELOC)</span></div>
+        <p class="term-def">When a lender suspends your ability to make new draws from your HELOC. Lenders can legally freeze a HELOC if your home's value drops significantly, your financial situation deteriorates, or you default on payments. A freeze does not affect your existing balance or repayment terms — only new draws are blocked.</p>
+        <a href="/blog/blog-post-8-can-lender-freeze-heloc.html" class="term-link"><i class="ti ti-arrow-right"></i> Can a lender freeze your HELOC?</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Full Appraisal</span></div>
+        <p class="term-def">A comprehensive property valuation where a licensed appraiser physically inspects your home inside and out and compares it to recent nearby sales. The most accurate valuation method, typically costing $300–$600. Required by many lenders for larger HELOC amounts or when automated valuations return unexpected results.</p>
+      </div>
+    </div>
+
+    <!-- ═══ H ═══ -->
+    <div class="letter-section" data-letter="H" id="letter-H">
+      <div class="letter-anchor"><div class="letter-badge">H</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Home Equity Line of Credit</span><span class="term-abbr">HELOC</span></div>
+        <p class="term-def">A revolving line of credit secured against the equity in your home. Like a credit card, you can draw funds, repay them, and draw again — up to your approved credit limit, during the draw period. Interest is only charged on the amount you've actually borrowed. HELOCs typically have variable interest rates tied to the Prime Rate.</p>
+        <a href="/what-is-a-heloc.html" class="term-link"><i class="ti ti-arrow-right"></i> What is a HELOC?</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Home Equity Loan</span></div>
+        <p class="term-def">A lump-sum loan secured against your home equity, with a fixed interest rate and fixed monthly payments over a set term. Unlike a HELOC, you receive all the money upfront and cannot re-borrow. Sometimes called a "second mortgage." Best for single defined projects where you know the exact amount needed.</p>
+        <a href="/heloc-vs-home-equity-loan.html" class="term-link"><i class="ti ti-arrow-right"></i> HELOC vs Home Equity Loan</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Hard Inquiry</span></div>
+        <p class="term-def">A credit check that occurs when you formally apply for a HELOC. Unlike a soft inquiry (used for pre-qualification), a hard inquiry is recorded on your credit report and may temporarily lower your score by a few points. Multiple HELOC applications within a short window (14–45 days) are typically treated as a single inquiry by credit bureaus.</p>
+      </div>
+    </div>
+
+    <!-- ═══ I ═══ -->
+    <div class="letter-section" data-letter="I" id="letter-I">
+      <div class="letter-anchor"><div class="letter-badge">I</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Index Rate</span></div>
+        <p class="term-def">The benchmark interest rate to which your HELOC rate is tied. Most US HELOCs use the Prime Rate as their index. When the Federal Reserve changes its federal funds rate, the Prime Rate typically moves in step, causing your HELOC rate to rise or fall accordingly.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Interest-Only Payment</span></div>
+        <p class="term-def">A monthly payment that covers only the interest accrued on your outstanding HELOC balance, with no principal reduction. Most HELOCs require only interest-only payments during the draw period. While this keeps payments low, the balance does not shrink — making it critical to plan for the higher payments when the repayment period begins.</p>
+        <a href="/blog/blog-post-11-heloc-draw-period-explained.html" class="term-link"><i class="ti ti-arrow-right"></i> Understanding payment shock</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Introductory Rate</span></div>
+        <p class="term-def">A temporarily reduced interest rate offered by some lenders for an initial period — often 3 to 12 months — to attract new HELOC borrowers. After the introductory period ends, the rate resets to the standard variable rate (index + margin). Always calculate your payments at the post-introductory rate before committing.</p>
+      </div>
+    </div>
+
+    <!-- ═══ L ═══ -->
+    <div class="letter-section" data-letter="L" id="letter-L">
+      <div class="letter-anchor"><div class="letter-badge">L</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Lien</span></div>
+        <p class="term-def">A legal claim a lender holds against your property as security for a loan. When you take out a HELOC, the lender places a lien on your home. If you default, the lender can use this lien to force a sale. Your first mortgage holds a first-position lien; a HELOC typically holds a second-position lien, meaning the first mortgage is repaid first in a foreclosure.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Line of Credit</span></div>
+        <p class="term-def">A flexible borrowing arrangement with a set maximum limit from which you can draw funds as needed, repay them, and draw again. A HELOC is a secured line of credit — secured against your home. Unlike a term loan, you only pay interest on what you've actually borrowed, not the full credit limit.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Loan-to-Value Ratio</span><span class="term-abbr">LTV</span></div>
+        <p class="term-def">Your current mortgage balance divided by your home's market value, expressed as a percentage. LTV measures how much of your home's value is mortgaged. A lower LTV means more equity and typically better HELOC terms. For HELOC purposes, lenders look at Combined LTV (CLTV) — which includes both your mortgage and the HELOC.</p>
+        <a href="/blog/blog-post-6-how-much-equity-for-heloc.html" class="term-link"><i class="ti ti-arrow-right"></i> Calculate your LTV and CLTV</a>
+      </div>
+    </div>
+
+    <!-- ═══ M ═══ -->
+    <div class="letter-section" data-letter="M" id="letter-M">
+      <div class="letter-anchor"><div class="letter-badge">M</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Margin</span></div>
+        <p class="term-def">The fixed percentage added to the index rate (e.g. Prime Rate) to calculate your HELOC's total interest rate. For example, if the Prime Rate is 7.50% and your margin is 0.50%, your HELOC rate is 8.00%. The margin is set at the time of your application and remains fixed for the life of the loan — even as the index rate changes.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Minimum Draw</span></div>
+        <p class="term-def">The smallest amount you are required to draw when accessing your HELOC. Some lenders set minimum initial draws of $10,000–$25,000 at closing, and minimum subsequent draws of $500–$1,000. Check your lender's minimum draw requirements before opening a HELOC, especially if you plan to make small, occasional draws.</p>
+      </div>
+    </div>
+
+    <!-- ═══ O ═══ -->
+    <div class="letter-section" data-letter="O" id="letter-O">
+      <div class="letter-anchor"><div class="letter-badge">O</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Origination Fee</span></div>
+        <p class="term-def">An upfront fee charged by some lenders to process and set up a HELOC, typically expressed as a percentage of the credit limit (e.g. 1–3%). Many lenders offer no-origination-fee HELOCs, though they may recoup costs elsewhere. Online lenders like Figure charge origination fees in exchange for much faster funding times.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Outstanding Balance</span></div>
+        <p class="term-def">The total amount you have drawn from your HELOC and not yet repaid. Interest is charged only on the outstanding balance, not the total credit limit. Repaying the outstanding balance during the draw period frees up your available credit to draw again.</p>
+      </div>
+    </div>
+
+    <!-- ═══ P ═══ -->
+    <div class="letter-section" data-letter="P" id="letter-P">
+      <div class="letter-anchor"><div class="letter-badge">P</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Payment Shock</span></div>
+        <p class="term-def">The significant jump in monthly payments that occurs when a HELOC transitions from the draw period (interest-only payments) to the repayment period (principal + interest). A $50,000 HELOC at 8% could see monthly payments more than double at this transition. Planning ahead — by paying principal during the draw period — is the best defence.</p>
+        <a href="/blog/blog-post-11-heloc-draw-period-explained.html" class="term-link"><i class="ti ti-arrow-right"></i> How to avoid payment shock</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Prime Rate</span></div>
+        <p class="term-def">The benchmark interest rate used by US banks as a reference for variable-rate lending products, including HELOCs. The Prime Rate is typically set at 3 percentage points above the Federal Reserve's federal funds rate. When the Fed raises or cuts rates, the Prime Rate moves in step, directly affecting your HELOC's variable interest rate.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Principal</span></div>
+        <p class="term-def">The original amount borrowed — the amount you actually drew from your HELOC, excluding interest. During the draw period, most lenders only require interest payments, leaving the principal untouched. During the repayment period, your monthly payments cover both interest and principal, gradually reducing the balance to zero.</p>
+      </div>
+    </div>
+
+    <!-- ═══ Q ═══ -->
+    <div class="letter-section" data-letter="Q" id="letter-Q">
+      <div class="letter-anchor"><div class="letter-badge">Q</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Qualified Residence</span></div>
+        <p class="term-def">For tax purposes, the home that secures a HELOC and against which mortgage interest deductions may apply. Under current US tax law, HELOC interest is only potentially deductible when funds are used to buy, build, or substantially improve the qualified residence — typically your primary or secondary home.</p>
+        <a href="/blog/blog-post-12-heloc-tax-deductible.html" class="term-link"><i class="ti ti-arrow-right"></i> Is HELOC interest tax deductible?</a>
+      </div>
+    </div>
+
+    <!-- ═══ R ═══ -->
+    <div class="letter-section" data-letter="R" id="letter-R">
+      <div class="letter-anchor"><div class="letter-badge">R</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Rate Cap</span></div>
+        <p class="term-def">The maximum interest rate your HELOC can ever reach, regardless of how high the index rate climbs. A lifetime cap protects borrowers against extreme rate rises. Some HELOCs also have periodic caps limiting how much the rate can change in a single adjustment period. Always check what caps apply before signing.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Repayment Period</span></div>
+        <p class="term-def">The phase of a HELOC that follows the draw period, during which no new draws are allowed and the outstanding balance must be fully repaid through monthly principal and interest payments. Typically lasts 10–20 years. The repayment period end date is set when the HELOC is opened and cannot normally be extended.</p>
+        <a href="/blog/blog-post-11-heloc-draw-period-explained.html" class="term-link"><i class="ti ti-arrow-right"></i> Draw period vs repayment period explained</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Revolving Credit</span></div>
+        <p class="term-def">A type of credit that can be borrowed, repaid, and borrowed again — up to a set limit. A HELOC is revolving credit, similar to a credit card. As you repay your balance, that credit becomes available to draw again during the draw period. This flexibility distinguishes a HELOC from a home equity loan, which is a one-time lump sum.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Right of Rescission</span></div>
+        <p class="term-def">A federal consumer protection right that gives you three business days after signing a HELOC agreement to cancel the loan without penalty. Applies to HELOCs secured by your primary residence. If you change your mind for any reason within this window, notify your lender in writing and no funds will be disbursed.</p>
+      </div>
+    </div>
+
+    <!-- ═══ S ═══ -->
+    <div class="letter-section" data-letter="S" id="letter-S">
+      <div class="letter-anchor"><div class="letter-badge">S</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Second Mortgage</span></div>
+        <p class="term-def">A loan secured against a property that already has an existing (first) mortgage. Both HELOCs and home equity loans are forms of second mortgage. In the event of default, the first mortgage lender is repaid first from any sale proceeds — making second mortgage lenders higher-risk and sometimes charging slightly higher rates accordingly.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Secured Debt</span></div>
+        <p class="term-def">Debt backed by collateral — in the case of a HELOC, your home. If you default on secured debt, the lender can seize the collateral. This contrasts with unsecured debt (like credit cards), where the lender has no claim on specific assets. The security is why HELOC rates are much lower than credit card rates.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Subordination</span></div>
+        <p class="term-def">The ranking of loan priority in the event of default. Your first mortgage has "first position" — it gets repaid first if your home is sold. A HELOC typically holds "second position." If you refinance your first mortgage while a HELOC is open, the HELOC lender must agree to remain in second position — this is called subordination.</p>
+      </div>
+    </div>
+
+    <!-- ═══ T ═══ -->
+    <div class="letter-section" data-letter="T" id="letter-T">
+      <div class="letter-anchor"><div class="letter-badge">T</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Tax Deductibility</span></div>
+        <p class="term-def">Under current US tax law, HELOC interest may be deductible on your federal tax return — but only when the funds are used to buy, build, or substantially improve the home securing the loan. Using HELOC funds for debt consolidation, personal spending, or other purposes does not qualify. You must also itemise deductions rather than taking the standard deduction.</p>
+        <a href="/blog/blog-post-12-heloc-tax-deductible.html" class="term-link"><i class="ti ti-arrow-right"></i> Full guide to HELOC tax deductibility</a>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Title Search</span></div>
+        <p class="term-def">A review of public records to confirm the legal ownership of a property and identify any existing liens, claims, or encumbrances. Lenders require a title search before approving a HELOC to ensure their lien position is secure. Title search fees are part of HELOC closing costs.</p>
+      </div>
+    </div>
+
+    <!-- ═══ U ═══ -->
+    <div class="letter-section" data-letter="U" id="letter-U">
+      <div class="letter-anchor"><div class="letter-badge">U</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Underwriting</span></div>
+        <p class="term-def">The process by which a lender evaluates your application and decides whether to approve your HELOC, and on what terms. Underwriters assess your credit score, income, DTI ratio, employment history, property value, and equity. Traditional bank underwriting can take 2–6 weeks; online lenders like Figure have automated the process to as little as 5 days.</p>
+      </div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Unsecured Debt</span></div>
+        <p class="term-def">Debt not backed by collateral — such as credit cards and personal loans. If you default on unsecured debt, the lender cannot automatically seize your property. Using a HELOC to pay off unsecured debt converts it to secured debt — lowering your interest rate but putting your home at risk for obligations that previously posed no such threat.</p>
+        <a href="/blog/blog-post-10-heloc-for-debt-consolidation.html" class="term-link"><i class="ti ti-arrow-right"></i> Using a HELOC for debt consolidation</a>
+      </div>
+    </div>
+
+    <!-- ═══ V ═══ -->
+    <div class="letter-section" data-letter="V" id="letter-V">
+      <div class="letter-anchor"><div class="letter-badge">V</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Variable Interest Rate</span></div>
+        <p class="term-def">An interest rate that changes periodically based on a benchmark index — typically the Prime Rate for HELOCs. When the Federal Reserve raises rates, your HELOC rate rises; when it cuts rates, your rate falls. Most HELOCs are variable-rate products, though some lenders offer a fixed-rate lock on a portion of the balance.</p>
+        <a href="/heloc-rates-today.html" class="term-link"><i class="ti ti-arrow-right"></i> Today's HELOC rates</a>
+      </div>
+    </div>
+
+    <!-- ═══ W ═══ -->
+    <div class="letter-section" data-letter="W" id="letter-W">
+      <div class="letter-anchor"><div class="letter-badge">W</div><div class="letter-divider"></div></div>
+
+      <div class="term-card">
+        <div class="term-header"><span class="term-name">Withdrawal</span></div>
+        <p class="term-def">The act of drawing funds from your HELOC — also called a draw. You can withdraw funds via bank transfer, cheque, or a HELOC-linked debit card, depending on your lender. During the draw period you can make as many withdrawals as you like, up to your credit limit. Each withdrawal begins accruing interest immediately.</p>
+      </div>
+    </div>
+
+    <!-- KEY BOX -->
+    <div class="key-box">
+      <h3><i class="ti ti-star"></i> New to HELOCs? Start Here</h3>
+      <ul>
+        <li><a href="/blog/blog-post-6-how-much-equity-for-heloc.html">Understand your equity and CLTV before applying — this determines your borrowing limit</a></li>
+        <li><a href="/blog/blog-post-11-heloc-draw-period-explained.html">The draw period (typically 10 years) is when you borrow; the repayment period is when you pay it all back</a></li>
+        <li><a href="/heloc-rates-today.html">Your rate is variable — it moves with the Prime Rate, so budget for potential increases</a></li>
+        <li><a href="/blog/blog-post-12-heloc-tax-deductible.html">HELOC interest is only tax deductible for qualifying home improvement use</a></li>
+        <li><a href="/blog/blog-post-9-best-heloc-lenders.html">Always compare at least three lenders — rates and terms vary significantly</a></li>
+      </ul>
+    </div>
+
+    <div class="disclaimer">
+      <strong>Disclaimer:</strong> This glossary is for educational purposes only and does not constitute financial, tax, or legal advice. Terms and definitions reflect general US market practice as of 2026. Individual lender products vary. Always consult a qualified professional before making borrowing decisions. <a href="/disclaimer.html">Full disclaimer →</a>
+    </div>
+
+  </main>
+
+  <!-- ── SIDEBAR ── -->
+  <aside class="page-sidebar">
+    <div class="sidebar-card">
+      <h4>Essential Guides</h4>
+      <ul class="sidebar-links">
+        <li><a href="/what-is-a-heloc.html"><i class="ti ti-arrow-right"></i> What is a HELOC?</a></li>
+        <li><a href="/how-heloc-works.html"><i class="ti ti-arrow-right"></i> How a HELOC Works</a></li>
+        <li><a href="/how-to-qualify-for-heloc.html"><i class="ti ti-arrow-right"></i> How to Qualify</a></li>
+        <li><a href="/heloc-rates-today.html"><i class="ti ti-arrow-right"></i> Today's HELOC Rates</a></li>
+        <li><a href="/heloc-vs-home-equity-loan.html"><i class="ti ti-arrow-right"></i> HELOC vs Home Equity Loan</a></li>
+        <li><a href="/heloc-pros-and-cons.html"><i class="ti ti-arrow-right"></i> HELOC Pros and Cons</a></li>
+      </ul>
+    </div>
+    <div class="sidebar-card">
+      <h4>Popular Blog Posts</h4>
+      <ul class="sidebar-links">
+        <li><a href="/blog/blog-post-6-how-much-equity-for-heloc.html"><i class="ti ti-arrow-right"></i> How Much Equity Do You Need?</a></li>
+        <li><a href="/blog/blog-post-3-credit-score-for-heloc.html"><i class="ti ti-arrow-right"></i> What Credit Score Do You Need?</a></li>
+        <li><a href="/blog/blog-post-11-heloc-draw-period-explained.html"><i class="ti ti-arrow-right"></i> The Draw Period Explained</a></li>
+        <li><a href="/blog/blog-post-12-heloc-tax-deductible.html"><i class="ti ti-arrow-right"></i> Is HELOC Interest Tax Deductible?</a></li>
+        <li><a href="/blog/blog-post-9-best-heloc-lenders.html"><i class="ti ti-arrow-right"></i> Best HELOC Lenders 2026</a></li>
+      </ul>
+    </div>
+    <div class="cta-card">
+      <h4>Calculate Your Payment</h4>
+      <p>See what a HELOC would cost you at today's rates.</p>
+      <a href="/heloc-calculator.html"><i class="ti ti-calculator"></i> Try the Calculator</a>
+    </div>
+  </aside>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-links">
+    <a href="/">Home</a><a href="/about.html">About</a><a href="/blog/index.html">Blog</a>
+    <a href="/heloc-glossary.html">Glossary</a><a href="/heloc-calculator.html">Calculator</a>
+    <a href="/contact.html">Contact</a><a href="/privacy-policy.html">Privacy Policy</a>
+    <a href="/disclaimer.html">Disclaimer</a><a href="/terms-of-use.html">Terms of Use</a>
+  </div>
+  <div>MyHelocRates.com — Helping US homeowners understand HELOC options.</div>
+  <div class="footer-copy">© <span class="dyn-year">2026</span> MyHelocRates.com. For informational purposes only. Not financial advice.</div>
+</footer>
+
+<script>
+// Dynamic dates
+(function(){
+  var now=new Date(),year=now.getFullYear(),month=now.toLocaleString("en-US",{month:"long"});
+  document.querySelectorAll(".dyn-year").forEach(function(el){el.textContent=year;});
+  document.querySelectorAll(".dyn-monthyear").forEach(function(el){el.textContent=month+" "+year;});
+})();
+
+// Build alpha nav
+(function(){
+  var letters=['A','B','C','D','E','F','H','I','L','M','O','P','Q','R','S','T','U','V','W'];
+  var nav=document.getElementById('alphaNav');
+  letters.forEach(function(l){
+    var btn=document.createElement('button');
+    btn.className='alpha-btn';
+    btn.textContent=l;
+    btn.onclick=function(){
+      document.querySelectorAll('.alpha-btn').forEach(function(b){b.classList.remove('active');});
+      btn.classList.add('active');
+      var target=document.getElementById('letter-'+l);
+      if(target){target.scrollIntoView({behavior:'smooth',block:'start'});}
+      // Clear search
+      document.getElementById('glossarySearch').value='';
+      filterGlossary();
+    };
+    nav.appendChild(btn);
+  });
+})();
+
+// Search / filter
+function filterGlossary(){
+  var q=document.getElementById('glossarySearch').value.toLowerCase().trim();
+  var sections=document.querySelectorAll('.letter-section');
+  var anyVisible=false;
+  sections.forEach(function(section){
+    var cards=section.querySelectorAll('.term-card');
+    var sectionVisible=false;
+    cards.forEach(function(card){
+      var text=card.textContent.toLowerCase();
+      var match=!q||text.includes(q);
+      card.style.display=match?'':'none';
+      if(match)sectionVisible=true;
+    });
+    section.style.display=sectionVisible?'':'none';
+    if(sectionVisible)anyVisible=true;
+  });
+  document.getElementById('noResults').style.display=anyVisible?'none':'block';
+  // Clear alpha active state when searching
+  if(q){document.querySelectorAll('.alpha-btn').forEach(function(b){b.classList.remove('active');});}
+}
+</script>
+</body>
+</html>
