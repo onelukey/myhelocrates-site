@@ -14,8 +14,8 @@
      crossorigin="anonymous"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Learn about MyHelocRates.com — our mission to help US homeowners understand and access home equity lines of credit through free tools and plain-English guides.">
-  <title>About Us — MyHelocRates.com</title>
+  <meta name="description" content="Meet Mike Lucas, the UK-based founder of MyHelocRates.com — and find out why a British homeowner became passionate about educating American homeowners on the power of HELOCs.">
+  <title>About Mike Lucas — MyHelocRates.com</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
@@ -42,18 +42,82 @@
 
     /* HERO */
     .hero { background: var(--navy); padding: 4rem 2rem 3rem; text-align: center; }
-    .hero-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--gold); font-size: 12px; padding: 5px 16px; border-radius: 20px; border: 0.5px solid rgba(201,168,76,0.35); margin-bottom: 1.25rem; }
+    .hero-badge { display: inline-block; background: rgba(201,168,76,0.15); color: var(--gold); font-size: 12px; padding: 5px 16px; border-radius: 20px; border: 0.5px solid rgba(201,168,76,0.35); margin-bottom: 1.25rem; letter-spacing: 0.5px; }
     .hero h1 { font-family: 'DM Serif Display', serif; color: white; font-size: 38px; font-weight: 400; line-height: 1.2; margin-bottom: 1rem; }
     .hero h1 em { color: var(--gold); font-style: normal; }
     .hero p { color: rgba(255,255,255,0.65); font-size: 16px; max-width: 560px; margin: 0 auto; line-height: 1.7; }
 
-    /* MISSION SECTION */
-    .section { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+    /* FOUNDER LETTER — the signature element */
+    .founder-wrap { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+    .founder-card {
+      background: var(--white);
+      border: 0.5px solid var(--border);
+      border-radius: 18px;
+      padding: 2.5rem 2.75rem;
+      position: relative;
+      box-shadow: 0 4px 24px rgba(15,37,87,0.07);
+    }
+    .founder-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 2.75rem; right: 2.75rem;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--navy));
+      border-radius: 0 0 4px 4px;
+    }
+    .founder-eyebrow {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--gold-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 1rem;
+    }
+    .founder-card h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 1.5rem;
+      line-height: 1.3;
+    }
+    .founder-body { font-size: 16px; color: var(--text-muted); line-height: 1.85; }
+    .founder-body p { margin-bottom: 1.2rem; }
+    .founder-body p:last-of-type { margin-bottom: 0; }
+    .founder-body strong { color: var(--text); font-weight: 600; }
+
+    .founder-sig {
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 0.5px solid var(--border);
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .founder-avatar {
+      width: 54px; height: 54px;
+      background: var(--navy-light);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .founder-avatar i { color: var(--navy); font-size: 28px; }
+    .founder-sig-name { font-weight: 600; font-size: 15px; color: var(--text); }
+    .founder-sig-role { font-size: 13px; color: var(--text-muted); }
+    .founder-sig-flag { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+    /* UK INSIGHT CALLOUT */
+    .insight-band { background: var(--gold-light); border-top: 0.5px solid rgba(201,168,76,0.3); border-bottom: 0.5px solid rgba(201,168,76,0.3); padding: 2.25rem 2rem; }
+    .insight-inner { max-width: 900px; margin: 0 auto; display: flex; gap: 1.5rem; align-items: flex-start; }
+    .insight-icon { color: var(--gold-dark); font-size: 30px; flex-shrink: 0; margin-top: 2px; }
+    .insight-inner h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+    .insight-inner p { font-size: 14px; color: var(--text-muted); line-height: 1.75; margin: 0; }
+
+    /* SECTION */
+    .section { max-width: 900px; margin: 0 auto; padding: 3.5rem 2rem; }
     .section-label { font-size: 12px; color: var(--gold-dark); font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 0.5rem; }
     .section-title { font-family: 'DM Serif Display', serif; font-size: 28px; font-weight: 400; color: var(--text); margin-bottom: 0.75rem; line-height: 1.25; }
     .section-body { font-size: 16px; color: var(--text-muted); line-height: 1.8; max-width: 700px; }
-    .section-body p { margin-bottom: 1rem; }
-    .section-body p:last-child { margin-bottom: 0; }
 
     hr { border: none; border-top: 0.5px solid var(--border); }
 
@@ -65,29 +129,17 @@
     .value-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
     .value-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
 
-    /* WHO WE HELP */
-    .audience-section { background: var(--navy); padding: 4rem 2rem; }
-    .audience-inner { max-width: 900px; margin: 0 auto; }
-    .audience-section .section-label { color: var(--gold); }
-    .audience-section .section-title { color: white; }
-    .audience-section .section-body { color: rgba(255,255,255,0.6); }
-    .audience-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
-    .audience-card { background: rgba(255,255,255,0.07); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 1.4rem; }
-    .audience-card i { font-size: 28px; color: var(--gold); margin-bottom: 0.75rem; display: block; }
-    .audience-card h3 { font-size: 15px; font-weight: 600; color: white; margin-bottom: 0.4rem; }
-    .audience-card p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.65; }
-
-    /* WHAT WE OFFER */
-    .offer-list { list-style: none; margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
-    .offer-item { display: flex; align-items: flex-start; gap: 12px; background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; }
-    .offer-item i { color: var(--gold-dark); font-size: 22px; flex-shrink: 0; margin-top: 1px; }
-    .offer-item div h4 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
-    .offer-item div p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+    /* HOW WE RESEARCH */
+    .research-list { list-style: none; margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+    .research-item { display: flex; align-items: flex-start; gap: 12px; background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; }
+    .research-item i { color: var(--gold-dark); font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+    .research-item div h4 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+    .research-item div p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; }
 
     /* DISCLAIMER BAND */
-    .disclaimer-band { background: var(--gold-light); border-top: 0.5px solid rgba(201,168,76,0.3); border-bottom: 0.5px solid rgba(201,168,76,0.3); padding: 2rem; }
+    .disclaimer-band { background: var(--navy-light); border-top: 0.5px solid rgba(15,37,87,0.12); border-bottom: 0.5px solid rgba(15,37,87,0.12); padding: 2rem; }
     .disclaimer-inner { max-width: 900px; margin: 0 auto; display: flex; gap: 1.25rem; align-items: flex-start; }
-    .disclaimer-inner i { color: var(--gold-dark); font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+    .disclaimer-inner i { color: var(--navy); font-size: 26px; flex-shrink: 0; margin-top: 2px; }
     .disclaimer-inner h3 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
     .disclaimer-inner p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin: 0; }
     .disclaimer-inner a { color: var(--navy-mid); }
@@ -112,11 +164,12 @@
       .nav-links { display: none; }
       .hero h1 { font-size: 28px; }
       .values-grid { grid-template-columns: 1fr 1fr; }
-      .audience-grid { grid-template-columns: 1fr 1fr; }
+      .founder-card { padding: 1.75rem 1.5rem; }
+      .founder-card::before { left: 1.5rem; right: 1.5rem; }
     }
     @media (max-width: 480px) {
       .values-grid { grid-template-columns: 1fr; }
-      .audience-grid { grid-template-columns: 1fr; }
+      .insight-inner { flex-direction: column; gap: 0.75rem; }
     }
   </style>
 </head>
@@ -140,101 +193,116 @@
   <!-- HERO -->
   <section class="hero" aria-labelledby="about-heading">
     <div class="hero-badge">About MyHelocRates.com</div>
-    <h1>Helping Homeowners Make<br><em>Smarter Equity Decisions</em></h1>
-    <p>Free tools, plain-English guides, and unbiased information — everything US homeowners need to understand and access their home equity.</p>
+    <h1>Built by Someone Who Wished<br><em>This Site Already Existed</em></h1>
+    <p>The story of why a UK homeowner spent months researching US home equity — and built a free resource so American homeowners don't have to start from scratch.</p>
   </section>
 
-  <!-- MISSION -->
-  <section class="section" aria-labelledby="mission-heading">
-    <div class="section-label">Our mission</div>
-    <h2 class="section-title" id="mission-heading">We believe every homeowner deserves clear, honest HELOC information</h2>
-    <div class="section-body">
-      <p>For many American homeowners, a Home Equity Line of Credit is one of the most powerful financial tools available. It can fund a life-changing renovation, consolidate expensive debt, or provide a safety net in uncertain times. Yet the information needed to make a smart HELOC decision is often buried in jargon, scattered across lender websites, or designed to push you toward a product rather than help you understand one.</p>
-      <p>We built MyHelocRates.com to fix that. Our goal is simple: give every US homeowner — whether they are exploring HELOCs for the first time or ready to apply tomorrow — the tools, rates data, and plain-English guides they need to make a confident, informed decision. No sign-ups, no sales calls, no agenda.</p>
-    </div>
+  <!-- FOUNDER LETTER -->
+  <div class="founder-wrap">
+    <article class="founder-card" aria-label="A note from Mike Lucas, founder">
+      <div class="founder-eyebrow">A note from the founder</div>
+      <h2>Why I Built MyHelocRates.com — and Why I'm Not American</h2>
 
-    <!-- VALUES -->
+      <div class="founder-body">
+        <p>My name is Mike Lucas, and I live in the UK. A few years ago I wanted to renovate my home. Like most people, I started looking into how to fund it — and I fell down a very interesting rabbit hole.</p>
+
+        <p>I came across the concept of a Home Equity Line of Credit. HELOCs do exist in the UK, but they are complicated, restricted, and rarely used. So I did what most UK homeowners do: I took out a traditional fixed personal loan. I borrowed a set amount upfront — whether I used every penny or not — and started paying interest on the full sum from day one. No flexibility. No ability to draw what I needed, when I needed it. Just a fixed repayment, every month, on money I hadn't yet spent.</p>
+
+        <p>Then I discovered what US homeowners have access to: <strong>a line of credit secured against home equity, where you only pay interest on what you actually draw.</strong> I remember thinking — can you believe that? A loan where you only pay for what you use. In the UK, that kind of flexibility simply doesn't exist in any practical, accessible form for the average homeowner.</p>
+
+        <p>What struck me next was the research. A significant proportion of US homeowners — estimates suggest around 65% — are either unaware of HELOCs or don't fully understand how they work. Here is one of the most powerful personal finance tools available to American homeowners, sitting largely unused or misunderstood. I've always believed that financial literacy is something the system actively fails to teach us — it's not on school curriculums, and the information that does exist is often written to sell you something rather than educate you.</p>
+
+        <p>I'm not a financial advisor or a mortgage broker. What I am is someone with a genuine interest in personal finance, a habit of tracking global markets, and a frustration with the gap between what people are entitled to know and what they're actually told. I spent months researching HELOCs — reading Federal Reserve guidance, CFPB publications, lender rate sheets, and real borrower experiences — to understand this product properly from the outside.</p>
+
+        <p><strong>MyHelocRates.com is what I built from that research.</strong> A free, independent, plain-English resource that explains HELOCs the way I wish someone had explained them to me — honestly, without jargon, and without trying to push you toward any particular lender or product. No sign-ups. No sales calls. No agenda beyond helping US homeowners understand a tool that many of them already have access to, but haven't yet had explained clearly.</p>
+
+        <p>If you're a US homeowner who's heard of HELOCs but isn't sure if they're right for you — this site was built for you.</p>
+      </div>
+
+      <div class="founder-sig">
+        <div class="founder-avatar"><i class="ti ti-user" aria-hidden="true"></i></div>
+        <div>
+          <div class="founder-sig-name">Mike Lucas</div>
+          <div class="founder-sig-role">Founder, MyHelocRates.com</div>
+          <div class="founder-sig-flag">🇬🇧 Based in the United Kingdom</div>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <!-- UK PERSPECTIVE CALLOUT -->
+  <div class="insight-band">
+    <div class="insight-inner">
+      <i class="ti ti-world" class="insight-icon" aria-hidden="true"></i>
+      <div>
+        <h3>Why an outside perspective matters</h3>
+        <p>Being based in the UK means I have no lender relationships, no affiliate pressure, and no financial stake in which HELOC product you choose. I research and write about HELOCs purely as an informed outsider who thinks American homeowners deserve better financial education than the industry typically provides. Every guide on this site is written to inform you, not to convert you.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
+  <!-- WHAT WE STAND FOR -->
+  <section class="section" aria-labelledby="values-heading">
+    <div class="section-label">Editorial standards</div>
+    <h2 class="section-title" id="values-heading">What this site stands for</h2>
+    <p class="section-body">Three principles guide every page on MyHelocRates.com.</p>
+
     <div class="values-grid">
       <div class="value-card">
         <div class="value-icon"><i class="ti ti-eye" aria-hidden="true"></i></div>
-        <h3>Transparent</h3>
-        <p>We clearly disclose how we make money (advertising and affiliate relationships) and it never influences our editorial content or calculator tools.</p>
+        <h3>Full transparency</h3>
+        <p>This site earns revenue through advertising and affiliate relationships. That is always clearly disclosed and never influences what we write, which lenders we mention, or how we explain the risks of HELOCs alongside the benefits.</p>
       </div>
       <div class="value-card">
-        <div class="value-icon"><i class="ti ti-book-2" aria-hidden="true"></i></div>
-        <h3>Educational first</h3>
-        <p>Every page is built to inform, not sell. We explain the risks and downsides of HELOCs as clearly as the benefits.</p>
+        <div class="value-icon"><i class="ti ti-school" aria-hidden="true"></i></div>
+        <h3>Education first</h3>
+        <p>Every page is written to inform, not to sell. That means explaining why a HELOC might not be right for you just as clearly as why it might be — because a bad borrowing decision serves nobody.</p>
       </div>
       <div class="value-card">
         <div class="value-icon"><i class="ti ti-refresh" aria-hidden="true"></i></div>
-        <h3>Always current</h3>
-        <p>HELOC rates move with Federal Reserve decisions. We review and update our rate data and content weekly to keep information accurate.</p>
+        <h3>Kept current</h3>
+        <p>HELOC rates move with Federal Reserve decisions. Rate data, qualification thresholds, and market context are reviewed and updated regularly to make sure the information you're reading reflects today's environment.</p>
       </div>
     </div>
   </section>
 
   <hr>
 
-  <!-- WHO WE HELP -->
-  <section class="audience-section" aria-labelledby="audience-heading">
-    <div class="audience-inner">
-      <div class="section-label">Who we help</div>
-      <h2 class="section-title" id="audience-heading">Built for US homeowners at every stage</h2>
-      <p class="section-body">Whether you have never heard of a HELOC or you are comparing lenders right now, MyHelocRates.com has resources for you.</p>
-      <div class="audience-grid">
-        <div class="audience-card">
-          <i class="ti ti-question-mark" aria-hidden="true"></i>
-          <h3>First-time explorers</h3>
-          <p>Just heard about HELOCs and want to understand the basics? Start with our plain-English guides — no financial background required.</p>
-        </div>
-        <div class="audience-card">
-          <i class="ti ti-calculator" aria-hidden="true"></i>
-          <h3>Active researchers</h3>
-          <p>Crunching numbers before you apply? Our free calculators let you estimate payments and borrowing power in seconds — no personal data needed.</p>
-        </div>
-        <div class="audience-card">
-          <i class="ti ti-building-bank" aria-hidden="true"></i>
-          <h3>Ready-to-apply borrowers</h3>
-          <p>Comparing lenders and rates right now? Our rate guides, qualification checklist, and lender comparisons help you shop with confidence.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- HOW WE RESEARCH -->
+  <section class="section" aria-labelledby="research-heading">
+    <div class="section-label">How we work</div>
+    <h2 class="section-title" id="research-heading">Where the information comes from</h2>
+    <p class="section-body">Every guide and rate update on this site is built from primary sources — not rewritten summaries of other blogs.</p>
 
-  <hr>
-
-  <!-- WHAT WE OFFER -->
-  <section class="section" aria-labelledby="offer-heading">
-    <div class="section-label">What we offer</div>
-    <h2 class="section-title" id="offer-heading">Everything in one place — completely free</h2>
-    <p style="font-size:15px; color:var(--text-muted); max-width:600px;">No registration, no paywalls, no sales calls. Everything on this site is free to use.</p>
-    <ul class="offer-list">
-      <li class="offer-item">
-        <i class="ti ti-calculator" aria-hidden="true"></i>
+    <ul class="research-list">
+      <li class="research-item">
+        <i class="ti ti-building-bank" aria-hidden="true"></i>
         <div>
-          <h4>Free HELOC calculators</h4>
-          <p>Estimate your monthly payment during the draw and repayment periods, or calculate how much you can borrow based on your home's current value and mortgage balance.</p>
+          <h4>Federal Reserve &amp; CFPB publications</h4>
+          <p>Rate environment context and regulatory guidance comes directly from Fed statements and Consumer Financial Protection Bureau resources — the same sources lenders themselves reference.</p>
         </div>
       </li>
-      <li class="offer-item">
+      <li class="research-item">
         <i class="ti ti-chart-line" aria-hidden="true"></i>
         <div>
-          <h4>Weekly rate tracking</h4>
-          <p>We monitor average HELOC rates across the US market every week and publish updated ranges by credit score so you always know where rates stand.</p>
+          <h4>Live lender rate monitoring</h4>
+          <p>We track published rates from major US banks, credit unions, and online lenders weekly to keep our rate ranges accurate and reflect what borrowers are actually being quoted.</p>
         </div>
       </li>
-      <li class="offer-item">
+      <li class="research-item">
         <i class="ti ti-book-2" aria-hidden="true"></i>
         <div>
-          <h4>Plain-English guides</h4>
-          <p>Our blog covers everything from HELOC basics and qualification requirements to advanced strategies, lender comparisons, and risk factors — all written without jargon.</p>
+          <h4>Plain-English translation</h4>
+          <p>Financial guidance is often written for financial professionals. We read the primary sources and translate them into language that any homeowner — regardless of financial background — can act on.</p>
         </div>
       </li>
-      <li class="offer-item">
-        <i class="ti ti-scale" aria-hidden="true"></i>
+      <li class="research-item">
+        <i class="ti ti-alert-triangle" aria-hidden="true"></i>
         <div>
-          <h4>Honest comparisons</h4>
-          <p>HELOC vs home equity loan, bank vs credit union, fixed vs variable rate — we lay out the facts so you can choose the product that fits your situation, not ours.</p>
+          <h4>Honest about the risks</h4>
+          <p>HELOCs are secured against your home. Defaulting puts your property at risk. We cover that clearly on every relevant page — because an informed borrower is a protected borrower.</p>
         </div>
       </li>
     </ul>
@@ -245,8 +313,8 @@
     <div class="disclaimer-inner">
       <i class="ti ti-info-circle" aria-hidden="true"></i>
       <div>
-        <h3>Important: we are not a lender or financial advisor</h3>
-        <p>MyHelocRates.com is an independent informational website. We do not offer, originate, or broker HELOC loans. All content is for educational purposes only and does not constitute financial advice. We may receive compensation through advertising and affiliate links, which never influences our editorial content. See our full <a href="/disclaimer.html">Disclaimer</a> and <a href="/privacy-policy.html">Privacy Policy</a> for details.</p>
+        <h3>We are not a lender, broker, or financial advisor</h3>
+        <p>MyHelocRates.com is an independent informational website run by a private individual. We do not offer, originate, or broker HELOC loans, and nothing on this site constitutes financial advice. Always consult a qualified financial professional before making borrowing decisions. We may receive compensation through advertising and affiliate links — this is always disclosed and never influences our editorial content. See our full <a href="/disclaimer.html">Disclaimer</a> and <a href="/privacy-policy.html">Privacy Policy</a> for details.</p>
       </div>
     </div>
   </div>
@@ -254,7 +322,7 @@
   <!-- CTA -->
   <div class="cta-section">
     <h2>Ready to explore your options?</h2>
-    <p>Start with our free calculator or browse our guides — no sign-up ever required.</p>
+    <p>Start with our free HELOC calculator — no sign-up, no personal data required, ever.</p>
     <div class="cta-btns">
       <a href="/#calculator" class="btn-primary"><i class="ti ti-calculator" aria-hidden="true"></i> Try the Calculator</a>
       <a href="/contact.html" class="btn-secondary"><i class="ti ti-mail" aria-hidden="true"></i> Get in Touch</a>
