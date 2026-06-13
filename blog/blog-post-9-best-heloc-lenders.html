@@ -82,37 +82,44 @@
 
     /* ── HERO ── */
     .hero {
-      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      background: var(--navy);
       padding: 3.5rem 2rem 3rem;
       text-align: center;
     }
     .hero-eyebrow {
-      font-size: 0.78rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 1.2px;
-      color: var(--gold);
-      margin-bottom: 0.75rem;
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 999px;
+      padding: 0.3rem 1rem;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 1.25rem;
+      letter-spacing: 0.3px;
     }
     .hero h1 {
       font-family: 'DM Serif Display', serif;
-      font-size: clamp(1.75rem, 4vw, 2.6rem);
+      font-size: clamp(1.9rem, 4.5vw, 2.75rem);
       color: var(--white);
-      line-height: 1.25;
+      line-height: 1.2;
       max-width: 800px;
-      margin: 0 auto 1rem;
-    }
-    .hero-sub {
-      color: rgba(255,255,255,0.75);
-      font-size: 1.05rem;
-      max-width: 640px;
       margin: 0 auto 1.5rem;
     }
     .hero-meta {
-      font-size: 0.82rem;
-      color: rgba(255,255,255,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      font-size: 0.84rem;
+      color: rgba(255,255,255,0.6);
+      flex-wrap: wrap;
     }
-    .hero-meta span { color: var(--gold); font-weight: 600; }
+    .hero-meta .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+    .hero-meta .meta-item i { font-size: 1rem; opacity: 0.7; }
 
     /* ── LAYOUT ── */
     .page-wrap {
@@ -527,10 +534,13 @@
 
 <!-- ── HERO ── -->
 <div class="hero">
-  <p class="hero-eyebrow">Lender Comparison Guide</p>
+  <span class="hero-eyebrow">Lender Comparison Guide</span>
   <h1>Best HELOC Lenders of 2026: Compared by Rate, Fees &amp; Who They Actually Suit</h1>
-  <p class="hero-sub">No affiliate links. No sponsored rankings. A straightforward comparison of the lenders worth looking at in 2026 — and who each one is actually right for.</p>
-  <p class="hero-meta">By <span>Mike Lucas</span> &nbsp;|&nbsp; Updated June 2026 &nbsp;|&nbsp; 16 min read</p>
+  <div class="hero-meta">
+    <span class="meta-item"><i class="ti ti-calendar"></i> Updated June 2026</span>
+    <span class="meta-item"><i class="ti ti-clock"></i> 16 min read</span>
+    <span class="meta-item"><i class="ti ti-user"></i> Mike Lucas — Founder</span>
+  </div>
 </div>
 
 <!-- ── MAIN CONTENT ── -->
