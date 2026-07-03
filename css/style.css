@@ -65,6 +65,96 @@ a { color: var(--navy-mid); }
 .page-header-meta i { font-size: 0.95rem; }
 .meta-divider { width: 1px; height: 14px; background: rgba(255,255,255,0.2); }
 .page-header-desc { color: rgba(255,255,255,0.65); font-size: 1rem; line-height: 1.7; max-width: 480px; margin: 0 auto; }
+.page-header h1 em { color: var(--gold); font-style: normal; }
+
+/* =========================================================
+   3b. FOUNDER / EDITORIAL LETTER CARD
+   Reusable for About page and similar editorial-profile pages
+   ========================================================= */
+
+.founder-wrap { max-width: 900px; margin: 0 auto; padding: 4rem 2rem; }
+.founder-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 18px; padding: 2.5rem 2.75rem; position: relative; box-shadow: 0 4px 24px rgba(15,37,87,0.07); }
+.founder-card::before { content: ''; position: absolute; top: 0; left: 2.75rem; right: 2.75rem; height: 3px; background: linear-gradient(90deg, var(--gold), var(--navy)); border-radius: 0 0 4px 4px; }
+.founder-eyebrow { font-size: 12px; font-weight: 600; color: var(--gold-dark); text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 1rem; }
+.founder-card h2 { font-family: 'DM Serif Display', serif; font-size: 26px; font-weight: 400; color: var(--text); margin-bottom: 1.5rem; line-height: 1.3; }
+.founder-body { font-size: 16px; color: var(--text-muted); line-height: 1.85; }
+.founder-body p { margin-bottom: 1.2rem; }
+.founder-body p:last-of-type { margin-bottom: 0; }
+.founder-body strong { color: var(--text); font-weight: 600; }
+.founder-sig { margin-top: 2rem; padding-top: 1.5rem; border-top: 0.5px solid var(--border); display: flex; align-items: center; gap: 1.25rem; }
+.founder-avatar { width: 54px; height: 54px; background: var(--navy-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.founder-avatar i { color: var(--navy); font-size: 28px; }
+.founder-sig-name { font-weight: 600; font-size: 15px; color: var(--text); }
+.founder-sig-role { font-size: 13px; color: var(--text-muted); }
+.founder-sig-flag { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+
+/* =========================================================
+   3c. INSIGHT / CALLOUT BAND (full-width)
+   ========================================================= */
+
+.insight-band { background: var(--gold-light); border-top: 0.5px solid rgba(201,168,76,0.3); border-bottom: 0.5px solid rgba(201,168,76,0.3); padding: 2.25rem 2rem; }
+.insight-inner { max-width: 900px; margin: 0 auto; display: flex; gap: 1.5rem; align-items: flex-start; }
+.insight-icon { color: var(--gold-dark); font-size: 30px; flex-shrink: 0; margin-top: 2px; }
+.insight-inner h3 { font-size: 16px; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+.insight-inner p { font-size: 14px; color: var(--text-muted); line-height: 1.75; margin: 0; }
+
+/* =========================================================
+   3d. GENERIC SECTION (label + serif title + body)
+   ========================================================= */
+
+.section { max-width: 900px; margin: 0 auto; padding: 3.5rem 2rem; }
+.section-label { font-size: 12px; color: var(--gold-dark); font-weight: 600; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 0.5rem; }
+.section-title { font-family: 'DM Serif Display', serif; font-size: 28px; font-weight: 400; color: var(--text); margin-bottom: 0.75rem; line-height: 1.25; }
+.section-body { font-size: 16px; color: var(--text-muted); line-height: 1.8; max-width: 700px; }
+hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width: 900px; margin: 0 auto; }
+
+/* =========================================================
+   3e. VALUES GRID (3-up cards)
+   ========================================================= */
+
+.values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2.5rem; }
+.value-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.4rem; }
+.value-icon { width: 44px; height: 44px; background: var(--navy-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+.value-icon i { color: var(--navy); font-size: 22px; }
+.value-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+.value-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+@media (max-width: 768px) { .values-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .values-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   3f. RESEARCH / METHODOLOGY LIST
+   Reusable for About and the future Editorial Standards page
+   ========================================================= */
+
+.research-list { list-style: none; margin-top: 2rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.research-item { display: flex; align-items: flex-start; gap: 12px; background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1rem 1.25rem; }
+.research-item i { color: var(--gold-dark); font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+.research-item div h4 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 2px; }
+.research-item div p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+/* =========================================================
+   3g. DISCLAIMER / INFO BAND (full-width, distinct from .callout)
+   ========================================================= */
+
+.disclaimer-band { background: var(--navy-light); border-top: 0.5px solid rgba(15,37,87,0.12); border-bottom: 0.5px solid rgba(15,37,87,0.12); padding: 2rem; }
+.disclaimer-band-inner { max-width: 900px; margin: 0 auto; display: flex; gap: 1.25rem; align-items: flex-start; }
+.disclaimer-band-inner i { color: var(--navy); font-size: 26px; flex-shrink: 0; margin-top: 2px; }
+.disclaimer-band-inner h3 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+.disclaimer-band-inner p { font-size: 14px; color: var(--text-muted); line-height: 1.7; margin: 0; }
+
+/* =========================================================
+   3h. IN-PAGE CTA SECTION
+   ========================================================= */
+
+.cta-section { text-align: center; padding: 4rem 2rem; max-width: 600px; margin: 0 auto; }
+.cta-section h2 { font-family: 'DM Serif Display', serif; font-size: 28px; font-weight: 400; color: var(--text); margin-bottom: 0.75rem; }
+.cta-section p { font-size: 15px; color: var(--text-muted); margin-bottom: 1.75rem; }
+.cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.btn-primary { background: var(--navy); color: white; padding: 12px 24px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: background 0.2s; }
+.btn-primary:hover { background: var(--navy-mid); }
+.btn-secondary { background: transparent; color: var(--navy); border: 0.5px solid var(--navy); padding: 12px 24px; border-radius: 8px; font-size: 15px; font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all 0.2s; }
+.btn-secondary:hover { background: var(--navy-light); }
 
 /* =========================================================
    3. MAIN CONTENT LAYOUT (2-column — content + sidebar)
