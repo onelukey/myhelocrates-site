@@ -435,6 +435,57 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 @media (max-width: 768px) { .tl-phases { grid-template-columns: 1fr; } }
 
 /* =========================================================
+   3x. PROS/CONS SUMMARY BAND (dark, full-width)
+   ========================================================= */
+
+.pc-band { background: var(--navy); padding: 0 2rem 2.5rem; }
+.pc-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.pc-card { border-radius: 14px; padding: 1.4rem; }
+.pc-card.pros { background: rgba(59,109,17,0.15); border: 0.5px solid rgba(59,109,17,0.3); }
+.pc-card.cons { background: rgba(163,45,45,0.15); border: 0.5px solid rgba(163,45,45,0.3); }
+.pc-title { font-size: 16px; font-weight: 600; margin-bottom: 1rem; display: flex; align-items: center; gap: 8px; }
+.pc-card.pros .pc-title { color: #7dc44a; }
+.pc-card.cons .pc-title { color: #f08080; }
+.pc-list { list-style: none; }
+.pc-list li { font-size: 14px; color: rgba(255,255,255,0.75); padding: 6px 0; border-bottom: 0.5px solid rgba(255,255,255,0.08); display: flex; gap: 8px; align-items: flex-start; line-height: 1.5; }
+.pc-list li:last-child { border-bottom: none; }
+.pc-list li i { font-size: 15px; flex-shrink: 0; margin-top: 2px; }
+.pros .pc-list li i { color: #7dc44a; }
+.cons .pc-list li i { color: #f08080; }
+
+@media (max-width: 768px) { .pc-inner { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   3y. PRO / CON DETAIL CARDS
+   ========================================================= */
+
+.detail-grid { display: flex; flex-direction: column; gap: 0.75rem; margin: 1.5rem 0; }
+.detail-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.1rem 1.25rem; display: flex; gap: 1rem; align-items: flex-start; }
+.detail-card.pro { border-left: 4px solid #3b6d11; }
+.detail-card.con { border-left: 4px solid #a32d2d; }
+.dc-icon { font-size: 22px; flex-shrink: 0; margin-top: 2px; }
+.pro .dc-icon { color: #3b6d11; }
+.con .dc-icon { color: #a32d2d; }
+.dc-body h4 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+.dc-body p { font-size: 14px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+/* =========================================================
+   3z. VERDICT GRID (good-fit / bad-fit cards)
+   ========================================================= */
+
+.verdict-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+.verdict-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.1rem; }
+.verdict-card.good { border-top: 3px solid #3b6d11; }
+.verdict-card.bad { border-top: 3px solid #a32d2d; }
+.vc-label { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 0.4rem; }
+.verdict-card.good .vc-label { color: #3b6d11; }
+.verdict-card.bad .vc-label { color: #a32d2d; }
+.vc-title { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 0.3rem; }
+.vc-desc { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+@media (max-width: 768px) { .verdict-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
    5. COMPARISON TABLE
    ========================================================= */
 
