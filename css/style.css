@@ -358,6 +358,52 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 .tip-list li i { color: var(--gold-dark); font-size: 20px; flex-shrink: 0; margin-top: 2px; }
 
 /* =========================================================
+   3s. REQUIREMENT CARD GRID
+   ========================================================= */
+
+.req-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+.req-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.25rem; }
+.req-icon { width: 42px; height: 42px; border-radius: 11px; background: var(--navy-light); display: flex; align-items: center; justify-content: center; margin-bottom: 0.9rem; }
+.req-icon i { color: var(--navy); font-size: 22px; }
+.req-card h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 0.3rem; }
+.req-card .req-min { font-size: 13px; color: var(--gold-dark); font-weight: 600; margin-bottom: 0.4rem; }
+.req-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+@media (max-width: 768px) { .req-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   3t. CREDIT SCORE BAND METER
+   ========================================================= */
+
+.score-bands { margin: 1.75rem 0; border-radius: 14px; overflow: hidden; border: 0.5px solid var(--border); }
+.score-band { display: grid; grid-template-columns: 120px 1fr auto; align-items: center; padding: 12px 16px; gap: 1rem; border-bottom: 0.5px solid var(--border); }
+.score-band:last-child { border-bottom: none; }
+.score-band.ex { background: #eaf3de; }
+.score-band.go { background: var(--navy-light); }
+.score-band.fa { background: #fff8e6; }
+.score-band.po { background: #fce8e8; }
+.score-band.no { background: #f2f1ee; }
+.sb-range { font-size: 14px; font-weight: 600; color: var(--text); }
+.sb-label { font-size: 13px; color: var(--text-muted); }
+.sb-verdict { font-size: 12px; font-weight: 600; white-space: nowrap; padding: 3px 10px; border-radius: 20px; }
+.v-yes { background: #eaf3de; color: #3b6d11; }
+.v-maybe { background: #fff8e6; color: #a07c28; }
+.v-hard { background: #fce8e8; color: #a32d2d; }
+
+@media (max-width: 768px) { .score-band { grid-template-columns: 100px 1fr auto; } }
+
+/* =========================================================
+   3u. CHECKLIST (yes / prep icon variants)
+   ========================================================= */
+
+.checklist { list-style: none; margin: 1.25rem 0; }
+.checklist li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; border-bottom: 0.5px solid var(--border); font-size: 15px; }
+.checklist li:last-child { border-bottom: none; }
+.checklist li i { font-size: 18px; flex-shrink: 0; margin-top: 2px; }
+.checklist li i.yes { color: #3b6d11; }
+.checklist li i.prep { color: var(--gold-dark); }
+
+/* =========================================================
    5. COMPARISON TABLE
    ========================================================= */
 
