@@ -486,6 +486,135 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 @media (max-width: 768px) { .verdict-grid { grid-template-columns: 1fr; } }
 
 /* =========================================================
+   4a. DUAL-PRODUCT COMPARISON HEADER
+   ========================================================= */
+
+.compare-band { background: var(--navy); padding: 0 2rem 2.5rem; }
+.compare-inner { max-width: 900px; margin: 0 auto; }
+.compare-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.compare-card { border-radius: 16px; padding: 1.5rem; text-align: center; }
+.compare-card.heloc { background: rgba(255,255,255,0.08); border: 0.5px solid rgba(255,255,255,0.15); }
+.compare-card.heloan { background: rgba(201,168,76,0.1); border: 0.5px solid rgba(201,168,76,0.25); }
+.cc-icon { width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1rem; }
+.heloc .cc-icon { background: rgba(255,255,255,0.1); }
+.heloan .cc-icon { background: rgba(201,168,76,0.15); }
+.cc-icon i { font-size: 26px; color: white; }
+.heloan .cc-icon i { color: var(--gold); }
+.cc-title { font-family: 'DM Serif Display', serif; font-size: 22px; color: white; margin-bottom: 0.4rem; font-weight: 400; }
+.cc-sub { font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 1.25rem; }
+.cc-tag { display: inline-block; font-size: 12px; padding: 4px 12px; border-radius: 20px; font-weight: 500; margin-bottom: 0.6rem; }
+.heloc .cc-tag { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.8); }
+.heloan .cc-tag { background: rgba(201,168,76,0.2); color: var(--gold); }
+.cc-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; justify-content: center; }
+
+@media (max-width: 768px) { .compare-cards { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   4b. CHOICE SCENARIO GRID (product A vs product B use cases)
+   ========================================================= */
+
+.scenario-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+.scenario { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.1rem; }
+.scenario.heloc-win { border-top: 3px solid var(--navy); }
+.scenario.heloan-win { border-top: 3px solid var(--gold-dark); }
+.sc-badge { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 0.5rem; }
+.heloc-win .sc-badge { color: var(--navy); }
+.heloan-win .sc-badge { color: var(--gold-dark); }
+.scenario h4 { font-size: 14px; font-weight: 600; color: var(--text); margin-bottom: 0.4rem; }
+.scenario p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+@media (max-width: 768px) { .scenario-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   4c. SIDEBAR DECISION-GUIDE CARD
+   ========================================================= */
+
+.decision-card { background: var(--navy-light); border: 0.5px solid var(--navy); border-radius: 14px; padding: 1.25rem; }
+.decision-card h3 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; }
+.decision-item { font-size: 13px; padding: 6px 0; border-bottom: 0.5px solid var(--border); display: flex; gap: 8px; align-items: flex-start; }
+.decision-item:last-child { border-bottom: none; }
+.decision-item i { font-size: 15px; flex-shrink: 0; margin-top: 2px; }
+
+/* =========================================================
+   4d. INTERACTIVE CALCULATOR CARD
+   ========================================================= */
+
+.calc-wrap { background: var(--navy); padding: 0 2rem 3rem; }
+.calc-card { background: var(--white); border-radius: 16px; max-width: 780px; margin: 0 auto; overflow: hidden; box-shadow: 0 8px 48px rgba(0,0,0,0.22); }
+.calc-tabs { display: flex; border-bottom: 0.5px solid var(--border); }
+.calc-tab { flex: 1; padding: 16px 12px; font-size: 14px; font-weight: 500; text-align: center; cursor: pointer; color: var(--text-muted); border: none; background: var(--bg); transition: all 0.2s; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; justify-content: center; gap: 7px; }
+.calc-tab i { font-size: 17px; }
+.calc-tab.active { background: var(--white); color: var(--navy); border-bottom: 3px solid var(--gold); }
+.calc-body { padding: 2rem; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 1rem; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-size: 12px; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.field input, .field select { width: 100%; padding: 12px 14px; border: 0.5px solid var(--border); border-radius: 8px; font-size: 15px; color: var(--text); background: var(--bg); font-family: 'DM Sans', sans-serif; transition: border-color 0.2s, box-shadow 0.2s; }
+.field input:focus, .field select:focus { outline: none; border-color: var(--navy-mid); box-shadow: 0 0 0 3px rgba(26,58,107,0.08); }
+.field .hint { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.calc-btn { width: 100%; background: var(--navy); color: white; border: none; padding: 14px; border-radius: 8px; font-size: 15px; font-weight: 600; cursor: pointer; margin-top: 0.75rem; font-family: 'DM Sans', sans-serif; transition: background 0.2s; display: flex; align-items: center; justify-content: center; gap: 8px; }
+.calc-btn:hover { background: var(--navy-mid); }
+.results { margin-top: 1.5rem; background: var(--navy-light); border-radius: 12px; padding: 1.5rem; display: none; animation: calcFadeIn 0.3s ease; }
+.results.show { display: block; }
+@keyframes calcFadeIn { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+.results-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin-bottom: 1rem; }
+.result-item { background: var(--white); border-radius: 10px; padding: 1rem; text-align: center; border: 0.5px solid var(--border); }
+.result-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 6px; }
+.result-value { font-size: 22px; font-weight: 600; color: var(--navy); }
+.result-value.gold { color: var(--gold-dark); }
+.result-note { font-size: 12px; color: var(--text-muted); text-align: center; line-height: 1.6; }
+.amort-toggle { background: none; border: 0.5px solid var(--border); color: var(--navy); font-size: 13px; font-weight: 500; padding: 8px 16px; border-radius: 8px; cursor: pointer; margin-top: 1rem; font-family: 'DM Sans', sans-serif; display: flex; align-items: center; gap: 6px; }
+.amort-table-wrap { display: none; margin-top: 1rem; overflow-x: auto; }
+.amort-table-wrap.show { display: block; }
+.amort-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.amort-table th { background: var(--navy); color: white; padding: 8px 10px; text-align: left; font-size: 12px; font-weight: 500; }
+.amort-table td { padding: 7px 10px; border-bottom: 0.5px solid var(--border); }
+.amort-table tr:nth-child(even) td { background: var(--navy-light); }
+
+@media (max-width: 768px) { .field-row { grid-template-columns: 1fr; } .results-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .results-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   4e. TRUST BAR (full-width, gold-light)
+   ========================================================= */
+
+.trust-bar { background: var(--gold-light); border-top: 0.5px solid rgba(201,168,76,0.3); border-bottom: 0.5px solid rgba(201,168,76,0.3); padding: 1rem 2rem; display: flex; justify-content: center; flex-wrap: wrap; gap: 1.5rem 2.5rem; }
+.trust-item { display: flex; align-items: center; gap: 7px; font-size: 13px; color: var(--navy); font-weight: 500; }
+.trust-item i { color: var(--gold-dark); font-size: 17px; }
+
+/* =========================================================
+   4f. HOW-TO-USE NUMBERED CARDS (distinct from step-card — no description body split)
+   ========================================================= */
+
+.how-section { max-width: 900px; margin: 3rem auto; padding: 0 2rem; }
+.how-section h2 { font-family: 'DM Serif Display', serif; font-size: 26px; font-weight: 400; color: var(--navy); margin-bottom: 1.5rem; }
+.how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.how-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.25rem; }
+.how-num { width: 34px; height: 34px; background: var(--navy); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 600; margin-bottom: 0.75rem; }
+.how-card h3 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 0.4rem; }
+.how-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin: 0; }
+
+@media (max-width: 768px) { .how-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   4g. DARK RELATED-GUIDES BAND (distinct from footer nav)
+   ========================================================= */
+
+.related-section { background: var(--navy); padding: 3rem 2rem; }
+.related-inner { max-width: 900px; margin: 0 auto; }
+.related-section h2 { font-family: 'DM Serif Display', serif; color: white; font-size: 24px; font-weight: 400; margin-bottom: 1.5rem; }
+.related-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.related-card { background: rgba(255,255,255,0.07); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 1.1rem; text-decoration: none; transition: background 0.2s; display: block; }
+.related-card:hover { background: rgba(255,255,255,0.11); }
+.related-card .rc-cat { font-size: 11px; color: var(--gold); font-weight: 600; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 0.4rem; }
+.related-card h3 { font-size: 14px; font-weight: 500; color: white; line-height: 1.4; margin-bottom: 0.5rem; }
+.related-card .rc-arrow { font-size: 13px; color: rgba(255,255,255,0.45); }
+
+@media (max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
    5. COMPARISON TABLE
    ========================================================= */
 
