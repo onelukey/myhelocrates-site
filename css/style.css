@@ -195,6 +195,123 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 .callout-content p { font-size: 0.88rem; line-height: 1.7; margin: 0; color: var(--text); }
 .callout-content strong { color: var(--navy); display: block; margin-bottom: 0.2rem; font-size: 0.88rem; }
 
+/* Four-colour callout variants (used across pillar/blog content) */
+.callout-block { border-radius: 0 12px 12px 0; padding: 1.25rem 1.5rem; margin: 1.75rem 0; border-left: 4px solid; }
+.callout-block.c-navy { background: var(--navy-light); border-color: var(--navy); }
+.callout-block.c-gold { background: var(--gold-light); border-color: var(--gold-dark); }
+.callout-block.c-green { background: #eaf3de; border-color: #3b6d11; }
+.callout-block.c-red { background: #fce8e8; border-color: #a32d2d; }
+.callout-block strong { display: block; font-size: 12px; text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 0.4rem; }
+.callout-block.c-navy strong { color: var(--navy); }
+.callout-block.c-gold strong { color: var(--gold-dark); }
+.callout-block.c-green strong { color: #3b6d11; }
+.callout-block.c-red strong { color: #a32d2d; }
+.callout-block p { margin: 0; font-size: 0.92rem; }
+
+/* =========================================================
+   3i. TABLE OF CONTENTS
+   ========================================================= */
+
+.toc { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.25rem; margin-bottom: 2rem; }
+.toc h4 { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 0.75rem; }
+.toc ol { margin: 0 0 0 1.25rem; }
+.toc li { font-size: 14px; margin-bottom: 0.4rem; }
+.toc a { color: var(--navy-mid); text-decoration: none; }
+.toc a:hover { color: var(--gold-dark); }
+
+/* =========================================================
+   3j. STATS BAND (full-width, below hero)
+   ========================================================= */
+
+.stats-band { background: var(--gold-light); border-top: 0.5px solid rgba(201,168,76,0.3); border-bottom: 0.5px solid rgba(201,168,76,0.3); padding: 1.5rem 2rem; }
+.stats-inner { max-width: 900px; margin: 0 auto; display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; text-align: center; }
+.stat-item .num { font-size: 24px; font-weight: 600; color: var(--navy); display: block; }
+.stat-item .lbl { font-size: 12px; color: var(--text-muted); line-height: 1.4; }
+
+@media (max-width: 768px) { .stats-inner { grid-template-columns: 1fr 1fr; } }
+
+/* =========================================================
+   3k. TIMELINE / ANATOMY VISUAL (e.g. draw period vs repayment)
+   ========================================================= */
+
+.anatomy { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.5rem; margin: 1.75rem 0; }
+.anatomy h4 { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 1.25rem; }
+.timeline { display: flex; gap: 0; position: relative; }
+.timeline-phase { flex: 1; }
+.phase-bar { height: 12px; border-radius: 0; }
+.phase-bar.draw { background: var(--navy); border-radius: 6px 0 0 6px; }
+.phase-bar.repay { background: var(--gold-dark); border-radius: 0 6px 6px 0; }
+.phase-label { font-size: 12px; font-weight: 600; margin-top: 8px; }
+.phase-label.draw { color: var(--navy); }
+.phase-label.repay { color: var(--gold-dark); }
+.phase-detail { font-size: 12px; color: var(--text-muted); margin-top: 3px; }
+.phase-payments { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; }
+.payment-box { flex: 1; min-width: 140px; background: var(--bg); border: 0.5px solid var(--border); border-radius: 8px; padding: 0.75rem; text-align: center; }
+.payment-box .p-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.3px; }
+.payment-box .p-val { font-size: 16px; font-weight: 600; color: var(--navy); margin-top: 2px; }
+.payment-box .p-val.gold { color: var(--gold-dark); }
+
+/* =========================================================
+   3l. USE-CASE GRID
+   ========================================================= */
+
+.use-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.75rem; margin: 1.5rem 0; }
+.use-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1rem; text-align: center; }
+.use-card i { font-size: 26px; margin-bottom: 0.5rem; display: block; }
+.use-card h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 0.25rem; }
+.use-card p { font-size: 12px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+
+@media (max-width: 768px) { .use-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .use-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   3m. PROS / CONS SPLIT
+   ========================================================= */
+
+.pros-cons { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1.5rem 0; }
+.pro-col, .con-col { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.1rem; }
+.pro-col h4 { color: #3b6d11; font-size: 14px; font-weight: 600; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 6px; }
+.con-col h4 { color: #a32d2d; font-size: 14px; font-weight: 600; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 6px; }
+.pro-col ul, .con-col ul { list-style: none; margin: 0; padding: 0; }
+.pro-col li, .con-col li { font-size: 13px; color: var(--text); padding: 5px 0; border-bottom: 0.5px solid var(--border); display: flex; gap: 8px; line-height: 1.5; }
+.pro-col li:last-child, .con-col li:last-child { border-bottom: none; }
+.pro-col li::before { content: "✓"; color: #3b6d11; font-weight: 600; flex-shrink: 0; }
+.con-col li::before { content: "✗"; color: #a32d2d; font-weight: 600; flex-shrink: 0; }
+
+@media (max-width: 768px) { .pros-cons { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   3n. SIDEBAR (used inside .main-wrap two-column layout)
+   ========================================================= */
+
+.sidebar-sticky { position: sticky; top: 84px; display: flex; flex-direction: column; gap: 1rem; }
+.sidebar-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.25rem; }
+.sidebar-card h3 { font-size: 14px; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 0.5px solid var(--border); display: flex; align-items: center; gap: 6px; }
+.sidebar-card p { font-size: 13px; color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem; }
+.sidebar-btn { display: block; background: var(--navy); color: white; text-align: center; padding: 10px; border-radius: 8px; font-size: 14px; font-weight: 600; text-decoration: none; transition: background 0.2s; margin-bottom: 0.5rem; }
+.sidebar-btn:hover { background: var(--navy-mid); }
+.sidebar-btn.gold { background: var(--gold-dark); margin-bottom: 0; }
+.quick-facts { list-style: none; }
+.quick-facts li { font-size: 13px; padding: 7px 0; border-bottom: 0.5px solid var(--border); display: flex; justify-content: space-between; gap: 0.5rem; }
+.quick-facts li:last-child { border-bottom: none; }
+.quick-facts .qf-label { color: var(--text-muted); }
+.quick-facts .qf-val { font-weight: 600; color: var(--navy); text-align: right; }
+.related-list { list-style: none; }
+.related-list li { padding: 7px 0; border-bottom: 0.5px solid var(--border); font-size: 13px; }
+.related-list li:last-child { border-bottom: none; }
+.related-list a { color: var(--navy-mid); text-decoration: none; }
+.related-list a:hover { color: var(--gold-dark); }
+
+@media (max-width: 768px) { .sidebar-sticky { position: static; } }
+
+/* =========================================================
+   3o. HERO META ROW (blog/pillar hero variant with read time + author)
+   ========================================================= */
+
+.hero-meta-row { display: flex; align-items: center; justify-content: center; gap: 1.5rem; font-size: 0.84rem; color: rgba(255,255,255,0.6); flex-wrap: wrap; margin-top: 0.5rem; }
+.hero-meta-row span { display: flex; align-items: center; gap: 0.4rem; }
+.hero-meta-row i { font-size: 1rem; opacity: 0.7; }
+
 /* =========================================================
    5. COMPARISON TABLE
    ========================================================= */
