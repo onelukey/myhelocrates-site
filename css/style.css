@@ -615,6 +615,87 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 @media (max-width: 768px) { .related-grid { grid-template-columns: 1fr; } }
 
 /* =========================================================
+   4h. SECONDARY PILLAR-NAV STRIP (homepage only, below main nav)
+   ========================================================= */
+
+.page-nav { background: var(--white); border-bottom: 0.5px solid var(--border); padding: 0 2rem; display: flex; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.page-nav a { display: block; padding: 12px 16px; font-size: 13px; color: var(--text-muted); text-decoration: none; white-space: nowrap; border-bottom: 2px solid transparent; transition: all 0.2s; }
+.page-nav a:hover, .page-nav a.active { color: var(--navy); border-bottom-color: var(--gold); font-weight: 500; }
+
+/* =========================================================
+   4i. SECTION SUBTITLE (pairs with existing .section-title)
+   ========================================================= */
+
+.section-sub { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 2.5rem; max-width: 580px; }
+
+/* =========================================================
+   4j. FEATURE CARD GRID
+   ========================================================= */
+
+.features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.feature-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.4rem; transition: box-shadow 0.2s; }
+.feature-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.feature-icon { width: 44px; height: 44px; background: var(--navy-light); border-radius: 12px; display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+.feature-icon i { color: var(--navy); font-size: 22px; }
+.feature-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 0.5rem; }
+.feature-card p { font-size: 13px; color: var(--text-muted); line-height: 1.65; }
+
+@media (max-width: 768px) { .features-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .features-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   4k. DARK "HOW IT WORKS" STEPS SECTION
+   ========================================================= */
+
+.how-section { background: var(--navy); padding: 4rem 2rem; }
+.how-inner { max-width: 960px; margin: 0 auto; }
+.how-section .section-label { color: var(--gold); }
+.how-section .section-title { color: white; }
+.how-section .section-sub { color: rgba(255,255,255,0.6); }
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
+.step { background: rgba(255,255,255,0.06); border: 0.5px solid rgba(255,255,255,0.12); border-radius: 14px; padding: 1.4rem; }
+.step .step-num { width: 36px; height: 36px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 1rem; }
+.step h4 { font-size: 14px; font-weight: 600; color: white; margin-bottom: 0.4rem; }
+.step p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+@media (max-width: 768px) { .steps-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .steps-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   4l. BLOG PREVIEW CARDS (homepage)
+   ========================================================= */
+
+.blog-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+.blog-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; overflow: hidden; transition: box-shadow 0.2s; }
+.blog-card:hover { box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+.blog-thumb { height: 90px; display: flex; align-items: center; justify-content: center; }
+.blog-thumb.t1 { background: var(--navy-light); }
+.blog-thumb.t2 { background: var(--gold-light); }
+.blog-thumb.t3 { background: #eaf3de; }
+.blog-thumb.t4 { background: #fce8e8; }
+.blog-thumb.t5 { background: #e8f4f0; }
+.blog-thumb.t6 { background: #f0e8f5; }
+.blog-thumb i { font-size: 34px; }
+.blog-content { padding: 1.1rem; }
+.blog-cat { font-size: 11px; color: var(--gold-dark); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 0.4rem; }
+.blog-card h4 { font-size: 14px; font-weight: 500; color: var(--text); line-height: 1.45; margin-bottom: 0.75rem; }
+.blog-card .read-more { font-size: 13px; color: var(--navy); font-weight: 600; text-decoration: none; display: inline-flex; align-items: center; gap: 4px; }
+.blog-card .read-more:hover { color: var(--gold-dark); }
+
+@media (max-width: 768px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .blog-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   4m. FULL-WIDTH CTA BAND (distinct from narrow .cta-section)
+   ========================================================= */
+
+.cta-band { background: var(--gold-light); border-top: 0.5px solid rgba(201,168,76,0.3); border-bottom: 0.5px solid rgba(201,168,76,0.3); padding: 3rem 2rem; text-align: center; }
+.cta-band h2 { font-family: 'DM Serif Display', serif; font-size: 26px; color: var(--navy); margin-bottom: 0.6rem; }
+.cta-band p { font-size: 15px; color: var(--text-muted); margin-bottom: 1.5rem; }
+.cta-band a { display: inline-block; background: var(--navy); color: white; font-size: 15px; font-weight: 600; padding: 13px 28px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+.cta-band a:hover { background: var(--navy-mid); }
+
+/* =========================================================
    5. COMPARISON TABLE
    ========================================================= */
 
