@@ -742,6 +742,39 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 .cat-count { font-size: 11px; color: var(--text-muted); background: var(--bg); padding: 2px 8px; border-radius: 10px; }
 
 /* =========================================================
+   4q. IN-ARTICLE DARK STAT ROW (3-up, embedded in blog posts)
+   ========================================================= */
+
+.stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.5rem 0; }
+.stat-card { background: var(--navy); border-radius: 12px; padding: 1.1rem; text-align: center; }
+.stat-card .num { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--gold); line-height: 1; }
+.stat-card .lbl { font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 6px; line-height: 1.4; }
+
+@media (max-width: 768px) { .stat-row { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .stat-row { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   4r. SCENARIO BOX (real-homeowner-example card)
+   ========================================================= */
+
+.scenario-box { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.5rem; margin: 1.75rem 0; }
+.scenario-box h4 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 0.75rem; padding-bottom: 0.5rem; border-bottom: 0.5px solid var(--border); }
+.scenario-box p { font-size: 15px; margin-bottom: 0.75rem; color: var(--text-muted); }
+.scenario-box p:last-child { margin-bottom: 0; }
+.scenario-box strong { color: var(--text); }
+
+/* =========================================================
+   4s. SOURCE NOTE (small italic caption under a callout)
+   ========================================================= */
+
+.source-note { font-size: 12px; color: var(--text-muted); font-style: italic; margin-top: -0.5rem; margin-bottom: 1.1rem; }
+.source-note a { color: var(--text-muted); }
+
+/* Plain checkmark/cross variant for .checklist (vs the icon-based yes/prep variant) */
+.checklist li .yes { color: #27ae60; font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.checklist li .no { color: #c0392b; font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+
+/* =========================================================
    5. COMPARISON TABLE
    ========================================================= */
 
