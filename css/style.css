@@ -775,6 +775,60 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 .checklist li .no { color: #c0392b; font-size: 18px; flex-shrink: 0; margin-top: 1px; }
 
 /* =========================================================
+   4t. LIGHT RATE-CARD GRID (in-article, distinct from the dark .rate-cards band)
+   ========================================================= */
+
+.rate-card-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1.75rem 0; }
+.rate-card-grid .rate-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.25rem; text-align: center; }
+.rate-card-grid .rate-card .label { font-size: 12px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.4px; margin-bottom: 8px; font-weight: 500; }
+.rate-card-grid .rate-card .rate { font-size: 26px; font-weight: 600; color: var(--navy); }
+.rate-card-grid .rate-card .rate.gold { color: var(--gold-dark); }
+.rate-card-grid .rate-card .sublabel { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+@media (max-width: 768px) { .rate-card-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .rate-card-grid { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   4u. LIVE-RATE HEADLINE BOX (big dark callout for a rate range)
+   ========================================================= */
+
+.live-rate-box { background: var(--navy); border-radius: 16px; padding: 2rem; margin: 1.75rem 0; text-align: center; }
+.live-rate-box .headline { font-family: 'DM Serif Display', serif; font-size: 48px; color: var(--gold); line-height: 1; }
+.live-rate-box .sub { font-size: 14px; color: rgba(255,255,255,0.6); margin-top: 8px; }
+.live-rate-box .source { font-size: 12px; color: rgba(255,255,255,0.35); margin-top: 12px; }
+.live-rate-box .source a { color: rgba(255,255,255,0.45); }
+
+/* =========================================================
+   4v. RATE CONTEXT ROW (3 small stat cards, follows the live-rate box)
+   ========================================================= */
+
+.rate-context-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin: 1rem 0 1.75rem; }
+.rate-context-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 10px; padding: 1rem; text-align: center; }
+.rate-context-card .num { font-size: 22px; font-weight: 600; color: var(--navy); }
+.rate-context-card .lbl { font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.4; }
+
+@media (max-width: 768px) { .rate-context-row { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .rate-context-row { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   4w. LIGHT-BACKGROUND UPDATE BADGE (in-article, distinct from the dark .update-badge)
+   ========================================================= */
+
+.rate-update-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--gold-light); color: var(--gold-dark); font-size: 12px; padding: 5px 14px; border-radius: 20px; border: 0.5px solid rgba(201,168,76,0.4); margin-bottom: 1.5rem; font-weight: 500; }
+
+/* =========================================================
+   4x. NUMBERED BOOST LIST (action item + savings badge)
+   ========================================================= */
+
+.boost-list { list-style: none; margin: 0 0 1.1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.boost-item { background: var(--white); border: 0.5px solid var(--border); border-radius: 12px; padding: 1.1rem 1.25rem; }
+.boost-item-header { display: flex; align-items: center; gap: 10px; margin-bottom: 0.5rem; }
+.boost-num { width: 28px; height: 28px; background: var(--navy); color: white; border-radius: 50%; font-size: 13px; font-weight: 600; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.boost-item h4 { font-size: 15px; font-weight: 600; color: var(--text); margin: 0; }
+.boost-item p { font-size: 14px; color: var(--text-muted); line-height: 1.65; margin: 0 0 0.4rem; }
+.boost-saving { font-size: 12px; font-weight: 600; color: #2d7a4f; background: #eaf3de; padding: 2px 10px; border-radius: 20px; display: inline-block; }
+
+/* =========================================================
    5. COMPARISON TABLE
    ========================================================= */
 
