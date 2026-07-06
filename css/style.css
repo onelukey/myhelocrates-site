@@ -924,6 +924,78 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 .example-stat .lbl { font-size: 12px; color: var(--text-muted); }
 
 /* =========================================================
+   5g. GRADIENT KEY-TAKEAWAY BOX
+   ========================================================= */
+
+.key-takeaway { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); border-radius: 12px; padding: 1.75rem 2rem; color: white; margin: 2.25rem 0; }
+.key-takeaway h3 { font-family: 'DM Serif Display', serif; font-size: 19px; color: var(--gold); margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 400; }
+.key-takeaway ul { margin-left: 1.25rem; }
+.key-takeaway li { color: rgba(255,255,255,0.88); margin-bottom: 0.45rem; font-size: 15px; }
+
+/* =========================================================
+   5h. DARK CTA STRIP (gradient, distinct from the gold-light .cta-band)
+   ========================================================= */
+
+.cta-strip { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); border-radius: 12px; padding: 2rem; text-align: center; margin: 2.5rem 0; color: white; }
+.cta-strip h3 { font-family: 'DM Serif Display', serif; font-size: 22px; margin-bottom: 0.5rem; font-weight: 400; }
+.cta-strip p { color: rgba(255,255,255,0.78); margin-bottom: 1.25rem; font-size: 15px; }
+.cta-strip .cta-btn { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--gold); color: var(--navy); text-decoration: none; font-weight: 700; padding: 0.8rem 1.75rem; border-radius: 8px; font-size: 15px; transition: background 0.2s, transform 0.15s; }
+.cta-strip .cta-btn:hover { background: var(--gold-dark); color: white; transform: translateY(-1px); }
+
+/* =========================================================
+   5i. DISCLOSURE BANNER (gold-bordered, editorial independence notice)
+   ========================================================= */
+
+.disclosure-banner { background: var(--gold-light); border: 1px solid var(--gold); border-radius: 10px; padding: 1rem 1.35rem; margin-bottom: 2rem; display: flex; gap: 0.85rem; align-items: flex-start; font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+.disclosure-banner i { color: var(--gold-dark); font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.disclosure-banner strong { color: var(--text); }
+
+/* =========================================================
+   5j. METHODOLOGY BOX
+   ========================================================= */
+
+.methodology-box { background: var(--navy-light); border: 1px solid var(--navy); border-radius: 12px; padding: 1.4rem 1.6rem; margin: 2rem 0; }
+.methodology-box h3 { font-family: 'DM Serif Display', serif; font-size: 18px; color: var(--navy); margin: 0 0 0.75rem; font-weight: 400; }
+.methodology-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.75rem; margin-top: 0.75rem; }
+.methodology-item { background: var(--white); border-radius: 8px; padding: 0.75rem 1rem; }
+.methodology-item .factor { font-weight: 600; color: var(--navy); font-size: 14px; display: block; margin-bottom: 0.2rem; }
+.methodology-item .weight { font-size: 13px; color: var(--text-muted); }
+
+/* =========================================================
+   5k. LENDER CARD (header, stats grid, pros/cons, best-for tag)
+   ========================================================= */
+
+.lender-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 14px; padding: 1.6rem 1.75rem; margin: 1.75rem 0; position: relative; }
+.lender-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 1rem; }
+.lender-name { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--navy); margin: 0 0 0.25rem; font-weight: 400; }
+.lender-tagline { font-size: 14px; color: var(--text-muted); margin: 0; }
+.lender-badge { background: var(--navy); color: white; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; padding: 0.3rem 0.75rem; border-radius: 20px; white-space: nowrap; flex-shrink: 0; }
+.lender-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 0.75rem; margin: 1rem 0; padding: 1rem 0; border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); }
+.lender-stat { text-align: center; }
+.lender-stat .val { font-family: 'DM Serif Display', serif; font-size: 20px; color: var(--navy); display: block; }
+.lender-stat .lbl { font-size: 12px; color: var(--text-muted); }
+.pros-cons .pros strong { display: block; margin-bottom: 0.4rem; font-size: 13px; text-transform: uppercase; letter-spacing: 0.6px; color: #1a5c2a; }
+.pros-cons .cons strong { display: block; margin-bottom: 0.4rem; font-size: 13px; text-transform: uppercase; letter-spacing: 0.6px; color: #721c24; }
+.pros-cons .pros ul, .pros-cons .cons ul { padding-left: 1.1rem; margin: 0; }
+.pros-cons .pros li, .pros-cons .cons li { margin-bottom: 0.3rem; color: var(--text-muted); font-size: 13px; }
+.best-for { background: var(--gold-light); border-radius: 8px; padding: 0.6rem 1rem; font-size: 14px; margin-top: 1rem; }
+.best-for strong { color: var(--gold-dark); }
+
+/* =========================================================
+   5l. DECISION GRID (goal / pick / why cards)
+   ========================================================= */
+
+.decision-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.decision-grid .decision-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 10px; padding: 1rem 1.1rem; }
+.decision-grid .decision-card .goal { font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--gold-dark); margin-bottom: 0.3rem; }
+.decision-grid .decision-card .pick { font-weight: 700; color: var(--navy); font-size: 15px; margin-bottom: 0.2rem; }
+.decision-grid .decision-card .why { font-size: 13px; color: var(--text-muted); }
+
+/* Table cell check/cross marks */
+.check { color: #1a5c2a; font-weight: 700; }
+.cross { color: #721c24; font-weight: 700; }
+
+/* =========================================================
    5. COMPARISON TABLE
    ========================================================= */
 
