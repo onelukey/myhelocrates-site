@@ -995,6 +995,36 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 .check { color: #1a5c2a; font-weight: 700; }
 .cross { color: #721c24; font-weight: 700; }
 
+/* Table row emphasis (e.g. highlighting the HELOC row in a rate comparison table) */
+.highlight-row td { font-weight: 600; color: var(--navy); }
+
+/* Payment-shock table row highlights */
+.shock-row td { font-weight: 700; color: #c0392b; background: #fff4f4 !important; }
+.good-row td { font-weight: 700; color: #1a5c2a; background: #d4edda !important; }
+
+/* =========================================================
+   5m. SIDE-BY-SIDE PHASE DIAGRAM (draw vs repayment comparison)
+   ========================================================= */
+
+.phase-diagram { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border-radius: 12px; overflow: hidden; border: 0.5px solid var(--border); margin: 1.75rem 0; }
+.phase-draw { background: var(--navy); color: white; padding: 1.5rem 1.75rem; }
+.phase-repay { background: var(--navy-light); color: var(--text); padding: 1.5rem 1.75rem; }
+.phase-diagram .phase-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.9px; margin-bottom: 0.5rem; opacity: 0.7; }
+.phase-draw .phase-label { color: var(--gold); }
+.phase-repay .phase-label { color: var(--navy); }
+.phase-diagram .phase-title { font-family: 'DM Serif Display', serif; font-size: 20px; margin-bottom: 1rem; font-weight: 400; }
+.phase-draw .phase-title { color: white; }
+.phase-repay .phase-title { color: var(--navy); }
+.phase-diagram .phase-list { list-style: none; padding: 0; margin: 0; }
+.phase-diagram .phase-list li { font-size: 14px; padding: 0.35rem 0; border-bottom: 0.5px solid rgba(255,255,255,0.12); display: flex; gap: 0.5rem; align-items: flex-start; }
+.phase-repay .phase-list li { border-bottom-color: var(--border); }
+.phase-diagram .phase-list li:last-child { border-bottom: none; }
+.phase-diagram .phase-list i { font-size: 15px; flex-shrink: 0; margin-top: 2px; }
+.phase-draw .phase-list i { color: var(--gold); }
+.phase-repay .phase-list i { color: var(--navy); }
+
+@media (max-width: 768px) { .phase-diagram { grid-template-columns: 1fr; } }
+
 /* =========================================================
    5. COMPARISON TABLE
    ========================================================= */
