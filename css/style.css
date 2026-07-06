@@ -302,6 +302,51 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 .related-list a { color: var(--navy-mid); text-decoration: none; }
 .related-list a:hover { color: var(--gold-dark); }
 
+/* =========================================================
+   5n. CONTACT FORM FIELDS
+   ========================================================= */
+
+.field { margin-bottom: 1.1rem; }
+.field label { display: block; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); margin-bottom: 6px; }
+.field input, .field select, .field textarea { width: 100%; padding: 11px 13px; border: 0.5px solid var(--border); border-radius: 8px; font-size: 15px; color: var(--text); background: var(--bg); font-family: 'DM Sans', sans-serif; transition: border-color 0.2s, box-shadow 0.2s; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: none; border-color: var(--navy-mid); box-shadow: 0 0 0 3px rgba(26,58,107,0.08); }
+.field textarea { resize: vertical; min-height: 130px; }
+.field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+@media (max-width: 768px) { .field-row { grid-template-columns: 1fr; } }
+
+/* =========================================================
+   5o. FORM ALERTS (success / error)
+   ========================================================= */
+
+.alert { border-radius: 10px; padding: 1rem 1.25rem; margin-top: 1.25rem; display: none; align-items: flex-start; gap: 10px; }
+.alert.show { display: flex; }
+.alert i { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+.alert div { font-size: 14px; line-height: 1.6; }
+.alert div strong { display: block; margin-bottom: 2px; font-size: 14px; }
+.alert.success { background: #eaf3de; border: 0.5px solid #97c459; }
+.alert.success i, .alert.success strong, .alert.success div { color: #3b6d11; }
+.alert.error { background: #fce8e8; border: 0.5px solid #f09595; }
+.alert.error i, .alert.error strong, .alert.error div { color: #a32d2d; }
+
+/* =========================================================
+   5p. CONTACT INFO ITEMS + TOPIC LIST
+   ========================================================= */
+
+.contact-item { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 1rem; }
+.contact-item:last-child { margin-bottom: 0; }
+.contact-icon { width: 36px; height: 36px; background: var(--navy-light); border-radius: 9px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.contact-icon i { color: var(--navy); font-size: 18px; }
+.contact-detail h4 { font-size: 13px; font-weight: 600; color: var(--text); margin-bottom: 1px; }
+.contact-detail p { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin: 0; }
+.contact-detail a { color: var(--navy-mid); font-size: 13px; text-decoration: none; }
+.contact-detail a:hover { color: var(--gold-dark); }
+
+.topic-list { list-style: none; }
+.topic-list li { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--text-muted); padding: 6px 0; border-bottom: 0.5px solid var(--border); }
+.topic-list li:last-child { border-bottom: none; }
+.topic-list li i { color: var(--gold-dark); font-size: 16px; }
+
 @media (max-width: 768px) { .sidebar-sticky { position: static; } }
 
 /* =========================================================
