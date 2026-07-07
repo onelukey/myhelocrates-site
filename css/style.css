@@ -38,7 +38,7 @@ a { color: var(--navy-mid); }
 .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.25rem; color: var(--white); white-space: nowrap; flex-shrink: 0; text-decoration: none; }
 .nav-logo span { color: var(--gold); }
 .nav-links { display: flex; align-items: center; gap: 0.25rem; list-style: none; }
-.nav-links a { color: rgba(255,255,255,0.82); font-size: 0.85rem; font-weight: 500; padding: 0.4rem 0.65rem; border-radius: 6px; transition: color 0.18s, background 0.18s; text-decoration: none; }
+.nav-links a { color: rgba(255,255,255,0.82); font-size: 0.85rem; font-weight: 500; padding: 0.4rem 0.65rem; border-radius: 6px; transition: color 0.18s, background 0.18s; text-decoration: none; white-space: nowrap; }
 .nav-links a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
 .nav-links a.active { color: var(--white); }
 .nav-cta { background: var(--gold); color: var(--navy) !important; font-weight: 600 !important; padding: 0.45rem 1rem !important; border-radius: 7px !important; white-space: nowrap; transition: background 0.18s !important; }
