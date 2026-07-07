@@ -347,6 +347,50 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 .topic-list li:last-child { border-bottom: none; }
 .topic-list li i { color: var(--gold-dark); font-size: 16px; }
 
+/* =========================================================
+   5q. GLOSSARY: HERO STATS ROW
+   ========================================================= */
+
+.glossary-hero-stats { display: flex; justify-content: center; gap: 2.5rem; flex-wrap: wrap; margin-top: 1.5rem; }
+.glossary-hero-stats .g-stat .num { font-family: 'DM Serif Display', serif; font-size: 28px; color: var(--gold); display: block; }
+.glossary-hero-stats .g-stat .lbl { font-size: 13px; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; }
+
+/* =========================================================
+   5r. GLOSSARY: SEARCH BAR + ALPHA NAV
+   ========================================================= */
+
+.search-bar-wrap { background: var(--white); border-bottom: 0.5px solid var(--border); padding: 1.25rem 2rem; position: sticky; top: 62px; z-index: 90; box-shadow: 0 2px 8px rgba(15,37,87,0.06); }
+.search-bar-inner { max-width: 1060px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; }
+.search-input-wrap { position: relative; flex: 1; min-width: 220px; }
+.search-input-wrap i { position: absolute; left: 0.85rem; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-size: 1.1rem; pointer-events: none; }
+.search-input-wrap input { width: 100%; padding: 0.65rem 0.9rem 0.65rem 2.5rem; border: 0.5px solid var(--border); border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 0.95rem; color: var(--text); background: var(--bg); }
+.search-input-wrap input:focus { outline: none; border-color: var(--navy); }
+.alpha-nav { display: flex; flex-wrap: wrap; gap: 0.25rem; }
+.alpha-btn { background: none; border: 0.5px solid var(--border); border-radius: 5px; padding: 0.25rem 0.55rem; font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 600; color: var(--text-muted); cursor: pointer; transition: all 0.2s; }
+.alpha-btn:hover, .alpha-btn.active { background: var(--navy); color: white; border-color: var(--navy); }
+
+/* =========================================================
+   5s. GLOSSARY: LETTER SECTIONS + TERM CARDS
+   ========================================================= */
+
+.letter-section { margin-bottom: 2.5rem; }
+.letter-anchor { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.25rem; }
+.letter-badge { background: var(--navy); color: white; font-family: 'DM Serif Display', serif; font-size: 1.5rem; width: 3rem; height: 3rem; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.letter-divider { flex: 1; height: 2px; background: var(--navy-light); }
+
+.term-card { background: var(--white); border: 0.5px solid var(--border); border-radius: 10px; padding: 1.25rem 1.5rem; margin-bottom: 0.85rem; transition: border-color 0.2s, box-shadow 0.2s; }
+.term-card:hover { border-color: var(--gold); box-shadow: 0 4px 14px rgba(15,37,87,0.1); }
+.term-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1rem; margin-bottom: 0.5rem; }
+.term-name { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--navy); }
+.term-abbr { font-size: 0.72rem; font-weight: 700; background: var(--navy-light); color: var(--navy); padding: 0.15rem 0.55rem; border-radius: 20px; white-space: nowrap; flex-shrink: 0; margin-top: 0.2rem; }
+.term-def { font-size: 0.95rem; color: var(--text); line-height: 1.65; }
+.term-link { display: inline-flex; align-items: center; gap: 0.3rem; margin-top: 0.65rem; font-size: 0.82rem; font-weight: 600; color: var(--gold-dark); text-decoration: none; }
+.term-link:hover { color: var(--navy); text-decoration: underline; }
+
+.no-results { display: none; text-align: center; padding: 3rem 1rem; color: var(--text-muted); }
+.no-results.show { display: block; }
+.no-results i { font-size: 2.5rem; display: block; margin-bottom: 0.75rem; color: var(--border); }
+
 @media (max-width: 768px) { .sidebar-sticky { position: static; } }
 
 /* =========================================================
