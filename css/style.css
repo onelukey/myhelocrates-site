@@ -391,6 +391,23 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 .no-results.show { display: block; }
 .no-results i { font-size: 2.5rem; display: block; margin-bottom: 0.75rem; color: var(--border); }
 
+/* =========================================================
+   6. AUDIT FIXES (site-wide sweep)
+   ========================================================= */
+
+/* Was inline-only on homepage + calculator hero sections — now a real shared class.
+   Padding still varies slightly between the two pages, so it stays as a light inline override. */
+.hero-band { background: var(--navy); text-align: center; }
+
+/* Was inline-only on the calculator page's FAQ section */
+.faq-section { max-width: 900px; margin: 0 auto 4rem; padding: 0 2rem; }
+
+/* Was defined via a page-local <style> block on the homepage only — moved here so every
+   page can use it consistently, and to close the "no per-page <style> blocks" gap. */
+html { scroll-behavior: smooth; }
+.skip-nav { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; }
+.skip-nav:focus { position: static; width: auto; height: auto; padding: 8px 16px; background: var(--gold); color: var(--navy); z-index: 200; }
+
 @media (max-width: 768px) { .sidebar-sticky { position: static; } }
 
 /* =========================================================
