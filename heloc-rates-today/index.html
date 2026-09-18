@@ -34,6 +34,19 @@
 
   <!-- Tabler Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+
+  <style>
+    /* HELOC rates page trust/UX polish */
+    .source-card-link{display:block;color:inherit;text-decoration:none;border-radius:inherit}
+    .source-card-link .rate-card{height:100%;transition:transform .18s ease,box-shadow .18s ease}
+    .source-card-link:hover .rate-card,.source-card-link:focus-visible .rate-card{transform:translateY(-2px);box-shadow:0 10px 24px rgba(0,0,0,.10)}
+    .source-card-link:focus-visible{outline:3px solid currentColor;outline-offset:4px}
+    .source-link-label{display:inline-flex;align-items:center;gap:.3rem;margin-top:.65rem;font-weight:600;text-decoration:underline;text-underline-offset:3px}
+    .authority-box{margin:1.5rem 0}
+    .authority-links{display:flex;flex-wrap:wrap;gap:.75rem 1.25rem;margin-top:.8rem}
+    .authority-links a{font-weight:600}
+    #review-warning[hidden]{display:none}
+  </style>
 </head>
 <body>
 
@@ -51,7 +64,7 @@
       <li><a href="/contact/">Contact</a></li>
       <li><a href="/#calculator" class="nav-cta">Try Calculator</a></li>
     </ul>
-    <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
+    <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <i class="ti ti-menu-2"></i>
     </button>
   </div>
@@ -81,12 +94,12 @@
         <p>A useful benchmark to understand — not a national average HELOC rate or a loan offer.</p>
       </div>
       <div class="rate-cards">
-        <div class="rate-card featured"><div class="rc-score">Federal Reserve H.15</div><div class="rc-label">Bank Prime Loan Rate</div><div class="rc-rate gold">6.75%</div><div class="rc-range">Federal Reserve release dated September 15, 2026</div></div>
+        <a class="source-card-link" href="https://www.federalreserve.gov/releases/h15/current/default.htm" target="_blank" rel="noopener noreferrer" aria-label="Federal Reserve H.15 Selected Interest Rates — opens in a new tab"><div class="rate-card featured"><div class="rc-score">Federal Reserve H.15</div><div class="rc-label">Bank Prime Loan Rate</div><div class="rc-rate gold">6.75%</div><div class="rc-range">Federal Reserve release dated September 15, 2026</div><span class="source-link-label">View official source <i class="ti ti-external-link" aria-hidden="true"></i></span></div></a>
         <div class="rate-card"><div class="rc-score">HELOC pricing</div><div class="rc-label">Common variable-rate structure</div><div class="rc-rate">Index + margin</div><div class="rc-range">Your lender's disclosures identify the index, margin and adjustment rules.</div></div>
         <div class="rate-card"><div class="rc-score">Before you borrow</div><div class="rc-label">Compare the whole offer</div><div class="rc-rate">Rate + fees</div><div class="rc-range">Review APR, introductory terms, caps, fees and payment rules.</div></div>
       </div>
       <p class="rates-note">The Federal Reserve's H.15 release reported a 6.75% Bank Prime Loan Rate when this page was reviewed. The Federal Reserve describes Prime as one of several base rates used by banks. A HELOC may use Prime or another publicly available index, so always check the lender's disclosures.</p>
-      <p class="rates-note"><a href="https://www.federalreserve.gov/releases/h15/" target="_blank" rel="noopener noreferrer">Check the latest Federal Reserve H.15 release →</a></p>
+      
       <div id="review-warning" class="callout-block c-gold" hidden role="status"><strong>Freshness notice</strong><p>Rate information may have changed since this page was last reviewed. Check the linked Federal Reserve and lender sources for current information.</p></div>
     </div>
   </section>
@@ -101,7 +114,7 @@
       </div>
       <h2 id="current">What today's benchmark tells you</h2>
       <p>The Bank Prime Loan Rate shown above is a benchmark published in the Federal Reserve's H.15 release. It is useful context for borrowers because Prime is a common index used in variable-rate lending. It is <strong>not</strong> the same thing as an average HELOC rate, and it does not tell you what rate a lender will offer you.</p>
-      <p>The Consumer Financial Protection Bureau (CFPB) explains that HELOCs typically have variable interest rates. A variable rate generally has two parts: an <strong>index</strong> and a <strong>margin</strong>. Different lenders can use different indexes, so the first question to ask is which index your HELOC follows.</p>
+      <p>The Consumer Financial Protection Bureau (CFPB) explains that HELOCs typically have variable interest rates. A variable rate generally has two parts: an <strong>index</strong> and a <strong>margin</strong>. Different lenders can use different indexes, so the first question to ask is which index your HELOC follows.</p><div class="callout-block c-navy authority-box"><strong><i class="ti ti-building-bank" aria-hidden="true"></i> Before you borrow: CFPB guidance</strong><p>The CFPB explains that a HELOC uses your home as security, that payments can change with a variable rate, and that borrowers should understand fees, draw rules and repayment terms before opening a line of credit.</p><div class="authority-links"><a href="https://www.consumerfinance.gov/ask-cfpb/what-is-a-home-equity-line-of-credit-heloc-en-107/" target="_blank" rel="noopener noreferrer">CFPB: What is a HELOC? <i class="ti ti-external-link" aria-hidden="true"></i></a><a href="https://files.consumerfinance.gov/f/documents/cfpb_heloc-brochure.pdf" target="_blank" rel="noopener noreferrer">CFPB HELOC booklet (PDF) <i class="ti ti-external-link" aria-hidden="true"></i></a></div></div>
       <div class="callout-block c-gold"><strong>Why we don't publish an invented “average rate by credit score”</strong><p>There is no single Federal Reserve table that tells us what every homeowner should be offered on a HELOC at a particular credit score. Lender pricing, borrower circumstances and loan terms vary. We would rather show you a verifiable benchmark and explain how to evaluate real lender offers than present false precision.</p></div>
       <h2 id="how-set">How HELOC rates are set</h2>
       <p>For a variable-rate HELOC, the lender's disclosures should explain the index used to make rate adjustments and how the annual percentage rate is determined. A common structure is:</p>
@@ -147,9 +160,9 @@
     <aside>
       <div class="sidebar-sticky">
         <div class="sidebar-card">
-          <h3><i class="ti ti-calculator" aria-hidden="true"></i> Calculate Your Payment</h3>
+          <h3><i class="ti ti-calculator" aria-hidden="true"></i> Estimate Your Payment</h3>
           <p>Enter a rate from a lender quote to estimate a HELOC payment — free, no sign-up required.</p>
-          <a href="/#calculator" class="sidebar-btn">Open Calculator</a>
+          <a href="/#calculator" class="sidebar-btn">Use HELOC Calculator</a>
         </div>
         <div class="sidebar-card">
           <h3><i class="ti ti-list-check" aria-hidden="true"></i> Do You Qualify?</h3>
