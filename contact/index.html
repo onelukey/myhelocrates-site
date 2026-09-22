@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Contact MyHelocRates.com. We welcome questions, feedback, and partnership enquiries. Typical response within 1 business day.">
+  <meta name="description" content="Contact MyHelocRates.com with site questions, feedback, content corrections, advertising enquiries or partnership enquiries. We aim to respond within 1–2 business days.">
   <title>Contact Us — MyHelocRates.com</title>
 
   <!-- Canonical -->
@@ -48,7 +48,7 @@
       <li><a href="/contact/" class="active">Contact</a></li>
       <li><a href="/#calculator" class="nav-cta">Try Calculator</a></li>
     </ul>
-    <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
+    <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <i class="ti ti-menu-2"></i>
     </button>
   </div>
@@ -60,7 +60,7 @@
     <div class="page-header-inner">
       <div class="hero-pill">Get in Touch</div>
       <h1>We'd Love to Hear From You</h1>
-      <p class="page-header-desc">Questions, feedback, corrections, or partnership enquiries — we read and respond to every message.</p>
+      <p class="page-header-desc">Site questions, feedback, content corrections, advertising or partnership enquiries — we read every message and aim to respond within 1–2 business days.</p>
     </div>
   </div>
 
@@ -69,7 +69,8 @@
     <!-- CONTACT FORM -->
     <div class="sidebar-card">
       <h3 style="font-family:'DM Serif Display', serif; font-size:22px; font-weight:400; color:var(--navy); text-transform:none; letter-spacing:normal; border-bottom:none; padding-bottom:0; margin-bottom:0.4rem;">Send us a message</h3>
-      <p style="font-size:14px; color:var(--text-muted); margin-bottom:1.75rem;">Typical response time: 1 business day</p>
+      <p style="font-size:14px; color:var(--text-muted); margin-bottom:1.75rem;">We aim to respond within 1–2 business days.</p>
+      <p style="font-size:13px; color:var(--text-muted); margin-bottom:1.5rem;"><strong>Please note:</strong> We can help with questions about this website and its content, but we cannot provide personalised financial, legal or tax advice or recommend a lender for your circumstances.</p>
 
       <form id="contact-form" action="https://formspree.io/f/mzdlweow" method="POST">
 
@@ -93,7 +94,7 @@
           <label for="enquiry-type">What's this about?</label>
           <select id="enquiry-type" name="Enquiry Type" required>
             <option value="" disabled selected>Choose a topic…</option>
-            <option value="HELOC question">HELOC questions &amp; guidance</option>
+            <option value="Site/content question">Question about our HELOC content</option>
             <option value="Calculator feedback">Calculator feedback</option>
             <option value="Content correction">Content correction</option>
             <option value="Advertising enquiry">Advertising enquiry</option>
@@ -117,7 +118,7 @@
 
         <div class="alert success" id="success-alert" role="status">
           <i class="ti ti-circle-check" aria-hidden="true"></i>
-          <div><strong>Message sent!</strong> Thanks for reaching out — we'll get back to you within 1 business day.</div>
+          <div><strong>Message sent!</strong> Thanks for reaching out — we aim to respond within 1–2 business days.</div>
         </div>
 
         <div class="alert error" id="error-alert" role="alert">
@@ -145,14 +146,14 @@
             <div class="contact-icon"><i class="ti ti-clock" aria-hidden="true"></i></div>
             <div class="contact-detail">
               <h4>Response time</h4>
-              <p>Within 1 business day<br>Monday – Friday</p>
+              <p>We aim to respond within 1–2 business days<br>Monday – Friday</p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
             <div class="contact-detail">
-              <h4>Location</h4>
-              <p>United States<br>Serving US homeowners nationwide</p>
+              <h4>Based in</h4>
+              <p>United Kingdom<br>Site focus: US homeowners</p>
             </div>
           </div>
         </div>
@@ -160,7 +161,7 @@
         <div class="sidebar-card">
           <h3>What can we help with?</h3>
           <ul class="topic-list">
-            <li><i class="ti ti-circle-check" aria-hidden="true"></i> HELOC questions &amp; guidance</li>
+            <li><i class="ti ti-circle-check" aria-hidden="true"></i> Questions about our HELOC content</li>
             <li><i class="ti ti-circle-check" aria-hidden="true"></i> Calculator feedback</li>
             <li><i class="ti ti-circle-check" aria-hidden="true"></i> Content corrections</li>
             <li><i class="ti ti-circle-check" aria-hidden="true"></i> Advertising enquiries</li>
@@ -171,7 +172,7 @@
 
         <div class="disclosure-banner">
           <i class="ti ti-shield-lock" aria-hidden="true"></i>
-          <div>Your message is delivered securely via Formspree. We never share your contact details with third parties.</div>
+          <div>Your message is submitted through Formspree, our form-processing provider. Please do not send sensitive financial information, account numbers or documents through this form. See our <a href="/privacy-policy/">Privacy Policy</a>.</div>
         </div>
 
       </div>
@@ -202,7 +203,7 @@
         <ul>
           <li><a href="/blog/what-is-a-heloc/">What is a HELOC?</a></li>
           <li><a href="/blog/best-heloc-lenders/">Best HELOC Lenders</a></li>
-          <li><a href="/blog/best-credit-unions-heloc/">Best Credit Unions 2026</a></li>
+          <li><a href="/blog/best-credit-unions-heloc/">Best Credit Unions for HELOCs</a></li>
           <li><a href="/blog/">All Articles →</a></li>
         </ul>
       </div>
@@ -233,7 +234,9 @@
   document.getElementById('navToggle').addEventListener('click', function() {
     const links = document.getElementById('navLinks');
     links.classList.toggle('open');
-    this.querySelector('i').className = links.classList.contains('open') ? 'ti ti-x' : 'ti ti-menu-2';
+    var isOpen = links.classList.contains('open');
+    this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    this.querySelector('i').className = isOpen ? 'ti ti-x' : 'ti ti-menu-2';
   });
 </script>
 
@@ -273,14 +276,10 @@
 </script>
 
 <script>
-  (function() {
-    var now = new Date();
-    var year = now.getFullYear();
-    var month = now.toLocaleString("en-US", { month: "long" });
-    document.querySelectorAll(".dyn-year").forEach(function(el) { el.textContent = year; });
-    document.querySelectorAll(".dyn-monthyear").forEach(function(el) { el.textContent = month + " " + year; });
-    document.querySelectorAll(".dyn-updated").forEach(function(el) { el.textContent = month + " 1, " + year; });
-  })();
+(function(){
+  var year = new Date().getFullYear();
+  document.querySelectorAll(".dyn-year").forEach(function(el){ el.textContent = year; });
+})();
 </script>
 
 </body>
