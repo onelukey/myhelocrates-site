@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Free HELOC calculator — estimate your monthly payments or find out how much home equity you can borrow. Plain-English guides for US homeowners.">
+  <meta name="description" content="Free HELOC calculator and plain-English guides for US homeowners. Estimate payments, explore home equity and learn how HELOC rates, qualification and repayment work.">
   <meta name="keywords" content="HELOC calculator, home equity line of credit, HELOC rates, home equity loan, HELOC payment calculator">
-  <meta property="og:title" content="MyHelocRates.com — Free HELOC Calculator & Guides">
-  <meta property="og:description" content="Estimate HELOC payments and borrowing power instantly. No sign-up required.">
+  <meta property="og:title" content="MyHelocRates.com — HELOC Calculator & Plain-English Guides">
+  <meta property="og:description" content="Estimate HELOC payments and explore home equity with no sign-up, then learn how HELOC rates, qualification and repayment work.">
   <meta property="og:type" content="website">
-  <title>MyHelocRates.com — Free HELOC Calculator &amp; Rates Guide</title>
+  <title>HELOC Calculator &amp; Plain-English Guides | MyHelocRates.com</title>
 
   <!-- Canonical -->
   <link rel="canonical" href="https://myhelocrates.com/" />
@@ -54,7 +54,7 @@
       <li><a href="/contact/">Contact</a></li>
       <li><a href="/#calculator" class="nav-cta">Try Calculator</a></li>
     </ul>
-    <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu">
+    <button class="nav-mobile-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
       <i class="ti ti-menu-2"></i>
     </button>
   </div>
@@ -78,8 +78,8 @@
   <!-- HERO + CALCULATOR -->
   <section class="hero-band" aria-labelledby="hero-heading" style="padding: 4rem 2rem 3rem;">
     <div class="hero-pill" style="display:inline-block;">Free HELOC Calculator — No Sign Up Required</div>
-    <h1 id="hero-heading" style="font-family:'DM Serif Display', serif; color:white; font-size:42px; font-weight:400; line-height:1.2; margin: 1.25rem 0 1rem;">Find Out What Your Home<br>Equity Is <em style="color:var(--gold); font-style:normal;">Worth To You</em></h1>
-    <p style="color:rgba(255,255,255,0.65); font-size:16px; max-width:540px; margin:0 auto 2.5rem; line-height:1.7;">Estimate your monthly payments or calculate how much you can borrow — in seconds. Plain-English guides for every step of the HELOC journey.</p>
+    <h1 id="hero-heading" style="font-family:'DM Serif Display', serif; color:white; font-size:42px; font-weight:400; line-height:1.2; margin: 1.25rem 0 1rem;">HELOC Calculator &amp;<br><em style="color:var(--gold); font-style:normal;">Plain-English Guides</em></h1>
+    <p style="color:rgba(255,255,255,0.65); font-size:16px; max-width:620px; margin:0 auto 2.5rem; line-height:1.7;">Estimate payments, explore how home equity can affect a possible credit limit, and learn how HELOC rates, qualification, draw periods and repayment work.</p>
 
     <div class="calc-card" id="calculator" role="region" aria-label="HELOC Calculator">
       <div class="calc-tabs" role="tablist">
@@ -121,11 +121,11 @@
           <div class="results" id="payment-results" aria-live="polite">
             <div class="results-grid">
               <div class="result-item">
-                <div class="result-label">Draw Period Payment</div>
+                <div class="result-label">Interest-Only Draw Payment</div>
                 <div class="result-value gold" id="r-draw-pmt">—</div>
               </div>
               <div class="result-item">
-                <div class="result-label">Repayment Payment</div>
+                <div class="result-label">Est. Repayment Payment</div>
                 <div class="result-value" id="r-repay-pmt">—</div>
               </div>
               <div class="result-item">
@@ -133,7 +133,7 @@
                 <div class="result-value" id="r-total-int">—</div>
               </div>
             </div>
-            <p class="result-note">Estimates are for informational purposes only. Actual rates and payments will vary by lender. Consult a licensed financial professional before making any borrowing decisions.</p>
+            <p class="result-note">Illustration only. The draw-period estimate assumes interest-only payments on the full balance at the rate you enter; the repayment estimate assumes that same balance is fully amortised over the repayment term at the same rate. Actual HELOC payment rules, balances and variable rates can differ by plan.</p>
           </div>
         </div>
 
@@ -151,17 +151,12 @@
           </div>
           <div class="field-row">
             <div class="field">
-              <label for="e-ltv">Lender Max LTV (%)</label>
+              <label for="e-ltv">Assumed Max CLTV (%)</label>
               <input type="number" id="e-ltv" value="85" min="50" max="95" step="1">
             </div>
             <div class="field">
-              <label for="e-credit">Credit Score Range</label>
-              <select id="e-credit">
-                <option value="0.95">Excellent (740+)</option>
-                <option value="0.90" selected>Good (680–739)</option>
-                <option value="0.80">Fair (620–679)</option>
-                <option value="0.65">Poor (below 620)</option>
-              </select>
+              <label for="e-other">Other Property-Secured Debt ($)</label>
+              <input type="number" id="e-other" value="0" min="0" step="1000">
             </div>
           </div>
           <button class="calc-btn" id="btn-calc-equity" aria-label="Calculate my HELOC borrowing power">
@@ -174,7 +169,7 @@
                 <div class="result-value" id="r-equity">—</div>
               </div>
               <div class="result-item">
-                <div class="result-label">Est. HELOC Limit</div>
+                <div class="result-label">Illustrative HELOC Limit</div>
                 <div class="result-value gold" id="r-heloc-limit">—</div>
               </div>
               <div class="result-item">
@@ -182,7 +177,7 @@
                 <div class="result-value" id="r-cltv">—</div>
               </div>
             </div>
-            <p class="result-note">Estimated borrowing power based on your inputs. Lender approval depends on income, credit history, and additional factors specific to your lender.</p>
+            <p class="result-note">Illustration only. The assumed maximum CLTV is an input, not a universal lender limit. Actual credit limits and approval depend on the lender, property value, existing liens, credit information, income, debts and other underwriting factors.</p>
           </div>
         </div>
 
@@ -193,9 +188,9 @@
   <!-- TRUST BAR -->
   <div class="trust-bar" role="complementary" aria-label="Trust signals">
     <div class="trust-item"><i class="ti ti-shield-check" aria-hidden="true"></i> No personal data required</div>
-    <div class="trust-item"><i class="ti ti-lock" aria-hidden="true"></i> Secure &amp; private</div>
+    <div class="trust-item"><i class="ti ti-lock" aria-hidden="true"></i> No calculator sign-up</div>
     <div class="trust-item"><i class="ti ti-user-check" aria-hidden="true"></i> Built by an independent publisher</div>
-    <div class="trust-item"><i class="ti ti-scale" aria-hidden="true"></i> No lender bias — ever</div>
+    <div class="trust-item"><i class="ti ti-scale" aria-hidden="true"></i> No lender relationships</div>
   </div>
 
   <hr>
@@ -203,8 +198,8 @@
   <!-- FEATURES -->
   <section class="section" aria-labelledby="features-heading">
     <div class="section-label">Why MyHelocRates</div>
-    <h2 class="section-title" id="features-heading">Everything you need to make a smart HELOC decision</h2>
-    <p class="section-sub">From calculating payments to understanding qualification — we guide US homeowners through every step of the HELOC process.</p>
+    <h2 class="section-title" id="features-heading">HELOC tools and guides built around the questions homeowners ask</h2>
+    <p class="section-sub">Use the calculator for illustrations, then dig into plain-English guides on HELOC mechanics, rates, qualification, risks and repayment.</p>
     <div class="features-grid">
       <div class="feature-card">
         <div class="feature-icon"><i class="ti ti-calculator" aria-hidden="true"></i></div>
@@ -213,8 +208,8 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="ti ti-chart-line" aria-hidden="true"></i></div>
-        <h3>Rate tracking</h3>
-        <p>We track HELOC rate trends against Federal Reserve policy so you understand the direction rates are heading, not just a single snapshot number.</p>
+        <h3>Rates explained</h3>
+        <p>Understand variable-rate HELOC pricing, including indexes, margins and the role of benchmark rates, with links to primary sources.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="ti ti-book-2" aria-hidden="true"></i></div>
@@ -223,18 +218,18 @@
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="ti ti-list-check" aria-hidden="true"></i></div>
-        <h3>Qualification checklist</h3>
-        <p>Know exactly what lenders look for before you apply — credit score, LTV, debt-to-income ratio and more.</p>
+        <h3>Qualification factors</h3>
+        <p>Learn the factors lenders may review — including equity, credit history, income and debts — without assuming one universal approval threshold.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="ti ti-scale" aria-hidden="true"></i></div>
         <h3>HELOC vs HELoan</h3>
-        <p>Side-by-side comparison to help you choose the right home equity product for your financial situation.</p>
+        <p>Compare how a revolving HELOC differs from a home equity loan, including access to funds, rates, payments and repayment structure.</p>
       </div>
       <div class="feature-card">
         <div class="feature-icon"><i class="ti ti-users" aria-hidden="true"></i></div>
-        <h3>Lender comparisons</h3>
-        <p>Compare top HELOC lenders by rate, fees, and eligibility — banks, credit unions, and online lenders.</p>
+        <h3>Independent research</h3>
+        <p>Core guides use primary US sources where possible, with lender-specific terms kept separate from general HELOC rules.</p>
       </div>
     </div>
   </section>
@@ -245,8 +240,8 @@
   <section class="how-section" aria-labelledby="how-heading">
     <div class="how-inner">
       <div class="section-label">How it works</div>
-      <h2 class="section-title" id="how-heading">Four steps to unlocking your home equity</h2>
-      <p class="section-sub">Understanding the HELOC process before you apply puts you in a stronger position with lenders.</p>
+      <h2 class="section-title" id="how-heading">Four things to understand before exploring a HELOC</h2>
+      <p class="section-sub">Understanding your equity, credit profile and the lender’s actual terms can help you compare HELOC options more carefully.</p>
       <div class="steps-grid">
         <div class="step">
           <div class="step-num">1</div>
@@ -256,17 +251,17 @@
         <div class="step">
           <div class="step-num">2</div>
           <h4>Review your credit</h4>
-          <p>Most lenders require a credit score of 620 or higher. A score of 700+ gets the best rates.</p>
+          <p>Review your credit reports and history. Lenders set their own credit requirements, so there is no single universal HELOC score threshold.</p>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <h4>Compare lenders</h4>
-          <p>Rates, fees, and terms vary widely. Our lender comparison content makes it easy to shop around.</p>
+          <p>Compare the APR, index and margin, fees, draw and repayment terms, minimum-payment rules and other conditions.</p>
         </div>
         <div class="step">
           <div class="step-num">4</div>
-          <h4>Apply &amp; draw</h4>
-          <p>Once approved, draw funds as needed up to your credit limit — only pay interest on what you use.</p>
+          <h4>Read the terms</h4>
+          <p>If you apply, review the lender’s disclosures carefully so you understand the credit limit, access rules, payments, fees and repayment terms.</p>
         </div>
       </div>
     </div>
@@ -275,8 +270,8 @@
   <!-- BLOG PREVIEW -->
   <section class="section" aria-labelledby="blog-heading">
     <div class="section-label">From The Blog</div>
-    <h2 class="section-title" id="blog-heading">Latest HELOC guides &amp; insights</h2>
-    <p class="section-sub">Practical, unbiased content for US homeowners at every stage of the HELOC journey.</p>
+    <h2 class="section-title" id="blog-heading">HELOC guides &amp; explanations</h2>
+    <p class="section-sub">Practical articles for US homeowners who want to understand HELOC mechanics, rates, qualification and risks.</p>
     <div class="blog-grid">
       <article class="blog-card">
         <div class="blog-thumb t1"><i class="ti ti-home-dollar" style="color:#1a3a6b;" aria-hidden="true"></i></div>
@@ -322,7 +317,7 @@
         <div class="blog-thumb t6"><i class="ti ti-building-bank" style="color:#534ab7;" aria-hidden="true"></i></div>
         <div class="blog-content">
           <div class="blog-cat">Lender Comparisons</div>
-          <h4>Best Credit Unions for a HELOC in 2026</h4>
+          <h4>Best Credit Unions for a HELOC</h4>
           <a href="/blog/best-credit-unions-heloc/" class="read-more">Read guide <i class="ti ti-arrow-right" aria-hidden="true"></i></a>
         </div>
       </article>
@@ -331,8 +326,8 @@
 
   <!-- CTA BAND -->
   <div class="cta-band">
-    <h2>Ready to explore your home equity options?</h2>
-    <p>Use our free calculator — no personal information required.</p>
+    <h2>Continue your HELOC research</h2>
+    <p>Use the calculator for an illustration, then read the guides before comparing actual lender terms.</p>
     <a href="#calculator">Try the Calculator</a>
   </div>
 
@@ -359,7 +354,7 @@
         <ul>
           <li><a href="/blog/what-is-a-heloc/">What is a HELOC?</a></li>
           <li><a href="/blog/best-heloc-lenders/">Best HELOC Lenders</a></li>
-          <li><a href="/blog/best-credit-unions-heloc/">Best Credit Unions 2026</a></li>
+          <li><a href="/blog/best-credit-unions-heloc/">Best Credit Unions for HELOCs</a></li>
           <li><a href="/blog/">All Articles →</a></li>
         </ul>
       </div>
@@ -390,7 +385,9 @@
   document.getElementById('navToggle').addEventListener('click', function() {
     const links = document.getElementById('navLinks');
     links.classList.toggle('open');
-    this.querySelector('i').className = links.classList.contains('open') ? 'ti ti-x' : 'ti ti-menu-2';
+    var isOpen = links.classList.contains('open');
+    this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    this.querySelector('i').className = isOpen ? 'ti ti-x' : 'ti ti-menu-2';
   });
 </script>
 
@@ -439,11 +436,11 @@
     var homeVal   = parseFloat(document.getElementById('e-home').value) || 0;
     var mortgage  = parseFloat(document.getElementById('e-mortgage').value) || 0;
     var ltv       = parseFloat(document.getElementById('e-ltv').value) / 100 || 0.85;
-    var creditMult = parseFloat(document.getElementById('e-credit').value) || 0.90;
-    var equity    = homeVal - mortgage;
-    var maxBorrow = (homeVal * ltv) - mortgage;
-    var helocLimit = Math.max(0, maxBorrow * creditMult);
-    var cltv      = homeVal > 0 ? ((mortgage + helocLimit) / homeVal * 100) : 0;
+    var otherDebt = parseFloat(document.getElementById('e-other').value) || 0;
+    var equity    = homeVal - mortgage - otherDebt;
+    var maxBorrow = (homeVal * ltv) - mortgage - otherDebt;
+    var helocLimit = Math.max(0, maxBorrow);
+    var cltv      = homeVal > 0 ? ((mortgage + otherDebt + helocLimit) / homeVal * 100) : 0;
     document.getElementById('r-equity').textContent      = fmt(Math.max(0, equity));
     document.getElementById('r-heloc-limit').textContent = fmt(Math.max(0, helocLimit));
     document.getElementById('r-cltv').textContent        = cltv.toFixed(1) + '%';
@@ -453,14 +450,10 @@
 </script>
 
 <script>
-  (function() {
-    var now = new Date();
-    var year = now.getFullYear();
-    var month = now.toLocaleString("en-US", { month: "long" });
-    document.querySelectorAll(".dyn-year").forEach(function(el) { el.textContent = year; });
-    document.querySelectorAll(".dyn-monthyear").forEach(function(el) { el.textContent = month + " " + year; });
-    document.querySelectorAll(".dyn-updated").forEach(function(el) { el.textContent = month + " 1, " + year; });
-  })();
+(function(){
+  var year = new Date().getFullYear();
+  document.querySelectorAll(".dyn-year").forEach(function(el){ el.textContent = year; });
+})();
 </script>
 
 </body>
