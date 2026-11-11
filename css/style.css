@@ -163,7 +163,7 @@ hr.section-rule { border: none; border-top: 0.5px solid var(--border); max-width
 .main-wrap { max-width: 1060px; margin: 0 auto; padding: 2.5rem 2rem 4rem; display: grid; grid-template-columns: 1fr 280px; gap: 3rem; align-items: start; }
 
 @media (max-width: 768px) {
-  .main-wrap { grid-template-columns: 1fr; padding: 2rem 1.25rem; gap: 2rem; }
+  .main-wrap { grid-template-columns: minmax(0, 1fr); padding: 2rem 1.25rem; gap: 2rem; }
 }
 
 /* Simple single-column layout — used for legal / short-form pages with no sidebar */

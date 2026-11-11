@@ -15,15 +15,9 @@
 
   <!-- External CSS -->
   <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="/css/mhr-analytics-consent.css" />
 
-  <!-- GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9RLKEB7GMX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-9RLKEB7GMX');
-  </script>
+
 
   <!-- AdSense -->
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3723787015797542" crossorigin="anonymous"></script>
@@ -509,6 +503,26 @@
     document.querySelectorAll(".dyn-updated").forEach(function(el) { el.textContent = month + " 1, " + year; });
   })();
 </script>
+<!-- MHR-001: Analytics consent interface -->
+<section id="mhr-consent" role="dialog"
+         aria-modal="false"
+         aria-labelledby="mhr-consent-title" hidden>
+  <h2 id="mhr-consent-title">Analytics cookies</h2>
+  <p>
+    We use optional analytics cookies to understand how visitors
+    use MyHelocRates and improve our educational content.
+    You can accept or reject analytics cookies.
+  </p>
+  <div class="choices">
+    <button type="button" id="mhr-accept">Accept analytics</button>
+    <button type="button" id="mhr-reject">Reject analytics</button>
+  </div>
+</section>
 
+<button type="button" id="mhr-consent-settings" hidden>
+  Cookie settings
+</button>
+
+<script src="/js/mhr-analytics-consent.js" defer></script>
 </body>
 </html>
