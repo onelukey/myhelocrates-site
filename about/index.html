@@ -191,16 +191,17 @@
   </div>
 
   <!-- DISCLAIMER BAND -->
-  <div class="disclaimer-band">
-    <div class="disclaimer-band-inner">
-      <i class="ti ti-info-circle" aria-hidden="true"></i>
-      <div>
-        <h3>We are not a lender, broker, or financial adviser</h3>       
-<p>MyHelocRates.com is an independent informational website run by a private individual in the United Kingdom for a US audience. We do not offer, originate or broker HELOC loans, and nothing on this site is personalised financial, legal or tax advice. The site may display advertising. See our full <a href="/disclaimer/">Disclaimer</a>, <a href="/editorial-standards/">Editorial Standards</a> and <a href="/privacy-policy/">Privacy Policy</a> for details.</p>
 
-      </div>
+<div class="disclaimer-band">
+  <div class="disclaimer-band-inner">
+    <i class="ti ti-info-circle" aria-hidden="true"></i>
+    <div>
+      <h3>We are not a lender, broker, or financial adviser</h3>
+      <p>MyHelocRates.com is an independent informational website run by a private individual in the United Kingdom for a US audience. We do not offer, originate or broker HELOC loans, and nothing on this site is personalised financial, legal or tax advice. The site may display advertising. See our full <a href="/disclaimer/">Disclaimer</a>, <a href="/editorial-standards/">Editorial Standards</a> and <a href="/privacy-policy/">Privacy Policy</a> for details.</p>
     </div>
   </div>
+</div>
+
 
   <!-- CTA -->
   <div class="cta-section">
@@ -272,15 +273,13 @@
   });
 </script>
 
+
 <script>
 (function(){
-  var now=new Date();
-  document.querySelectorAll(".dyn-year").forEach(function(el){el.textContent=now.getFullYear();});
-  var r=document.getElementById("last-reviewed"),w=document.getElementById("review-warning");
-  if(!r||!w)return;
-  var p=r.getAttribute("datetime").split("-").map(Number);
-  var age=Math.floor((Date.UTC(now.getUTCFullYear(),now.getUTCMonth(),now.getUTCDate())-Date.UTC(p[0],p[1]-1,p[2]))/86400000);
-  if(age>Number(r.dataset.reviewDays||365))w.hidden=false;
+  var now = new Date();
+  document.querySelectorAll(".dyn-year").forEach(function(el){
+    el.textContent = now.getFullYear();
+  });
 })();
 </script>
 
